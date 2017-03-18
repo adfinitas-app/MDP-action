@@ -60,7 +60,7 @@
 
 
 
-        //submitForm();
+        submitForm();
         showNotif();
     }
 
@@ -70,7 +70,7 @@
         $('.notification').slideDown( "slow", function() {
             setTimeout(function(){
                 $('.notification').slideUp("slow");
-          }, 5000);
+            }, 5000);
         });
     }
 
@@ -78,15 +78,15 @@
     function extractUrlParams(){
       var t = document.location.search.substring(1).split('&'); var f = [];
       for (var i=0; i<t.length; i++){
-         var x = t[ i ].split('=');
-         f[x[0]]=decodeURIComponent(x[1]);
-     }
-     return f;
- };
+       var x = t[ i ].split('=');
+       f[x[0]]=decodeURIComponent(x[1]);
+   }
+   return f;
+};
 
- var p = extractUrlParams();
+var p = extractUrlParams();
 
- if (p['email'] && p['email'] != "undefined") {
+if (p['email'] && p['email'] != "undefined") {
   $("input[name=email]").val(p['email']);
 }
 
@@ -176,97 +176,132 @@ function getCivilityLong() {
         return 'MONSIEUR';
     }
 }
+function getBirthday() {
+    var bday = "";
+    $('.max-length').each( function() {
+        if ($(this).length == 0)
+            return "";
+        else {
+            bday += $(this).val() + ' ';
+        }
+    });
+    return pureField(bday.slice(0,-1));
+}
 
 
 function submitForm(mode) {
 
-   var data = {
+  var data = {
+    "db": {
+      "schema": "TODO",
       "db": {
-         "schema": "cimade_journaliste",
-         "db": {
-            "email": pureField($("input[name='email']").val()),
-            "phone": pureField($("input[name='phone']").val()),
-            "firstname": pureField($("input[name='prenom']").val()),
-            "lastname": pureField($("input[name='nom']").val()),
-            "name": pureField($("input[name='prenom']").val()) + ' ' + pureField($("input[name='nom']").val()),
-            "media": pureField($("input[name='media']").val()),
-            "language": $("input[name='language']")
-        },
-    },
-    "woopra" : {
-     "host": "lacimade.org",
-     "cookie": getCookie("wooTracker"),
-     "event": "inscription-presse",
-     "cv_email": pureField($("input[name='email']").val()),
-     "cv_phone": pureField($("input[name='phone']").val()),
-     "cv_firstname": pureField($("input[name='prenom']").val()),
-     "cv_lastname": pureField($("input[name='nom']").val()),
-     "cv_name": pureField($("input[name='prenom']").val()) + ' ' + pureField($("input[name='nom']").val()),
-     "ce_email": pureField($("input[name='email']").val()),
-     "ce_phone": pureField($("input[name='phone']").val()),
-     "ce_firstname": pureField($("input[name='prenom']").val()),
-     "ce_lastname": pureField($("input[name='nom']").val()),
-     "ce_name": pureField($("input[name='prenom']").val()) + ' ' + pureField($("input[name='nom']").val()),
-     "ce_media": pureField($("input[name='media']").val()),
-     "language": $("input[name='language']")
- },
- "mailjet": {
-     "Email": pureField($("input[name='email']").val()),
-     "Properties": {
-        "firstname": pureField($("input[name='prenom']").val()),
-        "lastname": pureField($("input[name='nom']").val()),
-        "name": pureField($("input[name='prenom']").val()) + ' ' +
-        pureField($("input[name='nom']").val()),
-        "language": $("input[name='language']")
-    },
-    "addLists": ["mjlist_journalistes"],
-    "delLists": ["mjlist_prospect"]
+        "email": pureField($("input[name='email']").val()),
+        "phone": pureField($("input[name='phone']").val()),
+        "sexe": getSexe(),
+        "civility": pureField($("input[name='civility']:checked").val()),
+        "civility_dear": getCivilityDear(),
+        "civility_long": getCivilityLong(),
+        "personnalisation": getCivilityDear() + ' ' + pureField($("input[name='civility']:checked").val()).toUpperCase() + ' ' + pureField($("input[name='lastname']").val()).toUpperCase(),
+        "personnalisation_courte": pureField($("input[name='civility']:checked").val()).toUpperCase() + ' ' + pureField($("input[name='lastname']").val()).toUpperCase(),
+        "firstname": pureField($("input[name='firstname']").val()),
+        "lastname": pureField($("input[name='lastname']").val()),
+        "name": pureField($("input[name='firstname']").val()) + ' ' + pureField($("input[name='lastname']").val()),
+        "address": pureField($("input[name='address']").val()),
+        "zipcode": pureField($("input[name='zipcode']").val()),
+        "city": pureField($("input[name='ville']").val()),
+        "country": pureField($("input[name='pays']").val()),
+        "birthdate": getBirthday(),
+        "language": "fr_FR"
+    }
 },
+"woopra" : {
+  "host": "miedepain.asso.fr",
+  "cookie": getCookie("wooTracker"),
+  "event": "TODO",
+  "cv_email": pureField($("input[name='email']").val()),
+  "cv_phone": pureField($("input[name='phone']").val()),
+  "cv_sexe": getSexe(),
+  "cv_civility": pureField($("input[name='civility']:checked").val()),
+  "cv_firstname": pureField($("input[name='firstname']").val()),
+  "cv_lastname": pureField($("input[name='lastname']").val()),
+  "cv_name": pureField($("input[name='firstname']").val()) + ' ' + pureField($("input[name='lastname']").val()),
+  "ce_email": pureField($("input[name='email']").val()),
+  "ce_phone": pureField($("input[name='phone']").val()),
+  "ce_sexe": getSexe(),
+  "ce_civility": pureField($("input[name='civility']:checked").val()),
+  "ce_firstname": pureField($("input[name='firstname']").val()),
+  "ce_lastname": pureField($("input[name='lastname']").val()),
+  "ce_name": pureField($("input[name='firstname']").val()) + ' ' + pureField($("input[name='lastname']").val()),
+
+  "ce_address": pureField($("input[name='address']").val()),
+  "ce_zipcode": pureField($("input[name='zipcode']").val()),
+  "ce_city": pureField($("input[name='ville']").val()),
+  "ce_country": pureField($("input[name='pays']").val()),
+  "ce_birthdate": getBirthday(),
+
+  "ce_language": "fr_FR"
+},
+"mailjet": {
+  "Email": pureField($("input[name='email']").val()),
+  "Properties": {
+    "sexe": getSexe(),
+    "civility": pureField($("input[name='civility']:checked").val()),
+    "civility_dear": getCivilityDear(),
+    "civility_long": getCivilityLong(),
+    "personnalisation": getCivilityDear() + ' ' + pureField($("input[name='civility']:checked").val()).toUpperCase() + ' ' + pureField($("input[name='lastname']").val()).toUpperCase(),
+    "personnalisation_courte": pureField($("input[name='civility']:checked").val()).toUpperCase() + ' ' + pureField($("input[name='lastname']").val()).toUpperCase(),
+    "firstname": pureField($("input[name='firstname']").val()),
+    "lastname": pureField($("input[name='lastname']").val()),
+    "name": pureField($("input[name='firstname']").val()) + ' ' + pureField($("input[name='lastname']").val()),
+    "language": "fr_FR"
+},
+"addLists": [],
+"delLists": []
+},
+    //"grecaptcha_response": grecaptcha.getResponse()
 }
-
-
-makeCorsRequest(data);
+//makeCorsRequest(data);
 }
 
 function checkPhone() {
   $phone = $("#f_tel");
   if ($phone.intlTelInput("isValidNumber")) {
-     $phone.get(0).setCustomValidity("");
- } else {
-     $phone.get(0).setCustomValidity("Numéro de téléphone invalide");
- }
+   $phone.get(0).setCustomValidity("");
+} else {
+   $phone.get(0).setCustomValidity("Numéro de téléphone invalide");
+}
 }
 
 var submitted = false;
 function launchTemplate() {
   $("#f_tel").intlTelInput({
-     utilsScript: "/js/vendor/intl-tel-input/build/js/utils.js",
-     initialCountry: "fr"
- });
+   utilsScript: "/js/vendor/intl-tel-input/build/js/utils.js",
+   initialCountry: "fr"
+});
   $("#f_tel").get(0).onchange = checkPhone;
   $('form').on('submit', function(e) {
-     e.preventDefault();
-     if (grecaptcha.getResponse().length == 0) {
-        alert('Merci de remplir le reCaptcha');
-        return;
-    }
-    if (!$('form').attr('disabled')) {
-        $('form').attr('disabled', 'disabled')
-        submitForm(function success() {
-           $('.success').css('display', 'block');
-           var url = $('#sondage-btn').attr('href');
-           var params = {
-              'firstname_hide': $('input[name=firstname]').val(),
-              'lastname_hide': $('input[name=lastname]').val(),
-              'phone_hide': $('input[name=phone]').val(),
-              'email_hide': $('input[name=email]').val()
-          };
-          $('#sondage-btn').attr('href', url + '?' + $.param(params, true));
-      }, function error() {
-       alert('Woops, there was an error making the request.');
-       $('form').removeAttr('disabled')
-   });
-    }
+   e.preventDefault();
+   if (grecaptcha.getResponse().length == 0) {
+    alert('Merci de remplir le reCaptcha');
+    return;
+}
+if (!$('form').attr('disabled')) {
+    $('form').attr('disabled', 'disabled')
+    submitForm(function success() {
+     $('.success').css('display', 'block');
+     var url = $('#sondage-btn').attr('href');
+     var params = {
+      'firstname_hide': $('input[name=firstname]').val(),
+      'lastname_hide': $('input[name=lastname]').val(),
+      'phone_hide': $('input[name=phone]').val(),
+      'email_hide': $('input[name=email]').val()
+  };
+  $('#sondage-btn').attr('href', url + '?' + $.param(params, true));
+}, function error() {
+ alert('Woops, there was an error making the request.');
+ $('form').removeAttr('disabled')
+});
+}
 });
 }
 
