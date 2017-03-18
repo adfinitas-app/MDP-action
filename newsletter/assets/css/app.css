@@ -55,7 +55,12 @@ input[type="number"] {
 
 
 
-
+#section-form {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 
 
@@ -70,6 +75,7 @@ input[type="number"] {
 .form-container h2 {
 	font-family: 'League Gothic Regular';
 	font-size: 38px;
+	line-height: 1.2;
 }
 .form-container p {
 	font-family: 'Open Sans';
@@ -178,6 +184,9 @@ input[type=radio]:checked + label:before {
 }
 
 .notification {
+	position: absolute;
+	width: 100%;
+	top: 0;
 	padding: 10px;
 	text-align: center;
 	background-color: #e09ba3;
