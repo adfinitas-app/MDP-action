@@ -184,17 +184,6 @@ function getCivilityLong() {
     return 'MONSIEUR';
   }
 }
-function getBirthday() {
-  var bday = "";
-  $('.max-length').each( function() {
-    if ($(this).length == 0)
-      return "";
-    else {
-      bday += $(this).val() + ' ';
-    }
-  });
-  return pureField(bday.slice(0,-1));
-}
 
 
 function submitForm(mode) {
@@ -218,8 +207,7 @@ function submitForm(mode) {
         "zipcode": pureField($("input[name='zipcode']").val()),
         "city": pureField($("input[name='ville']").val()),
         "country": pureField($("input[name='pays']").val()),
-        "birthdate": getBirthday(),
-        "language": "fr_FR"
+        "language": pureField($("input[name='language']:checked").val())
       }
     },
     "woopra" : {
@@ -245,9 +233,8 @@ function submitForm(mode) {
       "ce_zipcode": pureField($("input[name='zipcode']").val()),
       "ce_city": pureField($("input[name='ville']").val()),
       "ce_country": pureField($("input[name='pays']").val()),
-      "ce_birthdate": getBirthday(),
 
-      "ce_language": "fr_FR"
+      "ce_language": pureField($("input[name='language']:checked").val())
     },
     "mailjet": {
       "Email": pureField($("input[name='email']").val()),
@@ -261,7 +248,7 @@ function submitForm(mode) {
         "firstname": pureField($("input[name='firstname']").val()),
         "lastname": pureField($("input[name='lastname']").val()),
         "name": pureField($("input[name='firstname']").val()) + ' ' + pureField($("input[name='lastname']").val()),
-        "language": "fr_FR"
+        "language": pureField($("input[name='language']:checked").val())
       },
       "addLists": [],
       "delLists": []
