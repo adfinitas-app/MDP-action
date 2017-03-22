@@ -251,7 +251,7 @@ function submitForm(mode) {
       "addLists": [],
       "delLists": []
     },
-    "grecaptcha_response": grecaptcha.getResponse()
+    //"grecaptcha_response": grecaptcha.getResponse()
   }
 //makeCorsRequest(data);
 }
