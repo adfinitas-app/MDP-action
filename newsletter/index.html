@@ -24,10 +24,13 @@
 	</header>
 	<section id="section-form">
 		<div class="row">
-			<div class="small-centered small-12 large-10 columns form-container">
+			<div class="small-centered small-12 medium-10 large-8 columns form-container">
 				<h2>En vous inscrivant à la Newsletter de la Mie de Pain, vous recevrez nos dernières actualités.</h2>
 				<form autocomplete="on">
-				    <input class="mandatory" type="email" placeholder="Adresse E-Mail" name="email">
+					<p class="text-mandatory">Les champs précédés d'un * sont obligatoires</p>
+					<div class="input">
+						<p>*</p><input class="mandatory" type="email" placeholder="Adresse E-Mail" name="email">
+					</div>
 					<div class="radio">
 						<p>Civilité: </p>
 						<input class="mandatory" id="f_homme" type="radio" name="civility" value="Monsieur">
@@ -35,15 +38,25 @@
 						<input class="mandatory" id="f_femme" type="radio" name="civility" value="Madame">
 						<label for="f_femme">Madame</label>
 					</div>
-					<div>
-					    <p>*</p><input class="mandatory" type="text" placeholder="Prénom" name="firstname">
+					<div class="input">
+						<p>*</p><input class="mandatory" type="text" placeholder="Prénom" name="firstname">
 					</div>
-					<input class="mandatory" type="text" placeholder="Nom" name="lastname">
+					<div class="input">
+						<p>*</p><input class="mandatory" type="text" placeholder="Nom" name="lastname">
+					</div>
 					<input type="text" placeholder="Adresse" name="address">
-					<input class="mandatory" type="text" placeholder="Code Postal" name="zipcode" />
-					<input class="mandatory" type="text" placeholder="Ville" name="ville" />
-					<input class="mandatory" type="text" placeholder="Pays" name="pays" />
-					<input type="tel" id="f_tel" placeholder="Téléphone" name="phone">
+					<div class="input">
+						<p>*</p><input class="mandatory" type="text" placeholder="Code Postal" name="zipcode" />
+					</div>
+					<div class="input">
+						<p>*</p><input class="mandatory" type="text" placeholder="Ville" name="ville" />
+					</div>
+					<div class="input">
+						<p>*</p><input class="mandatory" type="text" placeholder="Pays" name="pays" />
+					</div>
+					<div class="input">
+						<input type="tel" id="f_tel" placeholder="Téléphone" name="phone">
+					</div>
 					<input type="hidden" name="language" value="fr_FR">
 					<div class="feedback error_mail">
 						Le format de l'email est incorrect
