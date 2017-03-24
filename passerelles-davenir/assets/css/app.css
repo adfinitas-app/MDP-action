@@ -1,0 +1,310 @@
+@font-face {
+	font-family: 'alpha-echo';
+	src: url('../fonts/alpha-webfont.woff2') format('woff2'),
+	url('../fonts/alpha-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'League Gothic Regular';
+	src: url('../fonts/leaguegothic-regular-webfont-webfont.woff2') format('woff2'),
+	url('../fonts/leaguegothic-regular-webfont-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PTSans Regular';
+	src: url('../fonts/pts55f-webfont.woff2') format('woff2'),
+	url('../fonts/pts55f-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+@font-face {
+	font-family: 'PTSans Italic';
+	src: url('../fonts/pts56f-webfont.woff2') format('woff2'),
+	url('../fonts/pts56f-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PTSans Bold';
+	src: url('../fonts/pts75f-webfont.woff2') format('woff2'),
+	url('../fonts/pts75f-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PTSans Bold Italic';
+	src: url('../fonts/pts76f-webfont.woff2') format('woff2'),
+	url('../fonts/pts76f-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*{
+	background: #000 !important;
+	color: #0f0 !important;
+	outline: solid #f00 1px !important;
+	}*/
+	.max-width {
+		max-width: 75rem;
+	}
+	.btn {
+		transition: all .1s ease-in-out;
+		-webkit-transition: all .1s ease-in-out;
+		-moz-transition: all .1s ease-in-out;
+		-o-transition: all .1s ease-in-out;
+		-ms-transition: all .1s ease-in-out;
+		background-color: #800d1c;
+		font-family: 'Open Sans';
+		font-weight: 600;
+		text-transform: uppercase;
+		color: white;
+		padding: 20px 30px;
+		border-radius: 5px;
+		min-width: 180px;
+		max-width: 100%;
+	}
+	.btn:hover {
+		transform: scale(1.05);
+	}
+	.btn.video {
+		padding: 30px 50px;
+		min-width: 280px;
+	}
+	.top-bar {
+		padding: 30px;
+		background-color: transparent;
+		position: fixed;
+		width: 100%;
+	}
+	.top-bar img {
+		float: left;
+	}
+	.top-bar button {
+		float: right;
+	}
+	.header {
+		background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/bg-header.jpg');
+		background-position: 20% 35%;
+		min-height: 100vh;
+		text-align: center;
+		padding: 20px;
+	}
+	.header img {
+		margin-top: 5%;
+		margin-bottom: 20px;
+	}
+	.header h1 {
+		font-family: 'PTSans Bold';
+		color: white;
+		font-size: 64px;
+		text-transform: uppercase;
+		line-height: 1.2;
+		margin-bottom: 0;
+	}
+	.header h2 {
+		font-family: 'PTSans Regular';
+		font-weight: 500;
+		color: white;
+		font-size: 24px;
+		text-transform: uppercase;
+		line-height: 1.2;
+		margin-bottom: 0;
+	}
+	.header p {
+		font-family: 'PTSans Regular';
+		font-weight: 500;
+		color: white;
+		font-size: 22px;
+		line-height: 1.2;
+		margin-top: 6%;
+		margin-bottom: 20px;
+	}
+	.video .text-columns{
+		padding: 40px 0px;
+		padding-right: 30px;
+	}
+	.video .text-columns h3 {
+		font-family: 'PTSans Bold';
+		color: #800d1c;
+		font-size: 40px;
+		line-height: 1.3;
+		text-transform: uppercase;
+	}
+	.video .text-columns p {
+		font-family: 'PTSans Regular';
+		font-size: 20px;
+		line-height: 1.3;
+		color: black;
+	}
+	#don-confiance {
+		max-width: 40px;
+		margin-left: 10px;
+	}
+	.video .video-columns {
+		background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/bg-video.jpg');
+	}
+	.box-expanded {
+		border-top: 1px solid black;
+		text-align: center;
+		padding: 40px;
+	}
+	.box-expanded p {
+		font-family: 'PTSans Bold';
+		color: #800d1c;
+		font-size: 20px;
+		line-height: 1.3;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		margin-top: 5px;
+	}
+	.arrow.up {
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		transform: rotate(180deg);
+		position: absolute;
+		bottom: -28px;
+		left: 49%;
+	}
+	.arrow:hover {
+		cursor: pointer;
+	}
+	.hidden {
+		position: relative;
+		width: 400px;
+		max-width: 100%;
+		text-align: left;
+		margin-left: auto;
+		margin-right: auto;
+		display: none;
+	}
+	.hidden.un {
+		margin-top: 15px;
+		border-top: 3px solid #800d1c;
+		border-bottom: 3px solid #800d1c;
+		padding-top: 20px;
+	}
+	.hidden.un ul {
+		margin-left: 0px;
+		list-style: none;
+	}
+	.hidden.un h6 {
+		font-family: 'PTSans Bold';
+		font-size: 16px;
+	}
+	.hidden.un li {
+		font-family: 'PTSans Regular';
+		font-size: 15px;
+	}
+	.hidden.un li::before {
+		content: "• ";
+		color: #800d1c;
+		font-size: 20px;
+	}
+
+	footer {
+		max-width: 100%;
+		padding-top: 40px;
+		background: #2b2b2b;
+		color: #7a7a7a;
+	}
+
+	footer > .row{
+		max-width: 900px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		border-top: 1px solid #252525;
+	}
+
+	footer > .row > .columns:first-child{
+		bord
+	}
+
+	.footer-redir
+	{
+		display: inline-block;
+		margin: 20px;
+		font-size: 18px;
+		color: #7a7a7a !important;
+	}
+
+	.footer-redir > img
+	{
+		display: inline-block;
+	}
+
+	.block-footer
+	{
+		margin-top: 25px;
+	}
+
+	.block-footer-link {
+		display: inline;
+	}
+
+	.text-footer-link {
+		font-size: 14px;
+		color: white;
+		display: inline-block;
+		margin: 0;
+		margin-bottom: 15px;
+	}
+
+	.text-footer-title
+	{
+		text-transform: uppercase;
+		line-height: 1.2;
+		font-size: 35px;
+		margin-bottom: 10px;
+		font-family: 'League Gothic Regular';
+	}
+
+	.text-footer-para
+	{
+		line-height: 1.2;
+		margin-bottom: 10px;
+		font-family: 'Arial';
+		font-weight: 500;
+	}
+
+	.img-footer-link {
+		max-width: 15px;
+		display: inline-block;
+	}
+
+	@media screen and (max-width: 640px) {
+		.top-bar {
+			padding: 15px;
+			position: absolute;
+			top: 0;
+		}
+		.header {
+			padding-top: 80px;
+			background-position: 20% 20%;
+		}
+		.header h1 {
+			font-size: 50px;
+		}
+		.header h2 {
+			font-size: 20px;
+		}
+		.header p {
+			font-size: 18px;
+		}
+		.video .text-columns{
+			padding: 20px;
+			padding-bottom: 40px;
+		}
+		.video .video-columns {
+			background-position: 100% 20%;
+		}
+		.box-expanded {
+			padding: 5px;
+			padding-top: 20px;
+			margin-bottom: 35px;
+		}
+	}
