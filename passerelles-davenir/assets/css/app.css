@@ -173,6 +173,19 @@
 	.arrow:hover {
 		cursor: pointer;
 	}
+	.inline {
+		padding-bottom: 30px;
+	}
+	.inline * {
+		display: inline-block;
+		font-family: 'PTSans Bold';
+		font-size: 15px;
+		color: #800d1c;
+	}
+	.inline img {
+		margin-left: 20px;
+		margin-right: 5px;
+	}
 	.hidden {
 		position: relative;
 		width: 400px;
@@ -181,12 +194,42 @@
 		margin-left: auto;
 		margin-right: auto;
 		display: none;
-	}
-	.hidden.un {
 		margin-top: 15px;
 		border-top: 3px solid #800d1c;
 		border-bottom: 3px solid #800d1c;
 		padding-top: 20px;
+	}
+	.hidden.deux {
+		width: 500px;
+		text-align: center;
+	}
+	.hidden.deux h6 {
+		font-weight: bold;
+	}
+	.hidden.trois h6.orange {
+		color: #f36b11;
+	}
+	.hidden.deux p,
+	.hidden.trois p {
+		margin-top: 10px;
+		font-family: 'PTSans Regular';
+		font-size: 15px;
+		color: black;
+		text-transform: none;
+	}
+	.hidden.trois {
+		text-align: center;
+	}
+	.hidden.trois p {
+		margin-top: 30px;
+		font-size: 12px;
+	}
+	.hidden.trois p span {
+		color: #f36b11;
+		font-family: 'PTSans Bold';
+	}
+	.hidden.trois p span.red {
+		color: #800d1c;
 	}
 	.hidden.un ul {
 		margin-left: 0px;
@@ -206,6 +249,92 @@
 		font-size: 20px;
 	}
 
+	.row.don {
+		background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/bg-don.jpg');
+		background-position: 57% 43%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align: center;
+		padding: 20px;
+		padding-top: 180px;
+		padding-bottom: 100px;
+	}
+	.row.don h1, 
+	.row.don h2 {
+		font-family: 'PTSans Bold';
+		font-size: 38px;
+		color: white;
+		text-transform: uppercase;
+		line-height: 1.2;
+	}
+	.row.don h2 {
+		font-size: 20px;
+		margin-bottom: 30px;
+	}
+	.box-don-container {
+		margin-top: 10px;
+		margin-right: 10px;
+		background-color: white;
+		display: inline-block;
+		max-width: 100%;
+		width: 250px;
+		text-align: center;
+		color: #980f21;
+	}
+	.box-don {
+		padding: 35px;
+		padding-bottom: 10px;
+	}
+	.box-don img {
+		max-width: 100px;
+	}
+	.box-don h3 {
+		font-family: 'PTSans Bold';
+		font-size: 38px;
+		margin-bottom: 0;
+		line-height: 1.2;
+	}
+	.box-don h4 {
+		font-family: 'PTSans Regular';
+		font-size: 10px;
+		font-weight: 600;
+		line-height: 1.2;
+	}
+	.box-don p {
+		margin-top: 10px;
+		font-family: 'PTSans Regular';
+		font-size: 12px;
+		color: #1e1e1e;
+		font-weight: 600;
+		line-height: 1.3;
+	}
+	.box-don-container .btn-don {
+		width: 100%;
+		background-color: #980f21;
+	}
+	.box-don-container .btn-don  p{
+		margin-bottom: 0;
+		color:white;
+		font-family: 'PTSans Regular';
+		font-size: 15px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		text-transform: uppercase;
+	}
+	.other-don {
+		font-family: 'PTSans Bold';
+		font-size: 12px;
+		color:white;
+		display: block;
+		margin-top: 30px;
+		text-transform: uppercase;
+		text-decoration: underline;
+	}
+	.other-don:hover {
+		color: white;
+		text-decoration: none;
+	}
+	
 	footer {
 		max-width: 100%;
 		padding-top: 40px;
@@ -306,5 +435,8 @@
 			padding: 5px;
 			padding-top: 20px;
 			margin-bottom: 35px;
+		}
+		.row.don {
+			background-position: 40% 43%;
 		}
 	}
