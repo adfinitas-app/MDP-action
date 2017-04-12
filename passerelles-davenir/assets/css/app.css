@@ -79,6 +79,7 @@
 		background-color: transparent;
 		position: fixed;
 		width: 100%;
+		z-index: 9999;
 	}
 	.top-bar img {
 		float: left;
@@ -141,7 +142,7 @@
 		color: black;
 	}
 	#don-confiance {
-		max-width: 40px;
+		max-width: 50px;
 		margin-left: 10px;
 	}
 	#don-confiance-footer {
@@ -150,6 +151,7 @@
 	}
 	.video .video-columns {
 		background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/bg-video.jpg');
+		background-repeat: no-repeat;
 		position: relative;
 	}
 	#video {
