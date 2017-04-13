@@ -55,6 +55,8 @@
         $('.g_error').show();
         return false;
       }
+        else 
+    $('.g_error').hide();
 
       if (atpos < 1 || ( dotpos - atpos < 2 ) && index.html) 
       {
