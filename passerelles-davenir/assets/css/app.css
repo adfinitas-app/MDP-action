@@ -87,9 +87,20 @@
 	.top-bar button {
 		float: right;
 	}
+	#bt-scroll-header {
+		display: block;
+		transform: scale(2);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#bt-scroll-header:hover {
+		cursor: pointer;
+	}
 	.header {
 		background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/bg-header.jpg');
 		background-position: 20% 35%;
+		background-size: cover;
+		background-repeat: no-repeat;
 		min-height: 100vh;
 		text-align: center;
 		padding: 20px;
@@ -201,6 +212,9 @@
 	.inline img {
 		margin-left: 20px;
 		margin-right: 5px;
+	}
+	.down:hover {
+		cursor: pointer;
 	}
 	.hidden {
 		position: relative;
