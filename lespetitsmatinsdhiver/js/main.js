@@ -66,12 +66,55 @@ $(document).ready(function() {
 		});
 	});
 
-	$('.stickybtn, .stickybtn2').parent().click(function() {
+	$('.stickybtn, .stickybtn2').click(function() {
 		var str = changelink();
-		console.log('bonjour');
 		$(this).attr('href', $(this).attr('href') + str);
 		woopra.track('interaction', {
 			category: 'DON-CTA_NOEL17',
+			action: 'clic',
+			url: document.location.href,
+			title: document.title
+		});
+	});
+
+	$('#eq1').click(function() {
+		var str = changelink();
+		$(this).attr('href', $(this).attr('href') + str);
+		woopra.track('interaction', {
+			category: 'DON-CTA-55_NOEL17',
+			action: 'clic',
+			url: document.location.href,
+			title: document.title
+		});
+	});
+
+	$('#eq2').click(function() {
+		var str = changelink();
+		$(this).attr('href', $(this).attr('href') + str);
+		woopra.track('interaction', {
+			category: 'DON-CTA-100_NOEL17',
+			action: 'clic',
+			url: document.location.href,
+			title: document.title
+		});
+	});
+
+	$('#eq3').click(function() {
+		var str = changelink();
+		$(this).attr('href', $(this).attr('href') + str);
+		woopra.track('interaction', {
+			category: 'DON-CTA-165_NOEL17',
+			action: 'clic',
+			url: document.location.href,
+			title: document.title
+		});
+	});
+
+	$('#autre').click(function() {
+		var str = changelink();
+		$(this).attr('href', $(this).attr('href') + str);
+		woopra.track('interaction', {
+			category: 'DON-CTA-AUTRE_NOEL17',
 			action: 'clic',
 			url: document.location.href,
 			title: document.title
@@ -111,6 +154,4 @@ $(document).ready(function() {
 		}
 	}
 	var str = changelink();
-	$('.stickybtn .stickybtn2').attr('href', )
-	console.log('str :' + str);
 });
