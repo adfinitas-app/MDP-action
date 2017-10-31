@@ -68,7 +68,7 @@ $(document).ready(function() {
 
 	$('.stickybtn, .stickybtn2').parent('a').click(function() {
 		var str = changelink();
-		$(this).attr('href', $(this).attr('href') + str);
+		$(this).attr('href', 'https://donner.miedepain.asso.fr/b?cid=49&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA&amount=10000' + str);
 		woopra.track('interaction', {
 			category: 'DON-CTA_NOEL17',
 			action: 'clic',
@@ -79,7 +79,7 @@ $(document).ready(function() {
 
 	$('#eq1').click(function() {
 		var str = changelink();
-		$(this).attr('href', $(this).attr('href') + str);
+		$(this).attr('href', 'https://donner.miedepain.asso.fr/b?cid=49&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA-55&amount=5500' + str);
 		woopra.track('interaction', {
 			category: 'DON-CTA-55_NOEL17',
 			action: 'clic',
@@ -90,7 +90,7 @@ $(document).ready(function() {
 
 	$('#eq2').click(function() {
 		var str = changelink();
-		$(this).attr('href', $(this).attr('href') + str);
+		$(this).attr('href', 'https://donner.miedepain.asso.fr/b?cid=49&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA-100&amount=10000' + str);
 		woopra.track('interaction', {
 			category: 'DON-CTA-100_NOEL17',
 			action: 'clic',
@@ -101,7 +101,7 @@ $(document).ready(function() {
 
 	$('#eq3').click(function() {
 		var str = changelink();
-		$(this).attr('href', $(this).attr('href') + str);
+		$(this).attr('href', 'https://donner.miedepain.asso.fr/b?cid=49&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA-165&amount=16500' + str);
 		woopra.track('interaction', {
 			category: 'DON-CTA-165_NOEL17',
 			action: 'clic',
@@ -112,7 +112,7 @@ $(document).ready(function() {
 
 	$('#autre').click(function() {
 		var str = changelink();
-		$(this).attr('href', $(this).attr('href') + str);
+		$(this).attr('href', 'https://donner.miedepain.asso.fr/b?cid=49&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA-AUTRE' + str);
 		woopra.track('interaction', {
 			category: 'DON-CTA-AUTRE_NOEL17',
 			action: 'clic',
