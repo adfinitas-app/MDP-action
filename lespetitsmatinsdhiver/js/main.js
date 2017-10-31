@@ -12,14 +12,14 @@ $(document).ready(function() {
 		e.preventDefault();
 		var display = $('#text-plus').css('display');
 		if ( display === 'none') {
-			$(this).attr('src', 'img/x.png');
+			$(this).attr('src', 'https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/x.png');
 		}
 		$('#text-plus').slideToggle();
 		$('#nono').slideToggle();
 		$('#confidentialite').slideToggle();
 
 		if ( display !== 'none') {
-			$(this).attr('src', 'img/+.png');
+			$(this).attr('src', 'https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/%2B.png');
 		}
 	});
 
