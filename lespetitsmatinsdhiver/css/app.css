@@ -568,6 +568,11 @@ footer .logo-fb img
 	top: 5px;
 }
 
+footer .title a
+{
+	color: #797979;
+}
+
 footer .title
 {
 	font-family: 'leagueGothic';
