@@ -113,7 +113,7 @@
 header
 {
 	min-height: 100vh;
-	background: url('../img/bg-header-small.png') no-repeat;
+	background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header-small.png') no-repeat;
 	background-size: cover;
 }
 
@@ -121,7 +121,7 @@ header
 {
 	header
 	{
-		background: url('../img/bg-header.png') no-repeat;
+		background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.png') no-repeat;
 		background-size: cover;
 	}
 }
@@ -166,7 +166,7 @@ header p
 
 #temoignage
 {
-	background: url('../img/bg-temoignage.png') no-repeat top left;
+	background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-temoignage.png') no-repeat top left;
 	background-size: cover;
 	background-position: right;
 	padding: 50px 0;
@@ -385,7 +385,7 @@ header p
 {
 	margin-top: -1px;
 	min-height: 100vh;
-	background: url('../img/bg-don.png') no-repeat center;
+	background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-don.png') no-repeat center;
 	background-size: cover;
 	color: white;
 }
