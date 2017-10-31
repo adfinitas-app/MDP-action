@@ -66,7 +66,7 @@ $(document).ready(function() {
 		});
 	});
 
-	$('.stickybtn, .stickybtn2').click(function() {
+	$('.stickybtn, .stickybtn2').parent('a').click(function() {
 		var str = changelink();
 		$(this).attr('href', $(this).attr('href') + str);
 		woopra.track('interaction', {
