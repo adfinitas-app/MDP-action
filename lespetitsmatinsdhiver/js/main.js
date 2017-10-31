@@ -66,7 +66,7 @@ $(document).ready(function() {
 		});
 	});
 
-	$('.stickybtn .stickybtn2').parent().click(function() {
+	$('.stickybtn, .stickybtn2').parent().click(function() {
 		var str = changelink();
 		console.log('bonjour');
 		$(this).attr('href', $(this).attr('href') + str);
