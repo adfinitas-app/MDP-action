@@ -1,0 +1,696 @@
+@font-face {
+    font-family: 'museo700';
+    src: url('../font/Museo/Museo700-Regular-webfont.eot');
+    src: url('../font/Museo/Museo700-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Museo/Museo700-Regular-webfont.woff2') format('woff2'),
+         url('../font/Museo/Museo700-Regular-webfont.woff') format('woff'),
+         url('../font/Museo/Museo700-Regular-webfont.ttf') format('truetype'),
+         url('../font/Museo/Museo700-Regular-webfont.svg#museo700') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo500';
+    src: url('../font/Museo/Museo500-Regular-webfont.eot');
+    src: url('../font/Museo/Museo500-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Museo/Museo500-Regular-webfont.woff2') format('woff2'),
+         url('../font/Museo/Museo500-Regular-webfont.woff') format('woff'),
+         url('../font/Museo/Museo500-Regular-webfont.ttf') format('truetype'),
+         url('../font/Museo/Museo500-Regular-webfont.svg#museo500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo300';
+    src: url('../font/Museo/Museo300-Regular-webfont.eot');
+    src: url('../font/Museo/Museo300-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/Museo/Museo300-Regular-webfont.woff2') format('woff2'),
+         url('../font/Museo/Museo300-Regular-webfont.woff') format('woff'),
+         url('../font/Museo/Museo300-Regular-webfont.ttf') format('truetype'),
+         url('../font/Museo/Museo300-Regular-webfont.svg#museo300') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'leagueGothic';
+    src: url('../font/LeagueGothic/LeagueGothic-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#logo
+{
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+
+/* Table settings */
+.table
+{
+	display: table;
+	width: 100%;
+}
+
+.table-row
+{
+	display: table-row;
+}
+
+.table-cell
+{
+	display: table-cell;
+}
+
+.table-cell.top
+{
+	vertical-align: top;
+}
+
+.table-cell.bottom
+{
+	vertical-align: bottom;
+}
+
+.table-cell.middle
+{
+	vertical-align: middle;
+}
+/* End of Table settings */
+
+/* sticky button */
+.stickybtn
+{
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	z-index: 3;
+	color: white;
+	font-family: 'Open Sans Condensed';
+	background: #7f101f;
+	border-radius: 5px;
+	padding: 16px 40px;
+}
+
+.stickybtn2
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 3;
+	color: white;
+	width: 100%;
+	font-family: 'Open Sans Condensed';
+	background: #7f101f;
+	border-radius: 0px;
+	padding: 16px 0;
+	display: none;
+}
+
+header
+{
+	min-height: 100vh;
+	background: url('../img/bg-header-small.png') no-repeat;
+	background-size: cover;
+}
+
+@media screen and (min-width: 40em)
+{
+	header
+	{
+		background: url('../img/bg-header.png') no-repeat;
+		background-size: cover;
+	}
+}
+
+/* Texte: Partagez la chaleur des petits matins ! */
+header p
+{
+	color: white;
+	font-family: 'museo700';
+	font-size: 42px;
+	text-align: center;
+	margin-top: 200px;
+	line-height: 1.2;
+}
+
+#txt
+{
+	font-family: 'museo700';
+	text-align: center;
+	padding: 50px 0;
+}
+
+#txt div > p:first-child
+{
+	color: #7F101F;
+	text-transform: uppercase;
+	font-size: 20px;
+	line-height: 1.2;
+}
+
+#txt div > p:last-child
+{
+	font-size: 16px;
+	line-height: 1.2;
+}
+
+#chiffres
+{
+	background: #555555;
+	padding: 50px 0;
+}
+
+#temoignage
+{
+	background: url('../img/bg-temoignage.png') no-repeat top left;
+	background-size: cover;
+	background-position: right;
+	padding: 50px 0;
+	min-height: 100vh;
+}
+
+#temoignage > p
+{
+	color: white;
+	font-family: 'museo700';
+	line-height: 1.2;
+	text-align: center;
+	font-size: 26px;
+}
+
+#temoignage #text-plus
+{
+	color: white;
+	line-height: 1.2;
+	text-align: center;
+	display: none;
+}
+
+#temoignage .text
+{
+	color: #fedb38;
+	font-style: italic;
+	text-align: center;
+	line-height: 1.2;
+}
+
+#temoignage .container
+{
+	font-family: 'museo500';
+	position: relative;
+	max-width: 650px;
+	display: inline-block;
+}
+
+#temoignage #nono
+{
+	color: white;
+	text-align: center;
+	line-height: 1.2;
+	font-family: 'museo700';
+	display: none;
+}
+
+#temoignage #confidentialite
+{
+	color: white;
+	text-align: center;
+	line-height: 1.2;
+	font-size: 10px;
+	display: none;
+}
+
+#objectifs
+{
+	min-height: 100vh;
+}
+
+#objectifs .even
+{
+	background: #fed631;
+}
+
+#objectifs .odd
+{
+	background: #f6ca30;
+}
+
+#objectifs .table
+{
+	min-height: 300px;
+	height: 50vh;
+}
+
+#objectifs .title
+{
+	font-family: 'museo700';
+	color: #7e101f;
+	font-size: 22px;
+	text-transform: uppercase;
+	line-height: 1.2;
+	margin-bottom: 0;
+	margin-top: 20px;
+}
+
+#objectifs .text
+{
+	font-family: 'museo500';
+	color: black;
+	line-height: 1.2;
+	font-size: 16px;
+	margin-bottom: 0;
+	max-width: 300px;
+	display: inline-block;
+}
+
+#objectifs .red-aide
+{
+	background: #7e101f;
+}
+
+#objectifs .red-aide p
+{
+	color: white;
+	font-family: 'museo700';
+	font-size: 32px;
+	line-height: 1.2;
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+
+#objectifs .red-aide p span
+{
+	font-family: 'museo300';
+	position: relative;
+}
+
+#objectifs .red-aide .top1
+{
+	top: -115px;
+	left: 30px;
+}
+
+#objectifs .red-aide .top2
+{
+	top: -130px;
+	left: 77px;
+}
+
+#objectifs .red-aide .top3
+{
+	top: -115px;
+	left: 110px;
+}
+
+#objectifs .red-aide .bot1
+{
+	top: 85px;
+	left: 30px;
+}
+
+#objectifs .red-aide .bot2
+{
+	top: 90px;
+	left: 77px;
+}
+
+#objectifs .red-aide .bot3
+{
+	top: 85px;
+	left: 110px;
+}
+@media screen and (min-width: 40em) and (max-width: 63.9375em)
+{
+	#objectifs .red-aide p
+	{
+		font-size: 26px;
+	}
+
+	#objectifs .red-aide .top1
+	{
+		top: -115px;
+		left: 10px;
+	}
+
+	#objectifs .red-aide .top2
+	{
+		top: -130px;
+		left: 57px;
+	}
+
+	#objectifs .red-aide .top3
+	{
+		top: -115px;
+		left: 90px;
+	}
+
+	#objectifs .red-aide .bot1
+	{
+		top: 85px;
+		left: 10px;
+	}
+
+	#objectifs .red-aide .bot2
+	{
+		top: 90px;
+		left: 57px;
+	}
+
+	#objectifs .red-aide .bot3
+	{
+		top: 85px;
+		left: 90px;
+	}
+
+}
+/* Large and up */
+@media screen and (min-width: 64em)
+{
+	#objectifs .even:not(.firstchild)
+	{
+		background: #f6ca30;
+	}
+
+	#objectifs .odd
+	{
+		background: #fed631;
+	}
+}
+
+#don
+{
+	margin-top: -1px;
+	min-height: 100vh;
+	background: url('../img/bg-don.png') no-repeat center;
+	background-size: cover;
+	color: white;
+}
+
+#don .left p
+{
+	font-family: 'museo700';
+	font-size: 32px;
+	line-height: 1.2;
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+
+#don .right .container
+{
+	max-width: 300px;
+	display: inline-block;
+}
+
+#don .right .container p
+{
+	font-family: 'museo300';
+	font-size: 16px;
+	line-height: 1.2;
+	margin-top: 20px;
+}
+
+#don #transparancy
+{
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 30px;
+}
+
+#don .v
+{
+	margin: 30px 0 20px 0;
+}
+
+#don .price
+{
+	font-size: 50px;
+	color: #961225;
+	font-family: 'museo700';
+	margin-bottom: 0px;
+	line-height: 1.1;
+}
+
+#don .deduction
+{
+	font-size: 16px;
+	color: #961225;
+	font-family: 'museo300';
+	line-height: 1.2;
+	max-width: 180px;
+	display: inline-block;
+}
+
+#don .text
+{
+	font-size: 16px;
+	color: black;
+	font-family: 'museo300';
+	line-height: 1.2;
+	padding: 0 20px;
+	height: 140px;
+}
+
+#don .priceCard
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin-top: 0.9375rem;
+	transition: 0.2s all;
+}
+
+#don .priceCard:hover
+{
+	transform: scale(1.05);
+}
+
+#don .priceCard button
+{
+	width: 100%;
+	color: white;
+	font-family: 'Open Sans Condensed', sans-serif;
+	padding: 20px;
+	border-radius: 0;
+}
+
+#don #autre
+{
+	text-align: center;
+	color: white;
+	font-family: 'Open Sans Condensed', sans-serif;
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	text-decoration: underline;
+}
+
+.priceCol:nth-child(1) .btn-don
+{
+	background: #760c1a;
+}
+
+.priceCol:nth-child(2) .btn-don
+{
+	background: #850e1f;
+}
+
+.priceCol:nth-child(3) .btn-don
+{
+	background: #961225;
+}
+
+.priceCol:nth-child(1) .priceCard
+{
+	background: #e8e8e8;
+}
+.priceCol:nth-child(2) .priceCard
+{
+	background: #f2f2f2;
+}
+.priceCol:nth-child(3) .priceCard
+{
+	background: #ffffff;
+	margin-bottom: 30px;
+}
+
+/* medium and up */
+@media screen and (min-width: 40em)
+{
+	#don
+	{
+		padding-top: 1px;
+	}
+
+	#don #transparancy
+	{
+		margin-top: 20px;
+	}
+
+	#don .priceCard
+	{
+		margin: 0;
+	}
+}
+
+footer
+{
+	background: #2b2b2b;
+	color: #ababab;
+	text-align: center;
+	padding: 1px 30px;
+}
+
+footer .rejoignez
+{
+	margin-bottom: 0;
+	height: 30px;
+}
+
+footer .logo-fb
+{
+	background: #b52c3a;
+	border-radius: 30px;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	margin-left: 10px;
+	position: relative;
+	top: -5px;
+	text-align: center;
+}
+
+footer .logo-fb img
+{
+	position: relative;
+	top: 5px;
+}
+
+footer .title
+{
+	font-family: 'leagueGothic';
+	margin-bottom: 5px;
+	line-height: 1.2;
+	font-size: 26px;
+	text-align: left;
+}
+
+footer .text
+{
+	font-family: arial;
+	font-size: 16px;
+	color: #7a7a7a;
+	text-align: left;
+	line-height: 1.2;
+	margin-bottom: 10px;
+}
+
+footer .link
+{
+	text-align: left;
+}
+
+footer .link img
+{
+	margin-right: 5px;
+	position: relative;
+	top: -1px;
+}
+
+footer .link a
+{
+	color: white;
+	font-size: 14px;
+}
+
+footer #isf
+{
+	color: #7a7a7a;
+	font-size: 12px;
+	text-align: left;
+	line-height: 1.2;
+	padding-top: 15px;
+	border-bottom: 1px solid #252525;
+	border-top: 1px solid #252525;
+	padding-bottom: 15px;
+	margin-bottom: 16px;
+}
+
+footer .footer-link
+{
+	max-width: 150px;
+	text-align: left;
+}
+
+footer .footer-link a
+{
+	color: #acacac;
+}
+
+footer #border-small
+{
+	border-bottom: 1px solid #252525;
+}
+
+footer .hideBorder
+{
+	padding-top: 18px;
+}
+
+@media screen and (min-width: 40em)
+{
+	footer .hideBorder
+	{
+		border-left: 1px solid #252525;
+		padding-left: 20px;
+		min-height: 440px;
+	}
+
+	#rowfooter
+	{
+		margin-top: 18px;
+	}
+
+	#border-small
+	{
+		border-bottom: none !important;
+	}
+}
+
+#guillemet-left
+{
+	position: absolute;
+	top: 0px;
+	left: -10px;
+	width: 10px;
+}
+
+#guillemet-right
+{
+	position: absolute;
+	bottom: 0px;
+	right: -10px;
+	width: 10px;
+}
+
+@media screen and (min-width: 64em)
+{
+	#guillemet-left
+	{
+		position: absolute;
+		top: 0px;
+		left: -50px;
+		width: 17px;
+	}
+
+	#guillemet-right
+	{
+		position: absolute;
+		bottom: 0px;
+		right: -20px;
+		width: 17px;
+	}
+
+}
