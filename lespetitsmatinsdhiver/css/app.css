@@ -43,6 +43,7 @@
 
 #logo
 {
+	z-index: 2;
 	position: absolute;
 	top: 30px;
 	left: 30px;
@@ -93,6 +94,7 @@
 	background: #7f101f;
 	border-radius: 5px;
 	padding: 16px 40px;
+	cursor: pointer;
 }
 
 .stickybtn2
@@ -108,6 +110,7 @@
 	border-radius: 0px;
 	padding: 16px 0;
 	display: none;
+	cursor: pointer;
 }
 
 header
@@ -131,37 +134,69 @@ header p
 {
 	color: white;
 	font-family: 'museo700';
-	font-size: 42px;
+	font-size: 40px;
 	text-align: center;
 	margin-top: 200px;
 	line-height: 1.2;
+	text-shadow: 0px 0px 30px rgba(50, 50, 50, 0.5);
 }
 
 #txt
 {
 	font-family: 'museo700';
 	text-align: center;
-	padding: 50px 0;
+	padding: 55px 0;
 }
 
 #txt div > p:first-child
 {
 	color: #7F101F;
 	text-transform: uppercase;
-	font-size: 20px;
+	font-size: 26px;
 	line-height: 1.2;
+	margin-bottom: 30px;
 }
 
 #txt div > p:last-child
 {
-	font-size: 16px;
+	font-size: 21px;
 	line-height: 1.2;
+	margin-bottom: 5px;
 }
 
 #chiffres
 {
 	background: #555555;
-	padding: 50px 0;
+	padding: 60px 0;
+}
+
+#chiffres p:first-child
+{
+	font-size: 89px;
+	margin: 0;
+	line-height: 0.75;
+}
+
+#chiffres p:last-child
+{
+	line-height: 1.2;
+}
+
+@media screen and (min-width: 64em) {
+	#marge-left-large
+	{
+		margin-left: 35px;
+	}
+
+	#cercle
+	{
+		margin-left: 50px;
+	}
+
+	header p
+	{
+		font-size: 64px;
+	}
 }
 
 #temoignage
@@ -173,13 +208,28 @@ header p
 	min-height: 100vh;
 }
 
+#temoignage .column
+{
+	min-height: 1100px;
+}
+
+@media screen and (min-width: 40em)
+{
+	#temoignage .column
+	{
+		min-height: 720px;
+	}
+}
+
 #temoignage > p
 {
 	color: white;
 	font-family: 'museo700';
 	line-height: 1.2;
 	text-align: center;
-	font-size: 26px;
+	font-size: 35px;
+	margin-bottom: 30px;
+	margin-top: 40px;
 }
 
 #temoignage #text-plus
@@ -188,6 +238,8 @@ header p
 	line-height: 1.2;
 	text-align: center;
 	display: none;
+	font-size: 19px;
+	max-width: 583px;
 }
 
 #temoignage .text
@@ -196,13 +248,16 @@ header p
 	font-style: italic;
 	text-align: center;
 	line-height: 1.2;
+	font-size: 22px;
+	color: #fedb38;
+	margin-bottom: 30px;
 }
 
 #temoignage .container
 {
 	font-family: 'museo500';
 	position: relative;
-	max-width: 650px;
+	max-width: 600px;
 	display: inline-block;
 }
 
@@ -213,6 +268,7 @@ header p
 	line-height: 1.2;
 	font-family: 'museo700';
 	display: none;
+	font-size: 18px;
 }
 
 #temoignage #confidentialite
@@ -220,7 +276,7 @@ header p
 	color: white;
 	text-align: center;
 	line-height: 1.2;
-	font-size: 10px;
+	font-size: 12px;
 	display: none;
 }
 
@@ -249,7 +305,7 @@ header p
 {
 	font-family: 'museo700';
 	color: #7e101f;
-	font-size: 22px;
+	font-size: 24px;
 	text-transform: uppercase;
 	line-height: 1.2;
 	margin-bottom: 0;
@@ -483,8 +539,23 @@ header p
 	font-family: 'Open Sans Condensed', sans-serif;
 	display: block;
 	width: 100%;
-	margin-top: 10px;
+	margin-bottom: 30px;
 	text-decoration: underline;
+	text-transform: uppercase;
+}
+
+#don .btn-don
+{
+	cursor: pointer;
+}
+
+@media screen and (min-width: 40em)
+{
+	#don #autre
+	{
+		margin-bottom: 0;
+		margin-top: 25px;
+	}
 }
 
 .priceCol:nth-child(1) .btn-don
@@ -698,4 +769,14 @@ footer .hideBorder
 		width: 17px;
 	}
 
+}
+
+/* IPHONE5 FIX */
+
+@media screen and (max-width: 380px)
+{
+	#chiffres p:first-child
+	{
+		font-size: 70px;
+	}
 }
