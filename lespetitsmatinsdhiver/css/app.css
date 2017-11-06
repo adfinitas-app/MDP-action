@@ -116,16 +116,16 @@
 header
 {
 	min-height: 100vh;
-	background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header-small.png') no-repeat;
-	background-size: cover;
+	/*background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header-small.png') no-repeat;
+	background-size: cover;*/
 }
 
 @media screen and (min-width: 40em)
 {
 	header
 	{
-		background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.jpg') no-repeat;
-		background-size: cover;
+		/*background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.jpg') no-repeat;
+		background-size: cover;*/
 	}
 }
 
@@ -141,11 +141,27 @@ header p
 	text-shadow: 0px 0px 30px rgba(50, 50, 50, 0.5);
 }
 
+header .bgvideo
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	transform: translateX(-50%) translateY(-50%);
+	background-size: cover;
+	transition: 1s opacity;
+}
+
 #txt
 {
 	font-family: 'museo700';
 	text-align: center;
 	padding: 55px 0;
+	background-color: white;
 }
 
 #txt div > p:first-child
