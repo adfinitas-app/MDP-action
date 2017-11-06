@@ -129,8 +129,8 @@ header
 {
 	header
 	{
-		background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.jpg') no-repeat;
-		background-size: cover;
+		/*background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.jpg') no-repeat;
+		background-size: cover;*/
 		background: none;
 	}
 }
@@ -161,7 +161,6 @@ header .bgvideo
 	transform: translateX(-50%) translateY(-50%);
 	background-size: cover;
 	transition: 1s opacity;
-	display: none;
 }
 
 #txt
