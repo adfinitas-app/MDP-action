@@ -120,7 +120,6 @@
 
 header
 {
-	height: 100vh;
 	min-height: 100vh;
 	background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header-small.png') no-repeat;
 	background-size: cover;
@@ -130,8 +129,9 @@ header
 {
 	header
 	{
-		background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.jpg') no-repeat;
-		background-size: cover;
+		/*background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.jpg') no-repeat;
+		background-size: cover;*/
+		background: none;
 	}
 }
 
@@ -149,14 +149,14 @@ header p
 
 header .bgvideo
 {
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	left: 50%;
 	min-width: 100%;
 	min-height: 100%;
 	width: auto;
 	height: auto;
-	z-index: 1;
+	z-index: -1;
 	transform: translateX(-50%) translateY(-50%);
 	background-size: cover;
 	transition: 1s opacity;
