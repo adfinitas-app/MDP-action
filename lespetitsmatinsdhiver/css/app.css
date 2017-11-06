@@ -415,37 +415,37 @@ header .bgvideo
 	#objectifs .red-aide .top1
 	{
 		top: -115px;
-		left: 10px;
+		left: 15px;
 	}
 
 	#objectifs .red-aide .top2
 	{
 		top: -130px;
-		left: 57px;
+		left: 62px;
 	}
 
 	#objectifs .red-aide .top3
 	{
 		top: -115px;
-		left: 90px;
+		left: 95px;
 	}
 
 	#objectifs .red-aide .bot1
 	{
 		top: 85px;
-		left: 10px;
+		left: 15px;
 	}
 
 	#objectifs .red-aide .bot2
 	{
 		top: 90px;
-		left: 57px;
+		left: 62px;
 	}
 
 	#objectifs .red-aide .bot3
 	{
 		top: 85px;
-		left: 90px;
+		left: 95px;
 	}
 
 }
