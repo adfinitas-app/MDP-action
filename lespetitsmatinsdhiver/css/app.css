@@ -129,8 +129,8 @@ header
 {
 	header
 	{
-		/*background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.jpg') no-repeat;
-		background-size: cover;*/
+		background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.jpg') no-repeat;
+		background-size: cover;
 		background: none;
 	}
 }
@@ -144,7 +144,8 @@ header p
 	text-align: center;
 	margin-top: 200px;
 	line-height: 1.2;
-	text-shadow: 0px 0px 30px rgba(50, 50, 50, 0.5);
+	text-shadow: 0px 0px 10px rgba(50, 50, 50, 0.5);
+	padding: 0 10px;
 }
 
 header .bgvideo
@@ -160,6 +161,7 @@ header .bgvideo
 	transform: translateX(-50%) translateY(-50%);
 	background-size: cover;
 	transition: 1s opacity;
+	display: none;
 }
 
 #txt
@@ -196,7 +198,7 @@ header .bgvideo
 
 #chiffres p:first-child
 {
-	font-size: 88px;
+	font-size: 89px;
 	margin: 0;
 	line-height: 0.75;
 }
@@ -801,6 +803,6 @@ footer .hideBorder
 {
 	#chiffres p:first-child
 	{
-		font-size: 70px;
+		font-size: 60px;
 	}
 }
