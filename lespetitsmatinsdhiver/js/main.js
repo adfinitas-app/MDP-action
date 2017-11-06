@@ -140,6 +140,43 @@ $(document).ready(function() {
 		return str;
 	}
 
+	function setDefault()
+	{
+
+	}
+
+	function animate()
+	{
+		top1.animate({
+			top: '-125px',
+			left: '20px'
+		}, 'fast');
+		top2.animate({
+			top: '-140px'
+		}, 'fast');
+		top3.animate({
+			top: '-125px',
+			left: '120px'
+		}, 'fast');
+	}
+
+	function startAnimation()
+	{
+		var i = 0;
+		var intervalId = setInterval(function() {
+			if (i % 2 === 0) {
+				animate();
+			} else {
+				setDefault();
+			}
+			i++;
+			if (i > 20) {
+				console.log('finished');
+				clearInterval(intervalId);
+			}
+		}, 700);
+	}
+
 	/* MAIN */
 
 	var isMob = isMobile();
@@ -154,4 +191,14 @@ $(document).ready(function() {
 		}
 	}
 	var str = changelink();
+
+	var top1 = $('.top1');
+	var top2 = $('.top2');
+	var top3 = $('.top3');
+
+	var bot1 = $('.bot1');
+	var bot2 = $('.bot2');
+	var bot3 = $('.bot3');
+
+	startAnimation();
 });
