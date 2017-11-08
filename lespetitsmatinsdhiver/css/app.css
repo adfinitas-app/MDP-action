@@ -121,7 +121,7 @@
 header
 {
 	min-height: 100vh;
-	/*background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header-small.png') no-repeat;*/
+	background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header-small.png') no-repeat;
 	background-size: cover;
 }
 
