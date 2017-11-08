@@ -807,3 +807,20 @@ footer .hideBorder
 		font-size: 60px;
 	}
 }
+
+
+#container-video {
+	overflow: hidden;
+	height: 100vh;
+	background: #edeae8;
+	position: relative;
+	z-index: -1;
+}
+
+video {
+	position: absolute;
+
+	/* Vertical and Horizontal center*/
+	left: 50%; top: 50%;
+	transform: translate(-50%, -50%);
+}
