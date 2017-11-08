@@ -8,14 +8,20 @@
 	<link rel="stylesheet" type="text/css" title="stylesheet" href="css/foundation.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
 	<link rel="icon" type="image/png" href="/siteicon.png" />
+
 </head>
 <body style="min-width: 200px;">
 	<a href="https://donner.miedepain.asso.fr/b?cid=49&wv_email=[[data:email]]&wv_firstname=[[data:firstname]]&wv_lastname=[[data:lastname]]=&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA&amount=10000" target="_blank"><button class="stickybtn">JE FAIS UN DON</button></a>
 	<a href="https://donner.miedepain.asso.fr/b?cid=49&wv_email=[[data:email]]&wv_firstname=[[data:firstname]]&wv_lastname=[[data:lastname]]=&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA&amount=10000" target="_blank"><button class="stickybtn2 hide-for-medium">JE FAIS UN DON</button></a>
 	<header class="">
 		<a href="http://www.miedepain.asso.fr/" target="_blank"><img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/logo.png" alt="Logo" id="logo"/></a>
-		<video autoplay loop muted class="bgvideo show-for-medium"><source src="video/Fume1920x1080.mp4" type="video/mp4"/></video>
-		<div class="table" style="height: 100vh;">
+		<div id="container-video" class="show-for-medium">
+			<video autoplay muted loop>
+				<source src="video/Fume.mp4" type="video/mp4"></source>
+			</video>
+		</div>
+		<!-- <video autoplay loop muted class="bgvideo show-for-medium"><source src="video/Fume1920x1080.mp4" type="video/mp4"/></video> -->
+		<div class="table" style="height: 100vh;position: absolute;top: 0;z-index: 2;">
 			<div class="table-row">
 				<div class="table-cell top">
 					<div style="overflow-x: hidden;">
@@ -314,5 +320,63 @@
 	<script src="js/vendor/foundation.min.js"></script>
 	<script src="js/app.js"></script>
 	<script src="js/main.js"></script>
+	<script>
+	// JS
+	var video = document.querySelector('video')
+	, container = document.querySelector('#container-video');
+
+	var setVideoDimensions = function () {
+		// Video's intrinsic dimensions
+		var w = video.videoWidth
+		, h = video.videoHeight;
+
+		// Intrinsic Ratio
+		// Will be more than 1 if W > H and less if W < H
+		var videoRatio = (w / h).toFixed(2);
+
+		// Get the container's computed styles
+		//
+		// Also calculate the min dimensions required (this will be
+		// the container dimentions)
+		var containerStyles = window.getComputedStyle(container)
+		, minW = parseInt( containerStyles.getPropertyValue('width') )
+		, minH = parseInt( containerStyles.getPropertyValue('height') );
+
+		// What's the min:intrinsic dimensions
+		//
+		// The idea is to get which of the container dimension
+		// has a higher value when compared with the equivalents
+		// of the video. Imagine a 1200x700 container and
+		// 1000x500 video. Then in order to find the right balance
+		// and do minimum scaling, we have to find the dimension
+		// with higher ratio.
+		//
+		// Ex: 1200/1000 = 1.2 and 700/500 = 1.4 - So it is best to
+		// scale 500 to 700 and then calculate what should be the
+		// right width. If we scale 1000 to 1200 then the height
+		// will become 600 proportionately.
+		var widthRatio = minW / w
+		, heightRatio = minH / h;
+
+		// Whichever ratio is more, the scaling
+		// has to be done over that dimension
+		if (widthRatio > heightRatio && 1 == 1) {
+			console.log('Width radio');
+			var newWidth = minW;
+			var newHeight = Math.ceil( parseInt(newWidth + 10) / videoRatio );
+		}
+		else {
+			console.log('Height radio');
+			var newHeight = minH;
+			var newWidth = Math.ceil( newHeight * videoRatio );
+		}
+
+		video.style.width = newWidth + 'px';
+		video.style.height = newHeight + 'px';
+	};
+
+	video.addEventListener('loadedmetadata', setVideoDimensions, false);
+	window.addEventListener('resize', setVideoDimensions, false);
+	</script>
 </body>
 </html>
