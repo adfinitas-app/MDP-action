@@ -11,8 +11,8 @@
 
 </head>
 <body style="min-width: 200px;">
-	<a href="https://donner.miedepain.asso.fr/b?cid=49&wv_email=[[data:email]]&wv_firstname=[[data:firstname]]&wv_lastname=[[data:lastname]]=&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA&amount=10000" target="_blank"><button class="stickybtn">JE FAIS UN DON</button></a>
-	<a href="https://donner.miedepain.asso.fr/b?cid=49&wv_email=[[data:email]]&wv_firstname=[[data:firstname]]&wv_lastname=[[data:lastname]]=&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA&amount=10000" target="_blank"><button class="stickybtn2 hide-for-medium">JE FAIS UN DON</button></a>
+	<a href="https://donner.miedepain.asso.fr/b?cid=49&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA&amount=10000" target="_blank"><button class="stickybtn">JE FAIS UN DON</button></a>
+	<a href="https://donner.miedepain.asso.fr/b?cid=49&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA&amount=10000" target="_blank"><button class="stickybtn2 hide-for-medium">JE FAIS UN DON</button></a>
 	<header class="">
 		<a href="http://www.miedepain.asso.fr/" target="_blank"><img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/logo.png" alt="Logo" id="logo"/></a>
 		<div id="container-video" class="show-for-medium">
@@ -196,7 +196,7 @@
 				</div>
 				<div class="row medium-collapse">
 					<div class="column small-12 medium-4 text-center priceCol">
-						<a href="https://donner.miedepain.asso.fr/b?cid=49&wv_email=[[data:email]]&wv_firstname=[[data:firstname]]&wv_lastname=[[data:lastname]]=&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA-55&amount=5500" target="_blank" class="priceCard" id="eq1">
+						<a href="https://donner.miedepain.asso.fr/b?cid=49&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA-55&amount=5500" target="_blank" class="priceCard" id="eq1">
 							<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/don-v.png" alt="v" class="v"/>
 							<p class="price">55€</p>
 							<p class="deduction">(soit 13,75€ après réduction fiscale)</p>
@@ -205,7 +205,7 @@
 						</a>
 					</div>
 					<div class="column small-12 medium-4 text-center priceCol">
-						<a href="https://donner.miedepain.asso.fr/b?cid=49&wv_email=[[data:email]]&wv_firstname=[[data:firstname]]&wv_lastname=[[data:lastname]]=&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA-100&amount=10000" target="_blank" class="priceCard" id="eq2">
+						<a href="https://donner.miedepain.asso.fr/b?cid=49&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA-100&amount=10000" target="_blank" class="priceCard" id="eq2">
 							<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/don-v.png" alt="v" class="v"/>
 							<p class="price">100€</p>
 							<p class="deduction">(soit 25€ après réduction fiscale)</p>
@@ -214,7 +214,7 @@
 						</a>
 					</div>
 					<div class="column small-12 medium-4 text-center priceCol">
-						<a href="https://donner.miedepain.asso.fr/b?cid=49&wv_email=[[data:email]]&wv_firstname=[[data:firstname]]&wv_lastname=[[data:lastname]]=&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA-165&amount=16500" target="_blank" class="priceCard" id="eq3">
+						<a href="https://donner.miedepain.asso.fr/b?cid=49&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA-165&amount=16500" target="_blank" class="priceCard" id="eq3">
 							<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/don-v.png" alt="v" class="v"/>
 							<p class="price">165€</p>
 							<p class="deduction">(soit 41,25€ après réduction fiscale)</p>
@@ -225,7 +225,7 @@
 				</div>
 				<div class="row">
 					<div class="column small-12 medium-offset-4 medium-4 end">
-						<p><a href="https://donner.miedepain.asso.fr/b?cid=49&wv_email=[[data:email]]&wv_firstname=[[data:firstname]]&wv_lastname=[[data:lastname]]=&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA-165&amount=16500" target="_blank" id="autre">Je donne un autre montant</a></p>
+						<p><a href="https://donner.miedepain.asso.fr/b?cid=49&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA-165&amount=16500" target="_blank" id="autre">Je donne un autre montant</a></p>
 					</div>
 				</div>
 
@@ -378,6 +378,29 @@
 
 	video.addEventListener('loadedmetadata', setVideoDimensions, false);
 	window.addEventListener('resize', setVideoDimensions, false);
+	</script>
+	<script>
+	var query = p;
+	var str = '';
+	var url = 'https://donner.miedepain.asso.fr/b?cid=49';
+	if ('wv_email' in query) {
+		str += '&' + 'email=' + query['wv_email'];
+	}
+	if ('wv_firstname' in query) {
+		str += '&' + 'firstname=' + query['wv_firstname'];
+	}
+	if ('wv_lastname' in query) {
+		str += '&' + 'lastname=' + query['wv_lastname'];
+	}
+
+	$('#eq1').attr('href', url + '&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA-55&amount=5500' + str);
+	$('#eq2').attr('href', url + '&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA-100&amount=10000' + str);
+	$('#eq3').attr('href', url + '&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA-165&amount=16500' + str);
+	$('#autre').attr('href', url + '&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA-AUTRE' + str);
+
+
+	$('.stickybtn').parent('a').attr('href', url + '&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA&amount=10000' + str);
+	$('.stickybtn2').parent('a').attr('href', url + '&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA&amount=10000' + str);
 	</script>
 </body>
 </html>
