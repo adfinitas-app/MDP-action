@@ -174,7 +174,7 @@ header .bgvideo
 	z-index: 4;
 }
 
-#txt div > p:first-child
+#txt p.bigger-red
 {
 	color: #7F101F;
 	text-transform: uppercase;
@@ -183,7 +183,7 @@ header .bgvideo
 	margin-bottom: 30px;
 }
 
-#txt div > p:last-child
+#txt p.normal
 {
 	font-size: 23px;
 	line-height: 1.2;
