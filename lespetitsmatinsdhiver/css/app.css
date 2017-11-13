@@ -46,7 +46,7 @@
     font-style: normal;
 }
 
-#logo
+#logo-small
 {
 	z-index: 11;
 	position: absolute;
@@ -55,13 +55,13 @@
 	width: 60px;
 }
 
-@media screen and (min-width: 40em) {
-	#logo
-	{
-		width: 82px;
-		top: 30px;
-		left: 30px;
-	}
+#logo
+{
+	z-index: 11;
+	position: absolute;
+	width: 82px;
+	top: 30px;
+	left: 30px;
 }
 
 /* Table settings */
