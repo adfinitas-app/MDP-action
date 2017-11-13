@@ -59,6 +59,8 @@
 	#logo
 	{
 		width: 82px;
+		top: 30px;
+		left: 30px;
 	}
 }
 
@@ -140,6 +142,12 @@ header
 		/*background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.jpg') no-repeat;
 		background-size: cover;*/
 		background: none;
+	}
+
+	.stickybtn
+	{
+		top: 30px;
+		right: 30px;
 	}
 }
 
