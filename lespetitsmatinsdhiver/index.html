@@ -328,7 +328,6 @@
 	, container = document.querySelector('#container-video');
 
  	//tablette fix
-	video.play();
 	var setVideoDimensions = function () {
 		// Video's intrinsic dimensions
 		var w = video.videoWidth
@@ -379,7 +378,11 @@
 		video.style.height = newHeight + 'px';
 	};
 
-	video.addEventListener('loadedmetadata', setVideoDimensions, false);
+	video.addEventListener('loadedmetadata', function() {
+		setVideoDimensions();
+		video.play();
+		alert('video.play()');
+	}, false);
 	window.addEventListener('resize', setVideoDimensions, false);
 	</script>
 	<script>
