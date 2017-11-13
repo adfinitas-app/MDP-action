@@ -843,7 +843,8 @@ footer .hideBorder
 
 video {
 	position: absolute;
-
+	background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.jpg')
+	background-size: cover;
 	/* Vertical and Horizontal center*/
 	left: 50%; top: 50%;
 	transform: translate(-50%, -50%);
