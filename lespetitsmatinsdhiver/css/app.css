@@ -836,15 +836,15 @@ footer .hideBorder
 #container-video {
 	overflow: hidden;
 	height: 100vh;
-	background: #edeae8;
+	background-color: #edeae8;
 	position: relative;
 	z-index: -1;
+	background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.jpg');
+	background-size: cover;
 }
 
 video {
 	position: absolute;
-	background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.jpg')
-	background-size: cover;
 	/* Vertical and Horizontal center*/
 	left: 50%; top: 50%;
 	transform: translate(-50%, -50%);
