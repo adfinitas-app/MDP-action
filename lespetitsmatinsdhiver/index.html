@@ -350,12 +350,12 @@
 		// Whichever ratio is more, the scaling
 		// has to be done over that dimension
 		if (widthRatio > heightRatio && 1 == 1) {
-			console.log('Width radio');
+//			console.log('Width radio');
 			var newWidth = minW;
 			var newHeight = Math.ceil( parseInt(newWidth + 10) / videoRatio );
 		}
 		else {
-			console.log('Height radio');
+//			console.log('Height radio');
 			var newHeight = minH;
 			var newWidth = Math.ceil( newHeight * videoRatio );
 		}
