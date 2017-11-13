@@ -839,8 +839,15 @@ footer .hideBorder
 	background-color: #edeae8;
 	position: relative;
 	z-index: -1;
-	background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.jpg');
+	background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header-small.jpg');
 	background-size: cover;
+}
+
+@media screen and (min-width: 40em)
+{
+	#container-video {
+		background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.jpg');
+	}
 }
 
 video {
