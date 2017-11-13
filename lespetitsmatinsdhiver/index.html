@@ -371,7 +371,15 @@
 	window.addEventListener('resize', setVideoDimensions, false);
 	</script>
 	<script>
-	var query = p;
+	function extractUrlParams(){
+   var t = document.location.search.substring(1).split('&'); var f = [];
+   for (var i=0; i<t.length; i++){
+       var x = t[ i ].split('=');
+       f[x[0]]=decodeURIComponent(x[1]);
+   }
+   return f;
+};
+	var query = extractUrlParams();
 	var str = '';
 	var url = 'https://donner.miedepain.asso.fr/b?cid=49';
 	if ('wv_email' in query) {
