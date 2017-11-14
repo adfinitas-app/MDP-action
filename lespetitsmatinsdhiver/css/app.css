@@ -474,7 +474,7 @@ header .bgvideo
 
 }
 /* Large and up */
-@media screen and (min-width: 64em)
+@media screen and (min-width: 40em)
 {
 	#objectifs .even:not(.firstchild)
 	{
@@ -832,7 +832,6 @@ footer .hideBorder
 	}
 }
 
-
 #container-video {
 	overflow: hidden;
 	height: 100vh;
@@ -851,7 +850,8 @@ footer .hideBorder
 	}
 }
 
-video {
+video
+{
 	position: absolute;
 	z-index: 1;
 	/* Vertical and Horizontal center*/
