@@ -402,7 +402,7 @@
 	$('.stickybtn2').parent('a').attr('href', url + '&utm_source=LP&utm_campaign=NOEL17&utm_content=DON-CTA&amount=10000' + str);
 	</script>
 	
-	<script>
+<script>
 function loadScript(url, callback){
 	var head = document.getElementsByTagName('head')[0];
 	var script = document.createElement('script');
@@ -420,13 +420,15 @@ loadScript("https://www.adfinitas.fr/cdn/lib/adfinitracks.min.js",function(){
 			writeKey: 'CE7BE74695CFFC8403DA8E1AC05BAFF95228C1DF4F6C4FD7880F8D48B7A8F4D8'
 		});
 		p = adfinitracks.extractUrlParams();
-		var eenc = "";
+		var eenc = "", mbzid = "";
 		"eenc" in p ? eenc = p["eenc"] : false;
+		"mbzid" in p ? mbzid = p["mbzid"] : false;
 		client.recordEvent('pageview', {
 			title			: document.title,
 			url	 			: document.location.href,
 			user			: {"uuid": adfinitracks.getUniqueId(),
 								"md5": eenc,
+								"id_mesopmindbaz": mbzid,
 								"organization": "miedepain.asso.fr"},
 			device			: adfinitracks.getDevice()
 		});
@@ -436,6 +438,7 @@ loadScript("https://www.adfinitas.fr/cdn/lib/adfinitracks.min.js",function(){
 				url	 			: document.location.href,
 				user			: {"uuid": adfinitracks.getUniqueId(),
 						   			"md5": eenc,
+						   			"id_mesopmindbaz": mbzid,
 						   			"organization": "miedepain.asso.fr"},
 				device  		: adfinitracks.getDevice(),
 				duration 		: 30
