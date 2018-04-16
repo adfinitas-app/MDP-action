@@ -6,241 +6,314 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Passerelles d'avenir</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.css" />
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700' rel='stylesheet' type='text/css' />
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700' rel='stylesheet' type='text/css' />
 	<link rel='stylesheet' href='assets/css/app.css' type='text/css'/>
 	<link rel="stylesheet" href="assets/css/remodal.css">
 	<link rel="stylesheet" href="assets/css/remodal-default-theme.css">
 </head>
 <body>
+<header>
 	<div class="row expanded top-bar">
-		<a href="http://www.miedepain.asso.fr/" target="_blank"><img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/logo.png" alt="La Mie de Pain"></a>
-		<a href="https://donner.miedepain.asso.fr/b?cid=42&lang=fr_FR" target="_blank"><button type="button" class="btn">Je fais un don</button></a>
+		<a href="http://www.miedepain.asso.fr/" target="_blank"><img id="logo" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/logo.png" alt="La Mie de Pain"></a>
+		<a href="https://donner.miedepain.asso.fr/b?cid=55&amount=200000" target="_blank" id="don-header" class="link-woopra"><button type="button" class="btn">Je fais un don</button></a>
 	</div>
-	<header>
-		<div class="row expanded header">
-			<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/label.png" alt="Passerelles d'avenir 2017">
-			<h1>Passerelles d'avenir</h1>
-			<h2>Prenez part à un dispositif innovant pour l’insertion</h2>
-			<p>Retour sur un parcours d’insertion réussi</p>
-			<a href="#video-modal"><button type="button" class="btn video">Je découvre la vidéo</button></a>
-			<img id="bt-scroll-header" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/arrow-down.png" alt="Cliquez pour afficher la prochaine aprtie">
-		</div>		
-	</header>
-	<div class="remodal" data-remodal-id="video-modal">
-		<div class="video-container">
-			<button data-remodal-action="close" class="remodal-close"></button>
-			<iframe src="https://player.vimeo.com/video/213200684" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<div class="row expanded header">
+		<div class="row max-width">
+			<div class="small-12 large-9 columns small-centered">
+				<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/label.png" alt="Passerelles d'avenir 2018">
+				<h1>TRANSFORMEZ VOTRE IFI EN<br />PASSERELLES D’AVENIR POUR UNE PERSONNE<br />ÉLOIGNÉE DE L’EMPLOI</h1>
+				<p>La Mie de Pain intervient auprès des personnes en situation de précarité et d’exclusion. En plus de leur fournir une aide d’urgence (les accueillir, les nourrir et les héberger), elle les accompagne dans leur insertion sociale et professionnelle.<br /><br /><br />
+
+					<strong>Parmi ses actions le programme Passerelles d’Avenir propose 3 dispositifs dont 2 chantiers d’insertion.<br />Soutenez-les tout en réduisant votre impôt !</strong></p>
+				<img id="bt-scroll-header" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/arrow.png" alt="Cliquez pour afficher la prochaine partie">
+			</div>
 		</div>
 	</div>
-	<section>
-		<div class="row video" data-equalizer>
-			<div class="large-offset-2 large-4 columns text-columns" data-equalizer-watch>
-				<h3>Faire de votre ISF une passerelle d’avenir</h3>
-				<p>Les Chantiers d’insertion des Œuvres de la Mie de Pain ont pour objectif de permettre à des personnes en situation de précarité ou de grande exclusion de renouer avec l’emploi grâce à deux parcours adaptés.<br /><br />
-					Soutenez les Chantiers d’insertion des Œuvres de la Mie de Pain, vous contribuez à une solution ambitieuse pour le retour à l’autonomie des personnes exclues et vous donnez à une personne comme Madame Diouf la chance de retrouver un emploi qualifié&nbsp;!
-				</p>
-				<a target="_blank" href="https://donner.miedepain.asso.fr/b?cid=42&lang=fr_FR"><button type="button" class="btn">Je fais un don ISF</button></a>
-				<img id="don-confiance" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/don-en-confiance.png" alt="Don en confiance">
-			</div>
-			<div class="large-6 columns video-columns" data-equalizer-watch>
-				<iframe id="video" src="https://player.vimeo.com/video/213232063" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			</div>
-		</div>
-	</section>
-	<section>
-		<div class="row expanded box-expanded">
-			<img class="down un" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/picto-1.png" alt="Comment faire votre don au titre de l’ISF ?">
-			<p class="down un">Comment faire votre don au titre de l’ISF&nbsp;?</p>
-			<img class="arrow down" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/arrow-down.png" alt="Cliquez pour afficher">
-			<div class="hidden un">
-				<h6>Soutenir les Chantiers d’insertion 2017 grâce à l’ISF</h6>
-				<ul>
-					<li>Vous faites un don aux Oeuvres de la Mie de Pain</li>
-					<li>La Loi Tepa vous autorise à déduire ce don de l’ISF</li>
-					<li>Vous recevez un reçu fiscal</li>
-					<li>Vous défiscalisez 75% de votre don</li>
-					<li>Dans la limite de 50 000 € de déduction</li>
-				</ul>
-				<img class="arrow up" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/arrow-down.png" alt="Cliquez pour cacher">
-			</div>
-		</div>
-		<div class="row expanded box-expanded">
-			<img class="down deux" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/picto-2.png" alt="Barème de calcul de l'ISF 2017">
-			<p class="down deux">Barème de calcul de l'ISF 2017</p>
-			<img class="arrow down" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/arrow-down.png" alt="Cliquez pour afficher">
-			<div class="hidden deux">
-				<h6>Patrimoine net taxable par tranche</h6>
-				<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/img-bareme.png" alt="Patrimoine net taxable par tranche">
-				<p>Pour les contribuables dont le patrimoine est égal à 1 300 000 €, une décote vient diminuer le montant de l’ISF à payer dont le calcul simplifié est de 17 500 € – 1,25% de la valeur nette taxable du patrimoine.</p>
-				<img class="arrow up" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/arrow-down.png" alt="Cliquez pour cacher">
-			</div>
-		</div>
-		<div class="row expanded box-expanded">
-			<img class="down trois" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/picto-3.png" alt="Toutes les dates Dates de l’ISF 2017">
-			<p class="down trois">Toutes les dates de l’ISF 2017</p>
-			<img class="arrow down" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/arrow-down.png" alt="Cliquez pour afficher">
-			<div class="hidden trois">
-				<div class="inline">
-					<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/circle.png" alt="supérieure à 2 570 000">
-					<h6>> 2 570 000 €</h6>
-					<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/circle-o.png" alt="entre 1 300 000 et 2 570 000">
-					<h6 class="orange">> 1 300 000 € et ≤ 2 570 000 €</h6>
-				</div>
-				<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/img-date.png" alt="Patrimoine net taxable par tranche">
-				<p><span>1</span> Selon les départements, le 23 mai (départements de 01 à 19), le 30 mai (départements de 20 à 49 y compris les deux départements de la Corse), le 6 juin (départements de 50 à 974/976), <span class="red">2</span> Via la déclaration d’ISF n°2725 avec les annexes ou la déclaration simplifiée n°2725-S. Paiement par chèque bancaire ou virement <span>3</span> paiement par chèque TIP ou télé-paiement
-				</p>
-				<img class="arrow up" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/arrow-down.png" alt="Cliquez pour cacher">
-			</div>
-		</div>
-	</section>
-	<section>
-		<div class="expanded row don">
-			<div class="row max-width">
-				<h1>Faites un don ISF</h1>
-				<h2>Votre don est déductible à hauteur de 75%</h2>
-				<a target="_blank" href="https://donner.miedepain.asso.fr/b?cid=42&lang=fr_FR&amount=50000"><div class="box-don-container">
-					<div class="box-don">
-						<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/img-box-1.png" alt="1000€">
-						<h3>500€</h3>
-						<h4> (soit 125€ après<br />déduction fiscale)</h4>
-						<p>Permet d'accompagner une personne sur le chemin de l'emploi pendant 45 jours.</p>
-					</div>
-					<div class="btn-don">
-						<p>Je donne</p>
-					</div>
-				</div></a>
-				<a target="_blank" href="https://donner.miedepain.asso.fr/b?cid=42&lang=fr_FR&amount=200000"><div class="box-don-container">
-					<div class="box-don">
-						<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/img-box-2.png" alt="1500€">
-						<h3>2 000€</h3>
-						<h4> (soit 500€ après<br />déduction fiscale)</h4>
-						<p>Permet d'accompagner une personne dans sa formation professionnelle pendant 5 mois</p>
-					</div>
-					<div class="btn-don">
-						<p>Je donne</p>
-					</div>
-				</div></a>
-				<a target="_blank" href="https://donner.miedepain.asso.fr/b?cid=42&lang=fr_FR&amount=500000"><div class="box-don-container">
-					<div class="box-don">
-						<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/img-box-3.png" alt="1000€">
-						<h3>5 000€</h3>
-						<h4> (soit 1 250€ après<br />déduction fiscale)</h4>
-						<p>Prend en charge 4 journées de formation professionnelle pour les 62 salariés en insertion</p>
-					</div>
-					<div class="btn-don">
-						<p>Je donne</p>
-					</div>
-				</div></a>
-				<a target="_blank" href="https://donner.miedepain.asso.fr/b?cid=42 " class="other-don">Je fais un don ISF d'un autre montant</a>
-			</div>
-		</div>
-	</section>
-	<section>
-		<div class="expanded row soutenir">
-			<div class="row max-width">
-				<h1>NOUS SOUTENIR AUTREMENT</h1>
-				<div class="container-box-soutenir">
-					<div class="box-soutenir un">
-						<p>accueillIr</p>
-						<p>nourrir</p>
-						<p>héberger</p>
-					</div>
-					<div class="box-soutenir deux">
-						<p>25</p>
-						<p>€</p>
-					</div>
-					<div class="box-soutenir trois">
-						<div>
-							<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/picto-soutien-1.png" alt="1 nuit d’hébergement">
-							<p>1 nuit d’hébergement</p>
-						</div>
-						<div>
-							<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/picto-soutien-2.png" alt="1 repas chaud">
-							<p>1 repas chaud</p>
-						</div>
-						<div>
-							<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/picto-soutien-3.png" alt="1 petit-déjeuner">
-							<p>1 petit-déjeuner</p>
-						</div>
-						<div>
-							<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/picto-soutien-4.png" alt="1 visite médicale">
-							<p>1 visite médicale</p>
-						</div>
-					</div>
-				</div>
-				<a href="https://donner.miedepain.asso.fr/b?cid=43&lang=fr_FR&amount=2500" target="_blank"><div class="btn-soutenir">
-					<p>Je fais un don</p>
-				</div></a>
-			</div>
-		</div>
-	</section>
-	<footer>
-		<div class="row">
-			<div class="medium-12 large-centered columns">
-				<div class="medium-7 columns">
-					<div class="block-footer bottom">
-						<h5 class="text-footer-title">qui sommes nous ?</h5>
-						<p class="text-footer-para">Les oeuvres de la Mie de Pain, association fondée en 1887 par Paulin Enfert, est une association reconnue d’utilité publique. Elle vient en aide aux personnes en situation de précarité, d’exclusion et de marginalisation. Sa mission principale est de fournir une aide d’urgence à ces personnes (accueillir, nourrir et héberger) et d’accompagner leur réinsertion sociale et professionnelle.</p>
-						<a href="http://www.miedepain.asso.fr/nos-missions-nos-actions/" target="_blank"><div class="block-footer-link">
-							<img class="img-footer-link" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/mdp-lp-noel-2016/arrow-footer.png">
-							<p class="text-footer-link" >En savoir plus</p>
-						</div></a>
-					</div>
-					<div class="block-footer">
-						<div class="row">
-							<div class="small-7 columns">
-								<h5 class="text-footer-title">NOS ENGAGEMENTS POUR MERITER VOTRE CONFIANCE</h5>
-							</div>
-							<div class="small-5 columns">
-								<img id="don-confiance-footer" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/don-en-confiance.png" alt="Don en confiance">
-							</div>
-						</div>
-						<p class="text-footer-para">Agréée par le Comité de la charte du don en confiance depuis 2011, La Mie de Pain s'engage à respecter un code de déontologie comprenant 4 grands principes : <br /><br />
+</header>
 
-							• Un fonctionnement statutaire et une gestion désintéressée.<br />
-							• Une gestion rigoureuse des fonds qui lui sont confiés.<br />
-							• Des actions de communication et de collecte de fonds appropriés.<br />
-							• Une véritable transparence financière à l'égard des donateurs, avec notamment la diffusion annuelle de "L'Essentiel" de ses comptes et de ses activités.<br /><br />
+<section id="video1">
+	<div class="row expanded video">
+		<iframe src="https://www.youtube.com/embed/b2FVlX0o7Dc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<div class="row max-width">
+			<div class="small-12 large-9 columns small-centered text-center container-text">
+				<p>DÉCOUVREZ<br />LES PASSERELLES D’AVENIR<br />AVEC NOTRE DIRECTRICE DES<br />DISPOSITIFS D’INSERTION</p>
+			</div>
+		</div>
+	</div>
+</section>
 
-							Nos comptes sont préalablement audités et certifiés par un commissaire aux comptes indépendant. Le Rapport Annuel de l'année 2015 est disponible sur le site internet de l'organisation www.miedepain.asso.fr ou sur simple demande écrite.</p>
-							<a href="http://www.miedepain.asso.fr/membre-du-comite-de-la-charte/" target="_blank"><div class="block-footer-link">
-								<img class="img-footer-link" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/mdp-lp-noel-2016/arrow-footer.png">
-								<p class="text-footer-link">En savoir plus</p>
-							</div>
-						</a>
+<section id="dispositif">
+	<div class="row expanded">
+		<div class="row max-width">
+			<div class="row title text-center">
+				<h2>3 DISPOSITIFS POUR L’INSERTION<br />DES PLUS FRAGILES</h2>
+
+			</div>
+			<div class="row text-center box-container">
+				<div class="small-12 large-4 columns box no-padding">
+					<div>
+						<img class="close" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/close.png" alt="Fermer">
+						<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/icon-dispositif.png" alt="LE CHANTIER REMOBILISANT NETTOYAGE">
+						<p>LE CHANTIER<br />REMOBILISANT NETTOYAGE</p>
+						<img class="plus" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/plus.png" alt="Voir plus">
+					</div>
+					<div class="to-show shadow-w-top">
+						<p><span>Notre objectif</span> : permettre aux personnes qui ont perdu les repères indispensables à la recherche d’un emploi, de se remobiliser, d’accéder à une formation professionnelle et une première expérience.<br /><br />Nous leur proposons un contrat de travail intégrant des formations et les suivons 6 mois après leur départ pour favoriser leur insertion.</p>
 					</div>
 				</div>
-				<div class="medium-5 columns block-footer left end" style="max-width: 330px;">
-					<h5 class="text-footer-title">transparence financière</h5>
-					<p class="text-footer-para">La confiance que nous entretenons avec nos donateurs et l'ensemble de nos soutiens est indispensable. C’est pourquoi nous œuvrons à rendre nos comptes, nos ressources et nos pratiques totalement limpides. Etre transparent aux yeux de ceux qui nous soutiennent, c’est participer à la construction d'un climat de confiance essentiel pour notre existence.</p>
-					<a href="http://www.miedepain.asso.fr/nos-comptes/" target="_blank"><div class="block-footer-link">
-						<img class="img-footer-link" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/mdp-lp-noel-2016/arrow-footer.png">
-						<p class="text-footer-link">En savoir plus</p>
+				<div class="small-12 large-4 columns box no-padding">
+					<div>
+						<img class="close" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/close.png" alt="Fermer">
+						<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/icon-dispositif.png" alt="LE DISPOSITIF PREMIÈRES HEURES">
+						<p>LE DISPOSITIF<br />PREMIÈRES HEURES</p>
+						<img class="plus" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/plus.png" alt="Voir plus">
+					</div>
+					<div class="to-show shadow-w-top">
+						<p><span>Notre objectif</span> : permettre aux personnes sans domicile et en situation d’exclusion sociale de renouer progressivement avec le monde de l’emploi.<br /><br />Nous leur proposons un contrat de travail de 5 à 15 heures hebdomadaires et adaptons les emplois aux capacités de chacun.<br /><br /><strong>Attention, le dispositif Premières heures est non-éligible à réduction fiscale car il intervient en amont des Chantiers d’Insertion.</strong></p>
+					</div>
+				</div>
+				<div class="small-12 large-4 columns box no-padding">
+					<div>
+						<img class="close" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/close.png" alt="Fermer">
+						<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/icon-dispositif.png" alt="LE CHANTIER QUALIFIANT RESTAURATION">
+						<p>LE CHANTIER<br />QUALIFIANT RESTAURATION</p>
+						<img class="plus" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/plus.png" alt="Voir plus">
+					</div>
+					<div class="to-show shadow-w-top">
+						<p><span>Notre objectif</span> : permettre aux personnes ayant validé un projet professionnel dans la restauration de se former aux métiers de la restauration collective pendant 12 mois en alternance.<br /><br />Ce chantier diplômant donne le titre d’agent polyvalent de restauration. Après leur sortie, nous assurons à ces salariés un suivi durant 6 mois en vue de favoriser leur insertion professionnelle. En 2017, 100% des candidats qui se sont présentés à l’examen ont obtenu leur diplôme.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row call">
+				<div class="small-12 large-offset-2 large-3 columns left">
+					<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/bulle-begin.png">
+					<p>Chaque année, la Mie de Pain recrute et suit d’un point de vue social et professionnel environ
+						100 salariés en insertion.</p>
+					<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/bulle-end.png">
+				</div>
+				<div class="small-12 large-offset-1 large-4 columns end right">
+					<p><strong>BUDGET RESTANT À FINANCER<br />
+						POUR 2018 :  253 000 €</strong><br /><br />
+						Soutenez notre programme Passerelles d’Avenir et réduisez 75% du montant de votre don de vos impôts.</p>
+					<a href="https://donner.miedepain.asso.fr/b?cid=55&amount=200000" target="_blank" class="link-woopra"><button type="button" class="btn" id="btn-don-ifi">Je fais un don IFI</button></a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="video2">
+	<div class="row expanded video">
+		<iframe src="https://www.youtube.com/embed/G1tv9xmjGQA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<div class="row max-width">
+			<div class="small-12 large-9 columns small-centered text-center container-text">
+				<p>Madame Diouf :<br />Un bel exemple d’insertion professionnelle</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="ifi">
+	<div class="row expanded">
+		<div class="row max-width">
+			<div class="small-12 large-offset-1 large-4 columns left">
+				<p>L’IFI<br />REMPLACE<br />L’ISF : êtes-vous<br />concernéS ?</p>
+			</div>
+			<div class="small-12 large-5 columns right end">
+				<p><br />L’impôt sur la fortune immobilière (IFI) a remplacé l’impôt de solidarité sur la fortune (ISF). L’IFI concerne les contribuables dont le patrimoine immobilier (hors activité professionnelle) est supérieur à 1 300 000 €.<br/><br />
+
+					Tous les biens autres qu’immobiliers (titres, placements, œuvres d’art, meubles…) sont exclus du champ d’application de ce nouvel impôt.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="row expanded box-expanded">
+		<img class="down un" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/picto-1.png" alt="Comment faire votre don au titre de l’ISF ?">
+		<p class="down un">Comment faire votre don au titre de l’ISF&nbsp;?</p>
+		<img class="arrow down" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/arrow-down.png" alt="Cliquez pour afficher">
+		<div class="hidden un">
+			<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/sep-red.jpg" alt="Separateur">
+			<h6>Soutenir les Chantiers d’insertion 2018 grâce à l’IFI</h6>
+			<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/1-step.png" alt="Cliquez pour cacher">
+			<img class="arrow up" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/arrow-down.png" alt="Cliquez pour cacher">
+		</div>
+	</div>
+	<div class="row expanded box-expanded" id="bareme">
+		<img class="down deux" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/picto-2.png" alt="Barème de calcul de l'ISF 2018">
+		<p class="down deux">Barème de calcul de l'IFI 2018</p>
+		<img class="arrow down" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/arrow-down.png" alt="Cliquez pour afficher">
+		<div class="hidden deux">
+			<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/sep-red.jpg" alt="Separateur">
+			<h6>Patrimoine net taxable par tranche</h6>
+			<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/2-grille.png" alt="Patrimoine net taxable par tranche">
+			<p>Pour les contribuables dont le patrimoine est égal à 1 300 000€,<br />une décote vient diminuer le montant de l’IFI à payer dont le calcul simplifié<br />est de 17 500€ - 1,25% de la valeur nette taxable du patrimoine.</p>
+			<img class="arrow up" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/arrow-down.png" alt="Cliquez pour cacher">
+		</div>
+	</div>
+	<div class="row expanded box-expanded" id="dates">
+		<img class="down trois" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/picto-3.png" alt="Toutes les dates Dates de l’ISF 2018">
+		<p class="down trois">Toutes les dates de l’IFI 2018</p>
+		<img class="arrow down" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/arrow-down.png" alt="Cliquez pour afficher">
+		<div class="hidden trois">
+			<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/sep-red.jpg" alt="Separateur">
+			<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/3-voie.png" alt="Toutes les dates de l’IFI 2018">
+			<p>Par mesure de précaution, compte tenu des délais d’acheminement postaux ou bancaires,<br />adressez-nous votre don au plus tôt pour bénéficier de votre réduction d’IFI.</p>
+			<img class="arrow up" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/arrow-down.png" alt="Cliquez pour cacher">
+		</div>
+	</div>
+
+	<div class="row expanded box-expanded">
+		<img class="down-quatre" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/euro.png" alt="IMPÔT SUR LE REVENU">
+		<p class="down quatre">IMPÔT SUR LE REVENU</p>
+		<img class="arrow down" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/arrow-down.png" alt="Cliquez pour afficher">
+		<div class="hidden quatre">
+			<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/sep-red.jpg" alt="Separateur">
+			<p>75% du montant de votre don aux chantiers d’insertion ou à toute autre action de la Mie de Pain<br />sont réductibles de l’impôt sur le revenu, dans la limite de 537 € (plafond 2018) et de 66% au-delà dans la<br />limite de 20 % de votre revenu imposable. Ainsi, un don de 200 € ne vous revient réellement qu’à 50 €.</p>
+			<img class="arrow up" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/arrow-down.png" alt="Cliquez pour cacher">
+		</div>
+	</div>
+</section>
+
+<section id="don">
+	<div class="expanded row don">
+		<div class="row max-width">
+			<h1>Faites un don IFI</h1>
+			<h2>Votre don est déductible à hauteur de 75%</h2>
+
+
+			<div class="small-12 large-8 small-centered columns">
+				<div class="row don-choice">
+					<div class="large-3 columns no-padding">
+						<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/dot.png" alt="1000€">
+						<p>500 €</p>
+					</div>
+					<div class="large-3 columns no-padding active">
+						<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/dot.png" alt="1500€">
+						<p>2 000 €</p>
+					</div>
+					<div class="large-3 columns no-padding">
+						<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/dot.png" alt="2000€">
+						<p>5 000 €</p>
+					</div>
+					<div id="other" class="large-3 columns no-padding">
+						<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/dot.png" alt="Autre montant">
+						<p><br />Autre montant</p>
+					</div>
+
+				</div>
+				<div class="row don-display">
+					<div class="row">
+						<div class="normal-don">
+							<div class="small-12 large-4 columns text-center">
+								<img class="illu" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/img-box-1.png" alt="1500#">
+
+							</div>
+							<div class="small-12 large-7 columns end">
+								<h6>(soit <span class="amount">500</span>€ après déduction fiscale)</h6>
+								<p class="text">Prend en charge un accompagnement<br />social et professionnel<br />d’une personne pendant 1 an</p>
+
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="don-other">
+							<div class="row">
+								<p>Entrez votre montant :</p>
+								<input type="number">
+								<p>€</p>
+							</div>
+							<div class="row soit">
+								<p>(soit <span id="other_amount">0</span> € après réduction fiscale)</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a class="link-woopra btn-don" id="btn-don" target="_blank" href="https://donner.miedepain.asso.fr/b?cid=55&amount=200000">
+					<div class="row button">
+						<p>Je donne</p>
 					</div>
 				</a>
 			</div>
-			<div class="medium-5 columns block-footer left end" style="max-width: 330px;">
-				<h5 class="text-footer-title">chiffres cleFs</h5>
-				<p class="text-footer-para">En quelques chiffres, La Mie de Pain, c’est chaque jour :<br /><br />
-					• 1000 personnes aidées au sein d’établissements sociaux<br /><br />
-					• 360 places d'hébergement ouvertes 24h/24 toute l'année<br /><br />
-					• 564 repas chauds préparés et distribués… <br /><br />
-					• 1 425 domiciliations, étape indispensable à la réinsertion</p>
-					<a href="http://www.miedepain.asso.fr/nos-missions-nos-actions/" target="_blank"><div class="block-footer-link">
-						<img class="img-footer-link" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/mdp-lp-noel-2016/arrow-footer.png">
-						<p class="text-footer-link">En savoir plus</p>
+			<a target="_blank" href="https://donner.miedepain.asso.fr/b?cid=56&amount=10000" class="other-don link-woopra" id="other-link">Je fais un don déductible de l'impôt sur le revenu</a>
+		</div>
+	</div>
+</section>
+
+<section id="engagement">
+	<div class="expanded row">
+		<div class="row max-width text-center">
+			<div class="row begin">
+				<div class="container">
+					<h3>NOS ENGAGEMENTS POUR<br />MERITER VOTRE CONFIANCE</h3>
+					<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/dec.png" alt="Don en confiance">
+				</div>
+				<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/footer-sep.jpg" alt="Séparateur">
+				<h5>Agréée par le Don en confiance depuis 2011, La Mie de Pain s'engage à<br />respecter un code de déontologie s’appuyant sur 4 grands principes :</h5>
+			</div>
+			<div class="row">
+				<div class="small-12 large-3 columns icon-footer">
+					<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/footer-icon1.png" alt="Un fonctionnement statutaire et une gestion désintéressée">
+					<p>Un fonctionnement<br />statutaire et une<br />gestion désintéressée</p>
+				</div>
+				<div class="small-12 large-3 columns icon-footer">
+					<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/footer-icon2.png" alt="Une gestion rigoureuse des fonds qui lui sont confiés">
+					<p>Une gestion<br />rigoureuse des fonds<br />qui lui sont confiés</p>
+				</div>
+				<div class="small-12 large-3 columns icon-footer">
+					<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/footer-icon3.png" alt="Des actions de communication et de collecte de fonds appropriées">
+					<p>Des actions de<br />communication et de<br />collecte de fonds<br />appropriées</p>
+				</div>
+				<div class="small-12 large-3 columns icon-footer">
+					<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/footer-icon4.png" alt="Une totale transparence financière à l'égard des donateurs">
+					<p>Une totale<br />transparence financière<br />à l'égard des donateurs</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="row">
+					<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/footer-sep-light.png" alt="Séparateur">
+				</div>
+				<div class="row inline">
+					<a href="http://www.miedepain.asso.fr/wp-content/uploads/2012/08/ra-2016-OMDP_vdef-2.pdf" target="_blank" download>
+						<div class="left">
+							<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/footer-icon-dl.png" alt="Téléchargez notre Rapport Annuel">
+							<p>Téléchargez notre Rapport Annuel</p>
+						</div>
+					</a>
+
+					<img class="sep hide-for-small-only" src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/footer-sep-light-up.png" alt="Séparateur">
+					<div class="right">
+						<p>Nos comptes sont préalablement audités et certifiés<br />par un commissaire aux comptes indépendant. </p>
 					</div>
-				</a>
+				</div>
+				<div class="row">
+					<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/footer-sep-light.png" alt="Séparateur">
+				</div>
+
+			</div>
+			<div class="row end-engagement">
+				<div class="small-12 large-8 small-centered columns">
+					<h3>Transparence financière</h3>
+					<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/footer-sep.jpg" alt="Séparateur">
+					<p>La confiance que nous entretenons avec nos donateurs et nos nombreux soutiens est essentielle. C’est pourquoi nous œuvrons à communiquer sur nos comptes, nos ressources et nos pratiques de façon transparente. Faire preuve de clarté à l'égard de ceux qui nous soutiennent, c’est participer à la construction d’un climat de confiance indispensable à notre existence.<br /><br />
+						Les comptes de La Mie de Pain sont annuellement soumis aux contrôles d’un Commissaire. Les comptes de l’Association pour l’année 2016 ont été certifiés. Cette certification donne lieu à la présentation des comptes annuels de La Mie de Pain sous la forme d’un bilan et d’un compte de résultat.</p>
+					<a href="http://www.miedepain.asso.fr/nos-comptes/" target="_blank">
+						<div class="savoir-plus">
+							<img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/footer-plus.png" alt="EN SAVOIR PLUS">
+							<p>EN SAVOIR PLUS</p>
+						</div>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="row" style="padding-left: 20px; padding-right: 20px;">
-		<div class="medium-12 large-centered columns" style="max-width: 900px;">
-			<p class="text-footer-para" style="font-size: 12px">* Sont assujetties à l’ISF, les personnes physiques qui ont leur domicile fiscal en France, et qui disposent d’un patrimoine dont la valeur nette en France et hors de France est supérieure à 1,3 million d'euros au 1er janvier 2017. Il en est de même des personnes physiques qui n’ont pas leur domicile fiscal en France mais qui y possèdent des biens d'une valeur nette supérieure à 1,3 million d'euros. La réduction d’ISF au titre des dons à certains organismes d’intérêt général est de 75% des montants donnés, limitée à 50 000€.</p>
-		</div>
-	</div>
+</section>
+
+<footer>
 	<div class="row">
-		<div class="medium-8 columns">
+		<div class="small-12 medium-8 columns">
 			<a href="http://www.miedepain.asso.fr/mentions-legales/" target="_blank"><h3 class="footer-redir">Mentions légales</h3></a>
 			<a href="http://www.miedepain.asso.fr/" target="_blank"><h3 class="footer-redir">Site institutionnel</h3></a>
 			<a href="http://www.miedepain.asso.fr/contact/" target="_blank"><h3 class="footer-redir">Contact</h3></a>
@@ -250,61 +323,65 @@
 </footer>
 <script src="https://code.jquery.com/jquery.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.js" type="text/javascript"></script>
-<script src="assets/js/app.js" type="text/javascript"></script>
-<script src="assets/js/remodal.js"></script>
+
 
 <script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-	ga('create', 'UA-7968425-1', 'auto');
-	ga('send', 'pageview');
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-7968425-1', 'auto');
+    ga('send', 'pageview');
 
 </script>
 <!-- Start of Woopra Code -->
 <script>
-	function extractUrlParams(){	
-		var t = document.location.search.substring(1).split('&'); var f = [];
-		for (var i=0; i<t.length; i++){
-			var x = t[ i ].split('=');
-			f[x[0]]=decodeURIComponent(x[1]);
-		}
-		return f;
-	};
+    function extractUrlParams(){
+        var t = document.location.search.substring(1).split('&'); var f = [];
+        for (var i=0; i<t.length; i++){
+            var x = t[ i ].split('=');
+            f[x[0]]=decodeURIComponent(x[1]);
+        }
+        return f;
+    };
 
-	(function(){
-		var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call","trackForm","trackClick"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
-	})("woopra");
+    (function(){
+        var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call","trackForm","trackClick"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+    })("woopra");
 
-	woopra.config({
-		domain: "miedepain.asso.fr"
-	});
+    woopra.config({
+        domain: "miedepain.asso.fr"
+    });
 
-	var p = extractUrlParams();
+    var p = extractUrlParams();
 
-	if ('email' in p) {
-		if ('lastname' in p && 'firstname' in p) {
-			woopra.identify({
-				email: p['email'],
-				name: p['firstname'] + ' ' + p['lastname']
-			});
-		} else {woopra.identify({email: p['email']})}
-	}
+    if ('email' in p) {
+        if ('lastname' in p && 'firstname' in p) {
+            woopra.identify({
+                email: p['email'],
+                name: p['firstname'] + ' ' + p['lastname']
+            });
+        } else {woopra.identify({email: p['email']})}
+    }
 
-	woopra.track();
+    woopra.track();
 </script>
 <!-- End of Woopra Code -->
 <!-- Remarketing -->
 <script type="text/javascript">
-var axel = Math.random() + "";
-var a = axel * 10000000000000;
-document.write('<iframe src="https://6786055.fls.doubleclick.net/activityi;src=6786055;type=invmedia;cat=ibgup1c6;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+    var axel = Math.random() + "";
+    var a = axel * 10000000000000;
+    document.write('<iframe src="https://6786055.fls.doubleclick.net/activityi;src=6786055;type=invmedia;cat=ibgup1c6;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
 </script>
 <noscript>
-<iframe src="https://6786055.fls.doubleclick.net/activityi;src=6786055;type=invmedia;cat=ibgup1c6;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+	<iframe src="https://6786055.fls.doubleclick.net/activityi;src=6786055;type=invmedia;cat=ibgup1c6;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
 </noscript>
 <!-- End remarketing -->
+<script src="assets/js/app.js" type="text/javascript"></script>
+<script src="assets/js/text.js" type="text/javascript"></script>
+<script src="assets/js/woopra.js" type="text/javascript"></script>
+<script src="assets/js/remodal.js"></script>
 </body>
 </html>

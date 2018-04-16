@@ -46,568 +46,700 @@
 	background: #000 !important;
 	color: #0f0 !important;
 	outline: solid #f00 1px !important;
-	}*/
-	.max-width {
-		max-width: 75rem !important;
-	}
-	.btn {
-		transition: all .1s ease-in-out;
-		-webkit-transition: all .1s ease-in-out;
-		-moz-transition: all .1s ease-in-out;
-		-o-transition: all .1s ease-in-out;
-		-ms-transition: all .1s ease-in-out;
-		background-color: #800d1c;
-		font-family: 'Open Sans';
-		font-weight: 600;
-		text-transform: uppercase;
-		color: white;
-		padding: 20px 30px;
-		border-radius: 5px;
-		min-width: 180px;
-		max-width: 100%;
-	}
-	.btn:hover {
-		transform: scale(1.05);
-	}
-	.btn.video {
-		padding: 30px 50px;
-		width: 280px;
-		max-width: 100%;
-	}
-	.top-bar {
-		padding: 30px;
-		background-color: transparent;
-		position: fixed;
-		width: 100%;
-		z-index: 9999;
-	}
-	.top-bar img {
-		float: left;
-	}
-	.top-bar button {
-		float: right;
-	}
-	.video-container {
-		position:relative;
-		padding-bottom:56.25%;
-		padding-top:30px;
-		height:0;
-		overflow:hidden;
-	}
-	.video-container iframe,
-	.video-container object,
-	.video-container embed {
-		width:100%;
-		height:100%;
-		position:absolute;
-		top:0;
-		left:0;
-	}
-	#bt-scroll-header {
-		display: block;
-		transform: scale(2);
-		margin-left: auto;
-		margin-right: auto;
-	}
-	#bt-scroll-header:hover {
-		cursor: pointer;
-	}
-	.header {
-		background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/bg-header.jpg');
-		background-position: 20% 35%;
-		background-size: cover;
-		background-repeat: no-repeat;
-		min-height: 100vh;
-		text-align: center;
-		padding: 20px;
-	}
-	.header img {
-		margin-top: 5%;
-		margin-bottom: 20px;
-	}
-	.header h1 {
-		font-family: 'PTSans Bold';
-		color: white;
-		font-size: 64px;
-		text-transform: uppercase;
-		line-height: 1.2;
-		margin-bottom: 0;
-	}
-	.header h2 {
-		font-family: 'PTSans Regular';
-		font-weight: 500;
-		color: white;
-		font-size: 24px;
-		text-transform: uppercase;
-		line-height: 1.2;
-		margin-bottom: 0;
-	}
-	.header p {
-		font-family: 'PTSans Regular';
-		font-weight: 500;
-		color: white;
-		font-size: 22px;
-		line-height: 1.2;
-		margin-top: 6%;
-		margin-bottom: 20px;
-	}
-	.video .text-columns{
-		padding: 40px 0px;
-		padding-right: 30px;
-	}
-	.video .text-columns h3 {
-		font-family: 'PTSans Bold';
-		color: #800d1c;
-		font-size: 40px;
-		line-height: 1.3;
-		text-transform: uppercase;
-	}
-	.video .text-columns p {
-		font-family: 'PTSans Regular';
-		font-size: 20px;
-		line-height: 1.3;
-		color: black;
-	}
-	#don-confiance {
-		max-width: 50px;
-		margin-left: 10px;
-	}
-	#don-confiance-footer {
-		max-width: 70px;
-		margin-top: 15px;
-	}
-	.video .video-columns {
-		background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/bg-video.jpg');
-		background-repeat: no-repeat;
-		position: relative;
-	}
-	#video {
-		position: absolute;
-		width: 450px;
-		max-width: 100%;
-		height: 300px;
-		bottom: 40px;
-		left: 20px;
-	}
-	.box-expanded {
-		border-top: 1px solid black;
-		text-align: center;
-		padding: 40px;
-	}
-	.box-expanded p {
-		font-family: 'PTSans Bold';
-		color: #800d1c;
-		font-size: 20px;
-		line-height: 1.3;
-		text-transform: uppercase;
-		margin-bottom: 10px;
-		margin-top: 5px;
-	}
-	.arrow.up {
-		-webkit-transform: rotate(180deg);
-		-moz-transform: rotate(180deg);
-		-o-transform: rotate(180deg);
-		-ms-transform: rotate(180deg);
-		transform: rotate(180deg);
-		position: absolute;
-		bottom: -28px;
-		left: 49%;
-	}
-	.arrow:hover {
-		cursor: pointer;
-	}
-	.inline {
-		padding-bottom: 30px;
-	}
-	.inline * {
-		display: inline-block;
-		font-family: 'PTSans Bold';
-		font-size: 15px;
-		color: #800d1c;
-	}
-	.inline img {
-		margin-left: 20px;
-		margin-right: 5px;
-	}
-	.down:hover {
-		cursor: pointer;
-	}
-	.hidden {
-		position: relative;
-		width: 400px;
-		max-width: 100%;
-		text-align: left;
-		margin-left: auto;
-		margin-right: auto;
-		display: none;
-		margin-top: 15px;
-		border-top: 3px solid #800d1c;
-		border-bottom: 3px solid #800d1c;
-		padding-top: 20px;
-	}
-	.hidden.deux {
-		width: 500px;
-		text-align: center;
-	}
-	.hidden.deux h6 {
-		font-weight: bold;
-	}
-	.hidden.trois h6.orange {
-		color: #f36b11;
-	}
-	.hidden.deux p,
-	.hidden.trois p {
-		margin-top: 10px;
-		font-family: 'PTSans Regular';
-		font-size: 15px;
-		color: black;
-		text-transform: none;
-	}
-	.hidden.trois {
-		text-align: center;
-	}
-	.hidden.trois p {
-		margin-top: 30px;
-		font-size: 12px;
-	}
-	.hidden.trois p span {
-		color: #f36b11;
-		font-family: 'PTSans Bold';
-	}
-	.hidden.trois p span.red {
-		color: #800d1c;
-	}
-	.hidden.un ul {
-		margin-left: 0px;
-		list-style: none;
-	}
-	.hidden.un h6 {
-		font-family: 'PTSans Bold';
-		font-size: 16px;
-	}
-	.hidden.un li {
-		font-family: 'PTSans Regular';
-		font-size: 15px;
-	}
-	.hidden.un li::before {
-		content: "• ";
-		color: #800d1c;
-		font-size: 20px;
-	}
+}*/
+.max-width {
+	max-width: 75rem !important;
+}
+.no-padding {
+	padding: 0;
+}
+.btn {
+	transition: all .1s ease-in-out;
+	-webkit-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-o-transition: all .1s ease-in-out;
+	-ms-transition: all .1s ease-in-out;
+	background-color: #800d1c;
+	font-family: 'Open Sans';
+	font-weight: 600;
+	text-transform: uppercase;
+	color: white;
+	padding: 20px 30px;
+	border-radius: 5px;
+	min-width: 180px;
+	max-width: 100%;
+}
+.btn:hover {
+	transform: scale(1.05);
+}
+.btn.video {
+	padding: 30px 50px;
+	width: 280px;
+	max-width: 100%;
+}
+.top-bar {
+	padding: 30px;
+	background-color: transparent;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+}
+.top-bar img {
+	float: left;
+	min-width: 80px;
+}
+.top-bar button {
+	float: right;
+}
+#bt-scroll-header {
+	margin-top: 10%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#bt-scroll-header:hover {
+	cursor: pointer;
+}
+.header {
+	background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/bg-header.jpg');
+	background-position: 20% 35%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	text-align: center;
+	padding: 20px;
+}
+.header img {
+	margin-top: 10%;
+	margin-bottom: 50px;
+}
+.header h1 {
+	font-family: 'PTSans Bold', sans-serif;
+	color: white;
+	font-size: 42px;
+	text-transform: uppercase;
+	line-height: 1.2;
+	margin-bottom: 0;
+}
+.header p {
+	font-family: 'PTSans Regular', sans-serif;
+	font-weight: 500;
+	color: white;
+	font-size: 24px;
+	line-height: 1.2;
+	margin-top: 6%;
+	margin-bottom: 20px;
+}
 
-	.row.don {
-		background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/bg-don.jpg');
-		background-position: 57% 43%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		text-align: center;
-		padding: 20px;
-		padding-top: 180px;
-		padding-bottom: 100px;
+#video1 {
+	position: relative;
+	min-height: 100vh;
+	background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/bg-video-1.jpg');
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: white;
+}
+#video1:hover,
+#video2:hover {
+	cursor: pointer;
+}
+#video2 {
+	position: relative;
+	min-height: 100vh;
+	background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/bg-video-2.jpg');
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: white;
+}
+.video:hover {
+	cursor: pointer;
+}
+.video iframe {
+	width: 100%;
+	min-height: 100vh;
+	z-index: 999;
+	display: none;
+}
+.video .container-text {
+	position: absolute;
+	margin: 0 auto;
+	bottom: 16%;
+	left: 0;
+	right: 0;
+}
+.video .container-text p {
+	font-family: 'PTSans Bold', sans-serif;
+	color: white;
+	font-size: 42px;
+	text-transform: uppercase;
+	line-height: 1.2;
+	margin-bottom: 0;
+}
+#dispositif {
+	padding: 10px;
+}
+#dispositif .title {
+	padding: 10px;
+	margin: 40px 0;
+}
+#dispositif .title h2 {
+	font-family: 'PTSans Bold', sans-serif;
+	color: #800d1c;
+	font-size: 42px;
+	text-transform: uppercase;
+	line-height: 1.2;
+}
+#dispositif .box-container {
+	margin-bottom: 10%;
+}
+#dispositif .box {
+	position: relative;
+	transition: all .1s ease-in-out;
+	-webkit-transition: all .1s ease-in-out;
+	-moz-transition: all .1s ease-in-out;
+	-o-transition: all .1s ease-in-out;
+	-ms-transition: all .1s ease-in-out;
+}
+.shadow {
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+}
+.shadow-w-top {
+	-webkit-box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.75);
+}
+#dispositif .box > div {
+	padding: 20px;
+
+}
+#dispositif .box:hover {
+	cursor: pointer;
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+}
+#dispositif .box .close {
+	display: none;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+#dispositif .box p {
+	margin-top: 10px;
+	font-family: 'PTSans Bold', sans-serif;
+	color: #454545;
+	font-size: 18px;
+	text-transform: uppercase;
+	line-height: 1.2;
+	margin-bottom: 20px;
+
+}
+#dispositif .box .plus {
+}
+
+#dispositif .box .to-show {
+	display: none;
+	width: 100%;
+	padding: 20px 40px;
+	position: absolute;
+	top: 215px;
+	margin: 0 auto;
+	background-color: white;
+}
+#dispositif .box .to-show p {
+	font-family: 'PTSans Regular', sans-serif;
+	text-transform: none;
+	color: #484848;
+
+}
+#dispositif .box .to-show p span {
+	font-family: 'PTSans Bold', sans-serif;
+	color: #800d1c;
+}
+#dispositif .call {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+#dispositif .call .left p {
+	font-family: 'PTSans Bold', sans-serif;
+	color: #800d1c;
+	font-size: 24px;
+	line-height: 1.2;
+	margin: 10px 0;
+}
+#dispositif .call .right p {
+	font-family: 'PTSans Regular', sans-serif;
+	color: #454545;
+	font-size: 15px;
+	line-height: 1.2;
+	margin: 10px 0;
+}
+#dispositif .call .right button {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	color: white;
+	font-size: 14px;
+	line-height: 1.2;
+	margin: 10px 0;
+}
+
+
+
+#ifi {
+	position: relative;
+	padding: 50px 10px;
+	background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/bg-ifi.jpg');
+	background-position: 50% 0%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#ifi .left p {
+	font-family: 'PTSans Bold', serif;
+	color: white;
+	font-size: 40px;
+	line-height: 1.3;
+	text-transform: uppercase;
+}
+#ifi .right p {
+	font-family: 'PTSans Regular', serif;
+	font-weight: 100;
+	color: white;
+	font-size: 20px;
+	line-height: 1.1;
+}
+
+.box-expanded {
+	border-top: 1px solid #b7b7b7;
+	text-align: center;
+	padding: 40px;
+}
+.box-expanded p {
+	font-family: 'PTSans Bold', serif;
+	color: #800d1c;
+	font-size: 24px;
+	line-height: 1.3;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.arrow.up {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+	position: absolute;
+	bottom: -28px;
+	left: 49%;
+}
+.arrow:hover {
+	cursor: pointer;
+}
+.down:hover {
+	cursor: pointer;
+}
+.hidden {
+	position: relative;
+	max-width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	display: none;
+	padding-bottom: 30px;
+}
+.hidden h6 {
+	margin-bottom: 60px;
+	margin-top: 10px;
+}
+.hidden.deux h6 {
+	font-weight: bold;
+}
+.hidden.deux p,
+.hidden.trois p,
+.hidden.quatre p{
+	margin-top: 20px;
+	font-family: 'PTSans Regular', serif;
+	font-size: 15px;
+	color: black;
+	text-transform: none;
+}
+.hidden.trois p {
+	margin-top: 30px;
+}
+.hidden.trois img {
+	display: block;
+	margin: 10px auto;
+}
+.hidden.un h6 {
+	font-family: 'PTSans Bold', serif;
+	font-size: 16px;
+}
+
+
+
+#impots {
+	padding: 40px 10px;
+	border-top: 3px solid #b7b7b7;
+}
+
+#impots h6 {
+	font-family: 'PTSans Bold', serif;
+	color: #800d1c;
+	font-size: 24px;
+	line-height: 1.3;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+#impots p {
+	margin-top: 20px;
+	font-family: 'PTSans Regular', serif;
+	font-size: 15px;
+	color: black;
+	text-transform: none;
+}
+
+
+
+
+.row.don {
+	background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/bg-don.jpg');
+	background-position: 57% 43%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	padding: 20px;
+	padding-top: 180px;
+	padding-bottom: 100px;
+}
+.row.don h1,
+.row.don h2 {
+	font-family: 'PTSans Bold', serif;
+	font-size: 38px;
+	color: white;
+	text-transform: uppercase;
+	line-height: 1.2;
+}
+.row.don h2 {
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
+
+.don-choice {
+	background-color: #ebebeb;
+	height: 150px;
+
+}
+.don-choice div {
+	height: 100%;
+	position: relative;
+	display: inline-block;
+	border-right: 1px solid #acacac;
+}
+.don-choice div:hover {
+	cursor: pointer;
+}
+.don-choice div img {
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: 30px
+}
+.don-choice div p {
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	font-family: 'PTSans Bold', serif;
+	color: #800d1c;
+	font-size: 32px;
+	line-height: 1;
+	text-transform: uppercase;
+	bottom: 40px;
+}
+.don-choice div:last-child {
+	border-right: none;
+}
+
+.don-choice div:last-child p {
+	bottom: 20px;
+	font-size: 26px;
+}
+
+.don-choice div.active {
+	background-color: #800d1c;
+}
+.don-choice div.active p {
+	color: #ebebeb;
+}
+.don-choice div.active img {
+	content: url("https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/dot-full.png");
+}
+.don-display {
+	background-color: white;
+	padding: 30px;
+}
+.don-display h6 {
+	font-family: 'PTSans Bold', serif;
+	color: #800d1c;
+	font-size: 21px;
+	line-height: 1;
+	margin-bottom: 20px;
+}
+.don-display p {
+	font-family: 'PTSans Bold', serif;
+	color: #1e1e1e;
+	font-size: 21px;
+	line-height: 1.2;
+}
+.don-other {
+	padding-top: 20px;
+	display: none;
+}
+.don-other * {
+	display: inline-block;
+}
+.don-other p {
+	font-family: 'PTSans Regular', serif;
+	color: #353535;
+	font-size: 20px;
+}
+.don-other input {
+	max-width: 200px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+.don-other .soit {
+	display: block;
+}
+.don-other .soit p {
+	display: block;
+	font-family: 'PTSans Regular', serif;
+	color: #980f21;
+	font-size: 20px;
+}
+
+.row.button {
+	padding: 25px 5px;
+	width: 100%;
+	background-color: #980f21 !important;
+}
+.row.button p {
+	font-family: 'PTSans Bold', serif;
+	color: white;
+	font-size: 26px;
+	text-transform: uppercase;
+	margin: 0;
+	line-height: 1.2;
+}
+
+
+
+
+
+
+
+
+
+
+
+.other-don {
+	font-family: 'PTSans Regular', serif;
+	font-size: 24px;
+	color:white;
+	display: block;
+	margin-top: 30px;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+.other-don:hover {
+	color: white;
+	text-decoration: none;
+}
+
+#engagement {
+	padding-top: 60px;
+	padding-bottom: 30px;
+	background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/footer-bg.jpg');
+	background-position: 26% 43%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+}
+#engagement .container {
+	margin-bottom: 15px;
+}
+#engagement .container h3 {
+	display: inline-block;
+	vertical-align: middle;
+	margin-bottom: 0;
+	margin-right: 20px;
+	font-family: 'PTSans Regular', serif;
+	color:white;
+	line-height: 1;
+}
+#engagement .begin h5 {
+	font-family: 'PTSans Regular', serif;
+	color:white;
+	line-height: 1;
+	margin-top: 10px;
+	margin-bottom: 40px;
+}
+.icon-footer {
+	margin-bottom: 30px;
+}
+.icon-footer p {
+	font-family: 'PTSans Regular', serif;
+	color:white;
+	line-height: 1.1;
+	font-size: 18px;
+	margin-top: 10px;
+}
+#engagement .inline * {
+	display: inline-block;
+}
+#engagement .inline .left p {
+	vertical-align: middle;
+	font-family: 'PTSans Regular', serif;
+	color:white;
+	line-height: 1.1;
+	text-transform: uppercase;
+	margin: 0;
+}
+#engagement .inline .left img {
+	margin-right: 10px;
+}
+#engagement .inline .sep {
+	margin: 5px 40px;
+}
+#engagement .inline .right p {
+	vertical-align: middle;
+	font-family: 'PTSans Regular', serif;
+	color:white;
+	line-height: 1.1;
+	margin: 0;
+}
+#engagement .end-engagement {
+	margin-top: 40px;
+}
+#engagement .end-engagement h3 {
+	font-family: 'PTSans Bold', serif;
+	color:white;
+	line-height: 1.1;
+	text-transform: uppercase;
+}
+#engagement .end-engagement p {
+	margin-top: 15px;
+	font-family: 'PTSans Regular', serif;
+	color:white;
+	line-height: 1.1;
+	font-size: 18px;
+}
+#engagement .end-engagement .savoir-plus * {
+	display: inline-block;
+}
+#engagement .end-engagement .savoir-plus p {
+	font-family: 'PTSans Bold', serif;
+	color:white;
+	line-height: 1.1;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-left: 5px;
+}
+footer {
+	background: #2b2b2b;
+	color: #7a7a7a;
+}
+
+footer h3  {
+	display: inline-block;
+	margin: 20px;
+	font-size: 18px;
+	color: #7a7a7a !important;
+}
+@media screen and (max-height: 700px) {
+	.video .container-text {
+		bottom: 5%;
 	}
-	.row.don h1, 
-	.row.don h2 {
-		font-family: 'PTSans Bold';
-		font-size: 38px;
-		color: white;
-		text-transform: uppercase;
-		line-height: 1.2;
-	}
-	.row.don h2 {
-		font-size: 20px;
-		margin-bottom: 30px;
-	}
-	.box-don-container {
-		transition: all .1s ease-in-out;
-		-webkit-transition: all .1s ease-in-out;
-		-moz-transition: all .1s ease-in-out;
-		-o-transition: all .1s ease-in-out;
-		-ms-transition: all .1s ease-in-out;
-		margin-top: 10px;
-		margin-right: 10px;
-		background-color: white;
-		display: inline-block;
-		max-width: 100%;
-		width: 250px;
-		text-align: center;
-		color: #980f21;
-	}
-	.box-don-container:hover {
-		transform: scale(1.03);
-	}
-	.box-don {
-		padding: 35px;
-		padding-bottom: 10px;
-	}
-	.box-don img {
+}
+@media screen and (max-width: 640px) {
+	.header img {
 		max-width: 100px;
 	}
-	.box-don h3 {
-		font-family: 'PTSans Bold';
-		font-size: 38px;
-		margin-bottom: 0;
-		line-height: 1.2;
+	.top-bar {
+		padding: 15px;
+		position: absolute;
+		top: 0;
 	}
-	.box-don h4 {
-		font-family: 'PTSans Regular';
-		font-size: 10px;
-		font-weight: 600;
-		line-height: 1.2;
+	.header {
+		padding-top: 80px;
+		background-position: 5% 30%;
 	}
-	.box-don p {
-		margin-top: 10px;
-		font-family: 'PTSans Regular';
-		font-size: 12px;
-		color: #1e1e1e;
-		font-weight: 600;
-		line-height: 1.3;
+	.header h1 {
+		font-size: 24px;
 	}
-	.box-don-container .btn-don {
-		width: 100%;
-		background-color: #980f21;
+	.header h2 {
+		font-size: 18px;
 	}
-	.box-don-container .btn-don  p{
-		margin-bottom: 0;
-		color:white;
-		font-family: 'PTSans Regular';
-		font-size: 15px;
-		padding-top: 20px;
-		padding-bottom: 20px;
-		text-transform: uppercase;
+	.header p {
+		font-size: 18px;
 	}
-	.other-don {
-		font-family: 'PTSans Bold';
-		font-size: 12px;
-		color:white;
-		display: block;
-		margin-top: 30px;
-		text-transform: uppercase;
-		text-decoration: underline;
-	}
-	.other-don:hover {
-		color: white;
-		text-decoration: none;
-	}
-	.row.soutenir {
-		background-image: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/bg-soutenir.jpg');
-		background-position: 57% 43%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		text-align: center;
-		padding: 10px;
-		padding-bottom: 80px;
-		padding-top: 30px;
+	.video .text-columns h3 {
+		font-size: 36px;
 	}
 	.row.soutenir h1 {
-		font-family: 'PTSans Bold';
-		font-size: 42px;
-		color: white;
-		text-transform: uppercase;
-		line-height: 1.2;
-		border-bottom: 5px solid white;
-		width: 541px;
-		max-width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.btn-soutenir {
-		margin-top: 15px;
-		width: 541px;
-		max-width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-		background-color: white;
-	}
-	.btn-soutenir p {
-		font-family: 'PTSans Bold';
-		font-size: 12px;
-		color: #980f21;
-		text-transform: uppercase;
-		margin-bottom: 0;
-		padding-top: 20px;
-		padding-bottom: 20px;
-	}
-	.container-box-soutenir {
-		margin-left: auto;
-		margin-right: auto;
-		border-bottom: 5px solid white;
-		width: 541px;
-		max-width: 100%;
-
-	}
-	.box-soutenir {
-		text-align: left;
-		display: inline-block;
-		text-transform: uppercase;
-		font-family: 'PTSans Regular';
-		color: white;
-	}
-	.box-soutenir.un p {
-		font-size: 32px;
-		margin-bottom: 0;
-		line-height: 1.0;
-	}
-	.box-soutenir.deux p {
-		font-family: 'PTSans Bold';
-		font-size: 125px;
-		margin-bottom: 0;
-		line-height: 1.0;
-	}
-	.box-soutenir.deux p:nth-child(1) {
-		letter-spacing: -10px;
-	}
-	.box-soutenir.deux p:nth-child(2) {
-		vertical-align: top;
-		margin-top: 12px;
-		font-size: 55px;
-	}
-	.box-soutenir.deux * {
-		display: inline-block;
-	}
-
-	.box-soutenir.trois {
-		margin-left: 10px;
-	}
-	.box-soutenir.trois div * {
-		display: inline-block;
-	}
-	.box-soutenir.trois div img {
-		margin-bottom: 3px;
-	}
-	.box-soutenir.trois div p {
-		margin-bottom: 0px;
-	}
-	.box-soutenir.trois div:nth-child(2) img {
-		margin-left: 3px;
-	}
-	.box-soutenir.trois div:nth-child(3) img {
-		margin-left: 4px;
-	}
-	.box-soutenir.trois div:nth-child(3) p {
-		margin-left: 4px;
-	}
-	.box-soutenir.trois div:nth-child(4) img {
-		margin-left: 6px;
-	}
-	.box-soutenir.trois div:nth-child(4) p {
-		margin-left: 5px;
-	}
-	
-	footer {
-		max-width: 100%;
-		padding-top: 40px;
-		background: #2b2b2b;
-		color: #7a7a7a;
-	}
-
-	footer > .row{
-		max-width: 900px;
-		padding-top: 20px;
-		padding-bottom: 20px;
-		border-top: 1px solid #252525;
-	}
-
-	footer > .row > .columns:first-child{
-		bord
-	}
-
-	.footer-redir
-	{
-		display: inline-block;
-		margin: 20px;
-		font-size: 18px;
-		color: #7a7a7a !important;
-	}
-
-	.footer-redir > img
-	{
-		display: inline-block;
-	}
-
-	.block-footer
-	{
-		margin-top: 25px;
-	}
-
-	.block-footer-link {
-		display: inline;
-	}
-
-	.text-footer-link {
-		font-size: 14px;
-		color: white;
-		display: inline-block;
-		margin: 0;
-		margin-bottom: 15px;
-	}
-
-	.text-footer-title
-	{
-		text-transform: uppercase;
-		line-height: 1.2;
 		font-size: 35px;
-		margin-bottom: 10px;
-		font-family: 'League Gothic Regular';
 	}
-
-	.text-footer-para
-	{
-		line-height: 1.2;
-		margin-bottom: 10px;
-		font-family: 'Arial';
-		font-weight: 500;
+	.box-expanded {
+		padding: 5px;
+		padding-top: 20px;
+		margin-bottom: 35px;
 	}
-
-	.img-footer-link {
-		max-width: 15px;
-		display: inline-block;
+	.row.don {
+		background-position: 40% 43%;
 	}
-
-	@media screen and (max-width: 640px) {
-		.top-bar {
-			padding: 15px;
-			position: absolute;
-			top: 0;
-		}
-		.header {
-			padding-top: 80px;
-			background-position: 5% 30%;
-		}
-		.header h1 {
-			font-size: 34px;
-		}
-		.header h2 {
-			font-size: 20px;
-		}
-		.header p {
-			font-size: 18px;
-		}
-		.video .text-columns h3 {
-			font-size: 36px;
-		}
-		.row.soutenir h1 {
-			font-size: 35px;
-		}
-		.video .text-columns{
-			padding: 20px;
-			padding-bottom: 40px;
-		}
-		.video .video-columns {
-			background-position: 100% 20%;
-		}
-		.box-expanded {
-			padding: 5px;
-			padding-top: 20px;
-			margin-bottom: 35px;
-		}
-		.row.don {
-			background-position: 40% 43%;
-		}
-		#video {
-			width: 400px;
-			max-width: 100%;
-			height: 300px;
-			bottom: 20px;
-			left: 0px;
-		}
+	#dispositif .box .to-show {
+		position: static;
 	}
+	.video .container-text p {
+		font-size: 20px;
+	}
+	#video2 {
+		background-image: url("https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-action/passerelles-davenir/2018/bg-video-2-small.jpg");
+	}
+	.don-choice {
+		height: auto;
+	}
+	.don-choice div {
+		width: 100%;
+		height: 100px;
+		border: none;
+	}
+	.don-choice div img {
+		top: 15px;
+	}
+	.don-choice div p {
+		bottom: 10px;
+	}
+	.don-other input {
+		max-width: 75px;
+	}
+	#engagement .inline .left p {
+		margin-top: 10px;
+	}
+	#engagement .inline .right {
+		margin-top: 20px;
+	}
+	#engagement .end-engagement {
+		margin-top: 20px;
+	}
+}
