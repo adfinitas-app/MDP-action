@@ -221,7 +221,7 @@ $(function(){
 
     // Gestion du numéro de téléphone
     $("#tel").intlTelInput({
-        utilsScript: 'js/utils.js',
+        utilsScript: 'https://action.miedepain.asso.fr/enquete/js/utils.js',
         onlyCountries: ['fr'],
         allowDropdown: false
     });
