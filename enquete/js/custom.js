@@ -26,8 +26,8 @@ function checkAnswer(question, el, radioIndex) {
     }
 
     var type = question.split('-');
-    if(question.indexOf('checkbox') >= 0 && $(el).attr('src') == 'img/checkbox-on.png') {
-        $(el).attr('src', 'img/checkbox-off.png');
+    if(question.indexOf('checkbox') >= 0 && $(el).attr('src') == 'https://action.miedepain.asso.fr/enquete/img/checkbox-on.png') {
+        $(el).attr('src', 'https://action.miedepain.asso.fr/enquete/img/checkbox-off.png');
         $(el).parents('.quiz-question').find('input[type=' + type[0] + ']').eq(radioIndex).prop('checked', false);
     }
     else {
@@ -196,7 +196,7 @@ $(function(){
         $('input[type=radio], input[type=checkbox]', $(this)).each(function() {
             var that = this;
 
-            $(that).prop('checked', false).css('display', 'none').after($('<img src="img/checkbox-off.png" class="custom-checkbox radio-' + $(that).attr('name') + ' img-' + i + ' quiz-question-' + j + '" onclick="checkAnswer(\'' + $(that).attr('type') + '-' + $(that).attr('name') + '\', \'.quiz-question-' + j + '.img-' + $(that).parent().index() + '\', ' + i + ');" />'));
+            $(that).prop('checked', false).css('display', 'none').after($('<img src="https://action.miedepain.asso.fr/enquete/img/checkbox-off.png" class="custom-checkbox radio-' + $(that).attr('name') + ' img-' + i + ' quiz-question-' + j + '" onclick="checkAnswer(\'' + $(that).attr('type') + '-' + $(that).attr('name') + '\', \'.quiz-question-' + j + '.img-' + $(that).parent().index() + '\', ' + i + ');" />'));
             $(that).parent().find('label').attr('onclick', 'checkAnswer(\'' + $(that).attr('type') + '-' + $(that).attr('name') + '\', \'.quiz-question-' + j + '.img-' + $(that).parent().index() + '\', ' + i + ');');
             i++;
         });
