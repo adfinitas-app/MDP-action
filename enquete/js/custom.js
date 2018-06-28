@@ -31,7 +31,7 @@ function checkAnswer(question, el, radioIndex) {
         $(el).parents('.quiz-question').find('input[type=' + type[0] + ']').eq(radioIndex).prop('checked', false);
     }
     else {
-        $(el).attr('src', 'img/checkbox-on.png');
+        $(el).attr('src', 'https://action.miedepain.asso.fr/enquete/img/checkbox-on.png');
         $(el).parents('.quiz-question').find('input[type=' + type[0] + ']').eq(radioIndex).prop('checked', true);
     }
 }
