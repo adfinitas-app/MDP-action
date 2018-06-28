@@ -22,7 +22,7 @@ function nextQuestion(question) {
 
 function checkAnswer(question, el, radioIndex) {
     if(question.indexOf('radio') >= 0) {
-        $('.' + question).attr('src', 'img/checkbox-off.png');
+        $('.' + question).attr('src', 'https://action.miedepain.asso.fr/enquete/img/checkbox-off.png');
     }
 
     var type = question.split('-');
