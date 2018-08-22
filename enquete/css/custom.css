@@ -390,3 +390,21 @@ p {
         transform: translateX(-50%);
     }
 }
+
+.inline-checkbox-container {
+	margin-top: 20px;
+}
+
+.inline-checkbox-container > * {
+	display: inline-block;
+	color: white;
+	vertical-align: middle;
+}
+
+.inline-checkbox-container > img {
+}
+.inline-checkbox-container > label {
+	margin-left: 5px;
+	width: calc(100% - 30px);
+	line-height: 1.2;
+}

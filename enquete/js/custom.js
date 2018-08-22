@@ -163,28 +163,76 @@ function endQuiz() {
             $('.container').animate({
                 scrollTop: $('.finish').offset().top + $('.container').scrollTop()
             });
-
-            woopra.identify({
-                email: $('#email').val(),
-                name: $('#prenom').val() + ' ' + $('#nom').val(),
-                firstname: $('#prenom').val(),
-                lastname: $('#nom').val(),
-                phone: $("#tel").intlTelInput("getNumber")
-            });
-            woopra.track("inscription", {
-                optin: "oui",
-                url: document.location.href,
-                title: document.title,
-                origine: "enquete2016"
-            });
-            woopra.track("enquete2016", {canal:"lp"});
         }
 
         function error() {
             alert('Une erreur est survenue lors de l\'enregistrement de vos réponses. Veuillez réessayer ultérieurement.');
         }
 
-        makeCorsRequest(data, success, error);
+      var excluded = $('#exclude:checked').val() === "yes"
+      if (excluded) {
+        // GDPR exclusion list
+        adfinitasIO({
+                    email: $('#email').val()
+        }, 'eda21ae3-54fb-49b9-a819-48b8a6f96697',
+           '569fc63d-7f70-492c-9912-3e5cf125aee9',
+           success,
+           error
+        )
+      } else {
+        adfinitasIO({
+          db: {
+            schema : "mdp-enquete2016",
+            db : {
+              "firstname" : $('#prenom').val(),
+              "lastname" : $('#nom').val(),
+              "email" : $('#email').val(),
+              "phone" : $("#tel").intlTelInput("getNumber"),
+              "q1" : $('input[type=radio]:checked', $('.quiz0')).val(),
+              "q2" : $('input[type=radio]:checked', $('.quiz1')).val(),
+              "q3" : $('input[type=radio]:checked', $('.quiz2')).val(),
+              "q4" : $('input[type=radio]:checked', $('.quiz3')).val(),
+              "q5" : $('input[type=checkbox]:checked', $('.quiz4')).map(function() {
+                return this.value;
+              }).get().join('|'),
+              "date": today.toString()
+            }
+          },
+          woopra : {
+            host: "miedepain.asso.fr",
+            cv_name: $('#prenom').val() + ' ' + $('#nom').val(),
+            cv_email: $('#email').val(),
+            cv_phone: $("#tel").intlTelInput("getNumber"),
+            cv_firstname: $('#prenom').val(),
+            cv_lastname: $('#nom').val(),
+            event: "inscription",
+            ce_optin: "oui",
+            ce_url: document.location.href,
+            ce_title: document.title,
+            ce_origine: "enquete2016"
+          }
+        }, 'eda21ae3-54fb-49b9-a819-48b8a6f96697',
+           'a2e55464-7fc6-4da1-84b8-045f0b09a4d2',
+           success,
+           error
+        )
+        adfinitasIO({
+          woopra: {
+            host: "miedepain.asso.fr",
+            cv_name: $('#prenom').val() + ' ' + $('#nom').val(),
+            cv_email: $('#email').val(),
+            cv_phone: $("#tel").intlTelInput("getNumber"),
+            cv_firstname: $('#prenom').val(),
+            cv_lastname: $('#nom').val(),
+            event: "enquete2016",
+            ce_canal: "lp"
+          }
+        }, 'eda21ae3-54fb-49b9-a819-48b8a6f96697',
+           'a2e55464-7fc6-4da1-84b8-045f0b09a4d2',
+           null,
+           null
+        )
+      }
     }
 }
 

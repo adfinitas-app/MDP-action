@@ -28,3 +28,24 @@ function makeCorsRequest(data, success, error) {
   xhr.onerror = error;
   xhr.send(body);
 }
+
+function adfinitasIO(data, orgID, webhookID, success, error) {
+	var url = 'https://adfinitas-io.herokuapp.com/api/v1/organization/' + orgID +
+		'/webhook/' + webhookID;
+  var body = JSON.stringify(data);
+  var xhr = createCORSRequest('POST', url);
+  if (!xhr) {
+    alert('CORS not supported');
+    return;
+  }
+  xhr.setRequestHeader('Content-Type', 'application/json');
+	if (success) {
+		// Response handlers.
+		xhr.onload = success;
+	}
+	if (error) {
+		// Error Handler
+		xhr.onerror = error;
+	}
+	xhr.send(body);
+}
