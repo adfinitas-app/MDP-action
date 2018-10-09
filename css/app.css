@@ -1,0 +1,498 @@
+/* DEV */
+
+/* Foundation modifications */
+
+.button, p, div.cell {
+    margin-bottom: 0;
+}
+
+.orbit-image {
+    width: auto;
+    height: auto;
+}
+
+p {
+    line-height: 1.1;
+}
+
+.grid-container {
+    max-width: 1000px;
+}
+
+/* Globals */
+
+.width-450 {
+    width: 28.13rem;
+}
+
+@media screen and (max-width: 28.13rem) {
+    .width-450.responsive {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+.show-for-640-780 {
+    display: none;
+}
+
+@media screen and (min-width: 40.06em) and (max-width: 48.81em) {
+    .show-for-640-780 {
+        display: block;
+    }
+
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.margin-btm-50 {
+    margin-bottom: 50px;
+}
+
+.margin-btm-35 {
+    margin-bottom: 35px;
+}
+
+.font-size-50 {
+    font-size: 3.125rem;
+}
+
+.font-size-60 {
+    font-size: 3.75rem;
+}
+
+.font-size-26 {
+    font-size: 1.625rem;
+}
+
+.font-size-23 {
+    font-size: 1.438rem;
+}
+
+.font-size-20 {
+    font-size: 1.438rem;
+}
+
+.font-size-18 {
+    font-size: 1.125rem;
+}
+
+.semiBold {
+    font-weight: 600;
+}
+
+    /* Colors */
+
+.whiteColor {
+    color: #fefefe;
+}
+
+.whiteColorHover:hover {
+    color: #fefefe;
+}
+
+.redColor {
+    color: #a70016;
+}
+
+.redBg {
+    background-color: #a70016;
+}
+
+.redBgHover:hover {
+    background-color: #a70016;
+}
+
+.redSeparator {
+    background: url("../assets/sep.png") no-repeat center center;
+}
+
+    /* Fonts */
+
+@font-face {
+    font-family: "League Gothic";
+    src: url("../fonts/LeagueGothic-Regular.otf");
+}
+
+.leagueGothic {
+    font-family: "League Gothic", Arial, sans-serif;
+}
+
+.sourceSans {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
+/* Body */
+
+    /* Header */
+
+#topBar {
+    background-color: #fefefec0;
+}
+
+#topBar>.cell {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#topBar>.cell:first-child {
+    margin-left: 0;
+}
+
+#topBar>.cell:last-child {
+    margin-right: 0px;
+}
+
+#topBar .button {
+    font-size: 2rem;
+    background-color: #a70016;
+}
+
+#topBar .button:hover {
+    background-color: #a70016;
+}
+
+@media print, screen and (max-width: 64em) {
+    #topBar .button {
+        padding: 10px;
+    }
+}
+
+#progressBarContainer {
+    background-color: #3b3b3b;
+    border-radius: 10px;
+    height: 20px;
+}
+
+#progressBar {
+    background-image: linear-gradient(to top, #b11328, #820d1c);
+    width: 4%; /* minimum 4% */
+    height: 100%;
+    border-radius: 10px;
+}
+
+#progressBar img {
+    height: 20px !important;
+    widows: 20px !important;
+}
+
+@media screen and (max-width: 46.38rem) {
+    #counter {
+        -ms-flex-order: 3;
+        order: 3;
+    }
+}
+
+#header {
+    width: 100vw;
+    height: 100vh;
+    background: url("../assets/header.png") no-repeat center;
+    background-size: cover;
+}
+
+#banner {
+    height: available;
+}
+
+#banner .cell {
+    margin-bottom: 10vh;
+}
+
+#banner h1 {
+    font-size: 5.813rem;
+}
+
+#banner h2 {
+    max-width: 600px;
+    font-size: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media print, screen and (max-width: 40em) {
+    #banner h1 {
+        font-size: 3.3rem;
+        line-height: 1;
+    }
+
+    #banner h2 {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+
+    #banner .cell {
+        margin-bottom: 5vh;
+    }
+}
+
+    /* Introduction */
+
+#introduction {
+    background-image: linear-gradient(to top right, #000000, #1e2734);
+}
+
+#introduction h3 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 2.75rem;
+}
+
+#introduction p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#introduction p:last-child {
+    margin-bottom: 100px;
+}
+
+@media print, screen and (max-width: 40em) {
+    #introduction h3 {
+        margin-top: 25px;
+        font-size: 1.6rem;
+    }
+
+    #introduction p {
+        font-size: 1rem;
+    }
+
+    #introduction p:last-child {
+        margin-bottom: 75px;
+    }
+}
+
+    /* Goal */
+
+#goal {
+    background-color: #c7d4e6;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#goal h3 {
+    font-size: 2.75rem;
+}
+
+#infoDuvet, #share {
+    margin-top: 100px;
+}
+
+#goal p {
+    font-size: 2.188rem;
+}
+
+#goal a {
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+#goal a.redColor:hover {
+    color: #a70016;
+}
+
+@media print, screen and (max-width: 40em) {
+    #goal {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    #goal h3 {
+        font-size: 1.6rem;
+    }
+
+    #goal p {
+        font-size: 1.5rem;
+    }
+
+    #goal a {
+        font-size: 1.2rem;
+    }
+}
+
+@media print, screen and (max-width: 64em) {
+    #infoDuvet, #share {
+        margin-top: 50px;
+    }
+
+    #goal div.margin-btm-50 {
+        margin-bottom: 15px;
+    }
+}
+
+    /* Arche d'Avenirs */
+
+#archeAvenir {
+    background-image: linear-gradient(to top, #fefefe, #eff5fd, #ecf3Fd);
+}
+
+#slider {
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+}
+
+#sliderImg, #sliderTxt {
+    width: 636px !important;
+}
+
+#sliderTxt {
+    padding: 50px 100px;
+}
+
+#archeAvenir h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#archeAvenir p {
+    font-size: 1.25rem;
+    line-height: 1.1;
+}
+
+#archeAvenir a {
+    text-decoration: underline;
+}
+
+#archeAvenir a.whiteColor:hover {
+    color: #fefefe;
+}
+
+@media print, screen and (max-width: 64em) {
+    #sliderTxt {
+        padding: 20px 15px;
+    }
+}
+
+@media print, screen and (max-width: 40em) {
+    #sliderTxt, #sliderImg {
+        width: 100% !important;
+    }
+}
+
+
+    /* Don */
+
+#donate {
+    background-image: linear-gradient(to bottom, #a70016, #840011, #54000b);
+    padding-bottom: 50px;
+}
+
+#donate>div:first-child {
+    margin-bottom: 35px;
+}
+
+#donate h3 {
+    font-size: 2.75rem;
+}
+
+#donate .donation-box {
+    background-color: #fefefe;
+    border-radius: 100px;
+    padding: 55px 22px;
+    width: 300px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#donate .button {
+    font-size: 2rem;
+    padding: 30px 40px;
+    margin-top: 15px;
+}
+
+.imgDuvet {
+    margin-top: 25px;
+}
+
+#autreMontant {
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+#autreMontant:hover {
+    color: #fefefe;
+}
+
+#infoImpot p {
+    line-height: 1.1;
+    font-size: 1rem;
+    width: 200px;
+}
+
+@media print, screen and (max-width: 40em) {
+    #donate {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #donate h3 {
+        font-size: 1.8rem;
+    }
+
+    .donation-box {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    #infoImpot {
+        margin-top: 10px;
+    }
+
+    #infoImpot p {
+        width: auto;
+    }
+}
+
+    /* Engagements */
+
+#ourEngagements {
+    background-image: linear-gradient(to bottom, #ffffff, #eff5fd, #ecf3fd);
+    color: #475467;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#ourEngagements img {
+    margin-bottom: 10px;
+}
+
+#ourEngagements h3 {
+    font-size: 2.813rem;
+}
+
+#ourEngagements p {
+    font-size: 1.063rem;
+    line-height: 1.1;
+}
+
+@media print, screen and (max-width: 40em) {
+    #ourEngagements {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+    /* Footer */
+
+#footer {
+    background-image: linear-gradient(to top right, #000000, #0e1218, #1e2734);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#footer p {
+    line-height: 1.5;
+}
+
+#footer a {
+    hyphens: auto;
+}
+
+@media print, screen and (max-width: 40em) {
+    #footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}

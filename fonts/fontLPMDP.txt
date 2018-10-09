@@ -1,0 +1,9 @@
+header: League Gothic
+Head (thomas): League Gothic (thomas ...) source sans pro (reste ...)
+sous le Head (fleche rouge) : En gros : League Gothic // en petit : Source sans pro
+bleu clair gros duvet: League Gothic
+slider: titre : League Gothic // reste : source sans pro
+Rouge don duvets: League Gothic pour tout sauf pour le diagramme patate , le texte est en Source sans pro
+Pre footer: titre: League Gothic // reste: Source sans pro
+footer: source sans pro
+Source sans pro : <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
