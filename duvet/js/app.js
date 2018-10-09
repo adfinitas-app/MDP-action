@@ -15,24 +15,7 @@ function zipDuvet() {
 }
 
 function getNbrDuvetBought() {
-    $.ajax({
-        url: "https://donner.miedepain.asso.fr/api/counter/get?user_api=umdpapi&pwd_api=drR3tmYQ&campaigns=59",
-        type: 'GET',
-        dataType: 'text',
-        headers: {
-            'Access-Control-Allow-Origin': 'https://golden-map.cloudvent.net/',
-        },
-        crossDomain: true,
-        success: function(content, statut) {
-            alert("success");
-        },
-        error: function(resultat, statut, error) {
-            alert("error: " + error);
-        },
-        complete: function() {
-            alert("complete");
-        }
-    });
+    return (150); //Pour l'instant, variable représentant le nombre de duvets achetés. La vraie fonction arrive soon ;)
 }
 
 function getPercentDuvetBought(nbr, objective) {
