@@ -5,7 +5,7 @@ $(document).ready(handleCounter());
 let img = document.getElementById("photoDuvet");
 
 function unzipDuvet() {
-    img.setAttribute("src", "assets/duvetOuvert.png");
+    img.setAttribute("src", "/duvet/assets/duvetOuvert.png");
     img.setAttribute("alt", "duvet ouvert");
 }
 
