@@ -15,7 +15,7 @@ function zipDuvet() {
 }
 
 function getNbrDuvetBought() {
-    return (150); //Pour l'instant, variable représentant le nombre de duvets achetés. La vraie fonction arrive soon ;)
+    return (0); //Pour l'instant, variable représentant le nombre de duvets achetés. La vraie fonction arrive soon ;)
 }
 
 function getPercentDuvetBought(nbr, objective) {
