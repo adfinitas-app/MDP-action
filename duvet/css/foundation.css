@@ -2294,8 +2294,6 @@ a {
   color: #1779ba;
   text-decoration: none;
   cursor: pointer; }
-  a:hover, a:focus {
-    color: #1468a0; }
   a img {
     border: 0; }
 
@@ -2505,9 +2503,6 @@ ul.no-bullet, ol.no-bullet {
   color: #fefefe; }
   [data-whatinput='mouse'] .button {
     outline: 0; }
-  .button:hover, .button:focus {
-    background-color: #14679e;
-    color: #fefefe; }
   .button.tiny {
     font-size: 0.6rem; }
   .button.small {
