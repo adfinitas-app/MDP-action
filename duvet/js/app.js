@@ -95,27 +95,6 @@ function getPercentDuvetBought(nbr) {
     return (res);
 }
 
-function animateProgressBar(action, value) {
-    animateProgressBar.state.size += animateProgressBar.state.direction;
-    if (animateProgressBar.state.size === 100 || animateProgressBar.state.size === 0) {
-        animateProgressBar.state.direction *= -1;
-        if (animateProgressBar.state.size === 0 && animateProgressBar.state.stop === 1) {
-            let nbrElement = document.getElementById("nbrDuvets");
-            let percent = getPercentDuvetBought(value);
-            let progressBar = document.getElementById("progressBar");
-
-            for (var i = 0; i <= animateProgressBar.state.value; i++) {
-                console.log("je suis la!" + i + "/" + percent);
-                nbrElement.textContent = i + " duvets achetés";
-                percent = getPercentDuvetBought(i);
-                progressBar.style.width = percent + "%";
-            }
-            clearInterval(animationInterval);
-        }
-    }
-    animateProgressBar.state.element.style.width = animateProgressBar.state.size + "%";
-}
-
 function handleCounter() {
     progressBar = new ProgressBar();
     progressBar.startAnimation();
