@@ -83,7 +83,7 @@ function getNbrDuvetBought() {
             res = JSON.parse(response);
             res = parseInt(res.products[0]) + parseInt(res.products[1]);
             res = Math.trunc(res / 3000);
-            progressBar.stop(800); //TODO res
+            progressBar.stop(150); //TODO res
             }
     });
 }
