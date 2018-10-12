@@ -21,6 +21,10 @@ function ProgressBar() {
             else {
                 this.state.i++;
                 this.state.size = this.state.i * 100 / OBJECTIVE;
+                if (this.state.size > 100)
+                    this.state.size = 100;
+                else if (this.state.size < 0)
+                    this.state.size = 0;
             }
             this.render(this.state.size, this.state.i);
         }).bind(this), 10);
@@ -57,7 +61,6 @@ $(document).foundation();
 $(document).ready(handleCounter());
 
 var img = document.getElementById("photoDuvet");
-var animationInterval;
 
 function unzipDuvet() {
     img.setAttribute("src", "assets/duvetOuvert.png");
@@ -80,19 +83,9 @@ function getNbrDuvetBought() {
             res = JSON.parse(response);
             res = parseInt(res.products[0]) + parseInt(res.products[1]);
             res = Math.trunc(res / 3000);
-            progressBar.stop(150); //TODO res
+            progressBar.stop(800); //TODO res
             }
     });
-}
-
-function getPercentDuvetBought(nbr) {
-    let res = (nbr * 100) / OBJECTIVE;
-
-    if (res < 0)
-        return (0);
-    if (res > 100)
-        return (100);
-    return (res);
 }
 
 function handleCounter() {
