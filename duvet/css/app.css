@@ -155,6 +155,10 @@ p {
 }
 
 @media print, screen and (max-width: 64em) {
+    #topBar {
+        padding-bottom: 5px;
+    }
+
     #topBar .button {
         padding: 10px;
     }
@@ -169,6 +173,7 @@ p {
 #progressBar {
     background-image: linear-gradient(to top, #b11328, #820d1c);
     width: 4%; /* minimum 4% */
+    min-width: 20px;
     height: 100%;
     border-radius: 10px;
 }
