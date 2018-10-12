@@ -3,13 +3,14 @@ var OBJECTIVE = 400;
 var progressBar = undefined;
 function ProgressBar() {
     this.state = {
-        direction: 1,
+        angle: 0,
         size: 0,
         stop: false,
         number: 0,
         i: 0
     };
 
+    this.counterStatus = document.getElementById("counterStatus");
     this.numberElement = document.getElementById("nbrDuvets");
     this.element = document.getElementById("progressBar");
     this.interval = undefined;
@@ -35,23 +36,26 @@ function ProgressBar() {
         this.state.number = value;
     };
 
-    this.render = function(size, number) {
-        this.element.style.width = size + "%";
+    this.render = function(size, number, angle) {
+        if (size)
+            this.element.style.width = size + "%";
         if (number)
             this.numberElement.textContent = number + " duvets achetés";
+        if (angle)
+            this.counterStatus.style.transform = "rotate(" + angle + "deg)";
     };
 
     this.startAnimation = function () {
         this.interval = setInterval((function() {
-            if (this.state.stop === true && this.state.size === 0) {
+            if (this.state.stop === true && this.state.angle === 0) {
                 clearInterval(this.interval);
                 this.startProgression();
             } else {
-                this.state.size += this.state.direction;
-                if (this.state.size === 0 || this.state.size === 100)
-                    this.state.direction *= -1;
+                this.state.angle++;
+                if (this.state.angle >= 360)
+                    this.state.angle = 0;
             }
-            this.render(this.state.size);
+            this.render(null, null, this.state.angle);
         }).bind(this), 5);
     };
 }
