@@ -18,7 +18,6 @@ function ProgressBar() {
     this.startProgression = function() {
         this.interval = setInterval((function() {
             if (this.state.number === 0) {
-                console.log("here");
                 this.render(0, 0)
                 clearInterval(this.interval);
                 return;
@@ -43,7 +42,6 @@ function ProgressBar() {
     };
 
     this.render = function(size, number, angle) {
-        console.log("there");
         if (size !== null)
             this.element.style.width = size + "%";
         if (number !== null)
