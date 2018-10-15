@@ -67,9 +67,20 @@ function ProgressBar() {
 
 $(document).foundation();
 
-$(document).ready(handleCounter());
+$(document).ready(setPage());
+
+window.onresize = setTopBar;
 
 var img = document.getElementById("photoDuvet");
+
+function setTopBar() {
+    document.getElementById("logoContainer").style.width = getComputedStyle(document.getElementById("donateButton"), null).getPropertyValue("width");
+}
+
+function setPage() {
+    handleCounter();
+    setTopBar();
+}
 
 function unzipDuvet() {
     img.setAttribute("src", "assets/duvetOuvert.png");
@@ -93,7 +104,7 @@ function getNbrDuvetBought() {
             res = parseInt(res.products[0]) + parseInt(res.products[1]);
             res = Math.trunc(res / 3000);
             progressBar.stop(0);
-            }
+        }
     });
 }
 
