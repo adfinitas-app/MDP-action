@@ -6,6 +6,10 @@
     width: 100vw;
 }
 
+.sticky.is-stuck {
+    width: 100%;
+}
+
 .button, p, div.cell {
     margin-bottom: 0;
 }
