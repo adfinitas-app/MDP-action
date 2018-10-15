@@ -17,6 +17,10 @@ function ProgressBar() {
 
     this.startProgression = function() {
         this.interval = setInterval((function() {
+            if (this.state.number === 0) {
+                this.render(0, 0)
+                return;
+            }
             if (this.state.i >= this.state.number)
                 clearInterval(this.interval);
             else {
