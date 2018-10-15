@@ -45,7 +45,7 @@ function ProgressBar() {
         if (size !== null)
             this.element.style.width = size + "%";
         if (number !== null)
-            this.numberElement.textContent = number + " duvet" + ((number === 0 || number === 1) ? " " : "s ") + "achetés";
+            this.numberElement.textContent = number + " duvet" + ((number === 0 || number === 1) ? " " : "s ") + "acheté" + ((number === 0 || number === 1) ? "" : "s");
         if (angle !== null)
             this.counterStatus.style.transform = "rotate(" + angle + "deg)";
     };
