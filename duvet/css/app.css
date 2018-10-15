@@ -6,8 +6,8 @@
     width: 100vw;
 }
 
-.sticky.is-stuck {
-    width: 100%.
+.sticky, .sticky.is-stuck {
+    width: 100%;
 }
 
 .button, p, div.cell {
