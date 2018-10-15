@@ -113,3 +113,13 @@ function handleCounter() {
     progressBar.startAnimation();
     getNbrDuvetBought();
 }
+
+document.getElementById("shareButton").onclick = function() {
+    FB.ui({
+        method: 'share',
+        mobile_iframe: true,
+        href: 'https://action.miedepain.asso.fr/duvet',
+        quote: 'test',
+    }, function (response) {
+    });
+};
