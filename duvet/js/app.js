@@ -43,6 +43,7 @@ function ProgressBar() {
     };
 
     this.render = function(size, number, angle) {
+        console.log("there");
         if (size)
             this.element.style.width = size + "%";
         if (number)
