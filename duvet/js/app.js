@@ -83,12 +83,12 @@ function setPage() {
 }
 
 function unzipDuvet() {
-    img.setAttribute("src", "assets/duvetOuvert.png");
+    img.setAttribute("src", "/duvet/assets/duvetOuvert.png");
     img.setAttribute("alt", "duvet ouvert");
 }
 
 function zipDuvet() {
-    img.setAttribute("src", "assets/duvetFerme.png");
+    img.setAttribute("src", "/duvetassets/duvetFerme.png");
     img.setAttribute("alt", "duvet fermé");
 }
 
