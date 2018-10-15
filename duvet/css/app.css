@@ -183,7 +183,7 @@ p {
     widows: 20px !important;
 }
 
-@media screen and (max-width: 46.38rem) {
+@media screen and (max-width: 53.06rem) {
     #counter {
         -ms-flex-order: 3;
         order: 3;
