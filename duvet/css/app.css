@@ -2,14 +2,6 @@
 
 /* Foundation modifications */
 
-.grid-y.grid-frame {
-    width: 100vw;
-}
-
-.sticky, .sticky.is-stuck {
-    width: 100%;
-}
-
 .button, p, div.cell {
     margin-bottom: 0;
 }
@@ -199,7 +191,6 @@ p {
 }
 
 #header {
-    width: 100vw !important;
     height: 100vh !important;
     background: url("../assets/header.png") no-repeat center;
     background-size: cover;
