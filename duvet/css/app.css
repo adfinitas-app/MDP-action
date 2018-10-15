@@ -3,7 +3,7 @@
 /* Foundation modifications */
 
 .sticky, .sticky.is-stuck {
-    width: 100%;
+    width: 100% !important;
 }
 
 .button, p, div.cell {
