@@ -44,11 +44,11 @@ function ProgressBar() {
 
     this.render = function(size, number, angle) {
         console.log("there");
-        if (size)
+        if (size !== null)
             this.element.style.width = size + "%";
-        if (number)
+        if (number !== null)
             this.numberElement.textContent = number + " duvets achetés";
-        if (angle)
+        if (angle !== null)
             this.counterStatus.style.transform = "rotate(" + angle + "deg)";
     };
 
