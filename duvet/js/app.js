@@ -88,7 +88,7 @@ function unzipDuvet() {
 }
 
 function zipDuvet() {
-    img.setAttribute("src", "/duvetassets/duvetFerme.png");
+    img.setAttribute("src", "/duvet/assets/duvetFerme.png");
     img.setAttribute("alt", "duvet fermé");
 }
 
