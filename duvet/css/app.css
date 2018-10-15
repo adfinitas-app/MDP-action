@@ -2,8 +2,8 @@
 
 /* Foundation modifications */
 
-.sticky, .sticky.is-stuck {
-    width: 100% !important;
+.grid-y.grid-frame {
+    width: 100vw;
 }
 
 .button, p, div.cell {
