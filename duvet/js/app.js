@@ -73,6 +73,9 @@ window.onresize = setTopBar;
 
 var img = document.getElementById("photoDuvet");
 
+img.addEventListener('onmouseover', unzipDuvet, {passive: false});
+img.addEventListener('onmouseout', zipDuvet, {passive: false});
+
 function setTopBar() {
     document.getElementById("logoContainer").style.width = getComputedStyle(document.getElementById("donateButton"), null).getPropertyValue("width");
 }
@@ -83,13 +86,10 @@ function setPage() {
 }
 
 function unzipDuvet() {
-    img.setAttribute("src", "/duvet/assets/duvetOuvert.png");
-    img.setAttribute("alt", "duvet ouvert");
+    img.style.backgroundPosition = `0px 314px`;
 }
-
 function zipDuvet() {
-    img.setAttribute("src", "/duvet/assets/duvetFerme.png");
-    img.setAttribute("alt", "duvet fermé");
+    img.style.backgroundPosition = `0px 0px`;
 }
 
 function getNbrDuvetBought() {
