@@ -83,7 +83,7 @@ p {
     font-weight: 600;
 }
 
-    /* Colors */
+/* Colors */
 
 .whiteColor {
     color: #fefefe;
@@ -93,7 +93,7 @@ p {
     color: #fefefe;
 }
 
-.redColor {
+.redColor, .redColor:hover {
     color: #a70016;
 }
 
@@ -109,7 +109,7 @@ p {
     background: url("../assets/sep.png") no-repeat center center;
 }
 
-    /* Fonts */
+/* Fonts */
 
 @font-face {
     font-family: "League Gothic";
@@ -126,7 +126,7 @@ p {
 
 /* Body */
 
-    /* Header */
+/* Header */
 
 #topBar {
     background-color: #fefefec0;
@@ -232,7 +232,7 @@ p {
     }
 }
 
-    /* Introduction */
+/* Introduction */
 
 #introduction {
     background-image: linear-gradient(to top right, #000000, #1e2734);
@@ -268,7 +268,7 @@ p {
     }
 }
 
-    /* Goal */
+/* Goal */
 
 #goal {
     background-color: #c7d4e6;
@@ -326,7 +326,14 @@ p {
     }
 }
 
-    /* Arche d'Avenirs */
+#photoDuvet {
+    width: 384px;
+    height: 314px;
+    background: url('../assets/duvetSpritesheet.png') 0px 0px;
+    margin: auto;
+}
+
+/* Arche d'Avenirs */
 
 #archeAvenir {
     background-image: linear-gradient(to top, #fefefe, #eff5fd, #ecf3Fd);
@@ -377,7 +384,7 @@ p {
 }
 
 
-    /* Don */
+/* Don */
 
 #donate {
     background-image: linear-gradient(to bottom, #a70016, #840011, #54000b);
@@ -450,7 +457,7 @@ p {
     }
 }
 
-    /* Engagements */
+/* Engagements */
 
 #ourEngagements {
     background-image: linear-gradient(to bottom, #ffffff, #eff5fd, #ecf3fd);
@@ -479,7 +486,7 @@ p {
     }
 }
 
-    /* Footer */
+/* Footer */
 
 #footer {
     background-image: linear-gradient(to top right, #000000, #0e1218, #1e2734);
@@ -500,11 +507,4 @@ p {
         padding-top: 50px;
         padding-bottom: 50px;
     }
-}
-
-#photoDuvet {
-    width: 384px;
-    height: 314px;
-    background: url('../assets/duvetSpritesheet.png') 0px 0px;
-    margin: auto;
 }
