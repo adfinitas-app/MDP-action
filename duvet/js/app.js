@@ -93,15 +93,17 @@ function zipDuvet() {
 }
 
 function getNbrDuvetBought() {
-    var res;
+    let res;
+    let obj;
 
     $.ajax({
         url: "//duvet-mdp-iraiser-proxy.herokuapp.com/",
         type: "GET",
         dataType: "text",
         success: function(response) {
-            res = JSON.parse(response);
-            res = parseInt(res.products[0]) + parseInt(res.products[1]);
+            obj = JSON.parse(response);
+            for (let i = 0; i < obj.products.length; i++)
+                res += parseInt(obj.products[i]);
             res = Math.trunc(res / 3000);
             progressBar.stop(0);
         }
