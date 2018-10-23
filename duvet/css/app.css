@@ -21,17 +21,6 @@ p {
 
 /* Globals */
 
-.width-450 {
-    width: 28.13rem;
-}
-
-@media screen and (max-width: 28.13rem) {
-    .width-450.responsive {
-        width: 90%;
-        margin: auto;
-    }
-}
-
 .show-for-640-780 {
     display: none;
 }
@@ -132,19 +121,6 @@ p {
     background-color: #fefefec0;
 }
 
-#topBar>.cell {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-#topBar>.cell:first-child {
-    margin-left: 0;
-}
-
-#topBar>.cell:last-child {
-    margin-right: 0px;
-}
-
 #topBar .button {
     font-size: 2rem;
     background-color: #a70016;
@@ -183,18 +159,23 @@ p {
     widows: 20px !important;
 }
 
-@media screen and (max-width: 53.06rem) {
+#counter {
+    width: 450px;
+    max-width: 90%;
+}
+
+@media screen and (max-width: 51.75rem) {
     #counter {
         -ms-flex-order: 3;
         order: 3;
+        margin: auto;
     }
 }
 
 #header {
     height: 100vh !important;
-    background: url("../assets/header.jpg") no-repeat center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background: url("../assets/header.jpg") no-repeat center;
 }
 
 #banner {
@@ -284,7 +265,7 @@ p {
     margin-top: 100px;
 }
 
-#goal p {
+#goal div.small-10 {
     font-size: 2.188rem;
 }
 
@@ -307,7 +288,7 @@ p {
         font-size: 1.6rem;
     }
 
-    #goal p {
+    #goal div.small-10 {
         font-size: 1.5rem;
     }
 
@@ -404,6 +385,7 @@ p {
     border-radius: 100px;
     padding: 55px 22px;
     width: 300px;
+    max-width: 95vw;
     margin-left: 15px;
     margin-right: 15px;
 }
