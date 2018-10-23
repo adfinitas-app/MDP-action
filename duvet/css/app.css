@@ -174,8 +174,8 @@ p {
 
 #header {
     height: 100vh !important;
-    background-size: cover;
     background: url("../assets/header.jpg") no-repeat center;
+    background-size: cover;
 }
 
 #banner {
