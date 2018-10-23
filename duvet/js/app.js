@@ -79,7 +79,6 @@ img.addEventListener('onmouseout', zipDuvet, {passive: false});
 function setTopBar() {
     if (window.innerWidth > 640) {
         document.getElementById("logoContainer").style.width = getComputedStyle(document.getElementById("donateButton"), null).getPropertyValue("width");
-        console.log("here");
     } else {
         document.getElementById("logoContainer").style.width = null;
     }
