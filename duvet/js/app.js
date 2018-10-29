@@ -113,7 +113,7 @@ function zipDuvet() {
 }
 
 function getNbrDuvetBought() {
-    let res;
+    let res = 0;
     let obj;
 
     $.ajax({
