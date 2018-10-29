@@ -39,6 +39,7 @@ function ProgressBar() {
     this.stop = function(value) {
         this.state.stop = true;
         this.state.number = value;
+        this.state.size = getPercent(value);
     };
 
     this.render = function(size, number, angle) {
@@ -133,8 +134,7 @@ function getNbrDuvetBought(progressBar) {
             console.log(res);
             res = Math.trunc(res / 3000);
             console.log(res);
-            progressBar.stop(0);
-            progressBar.render(getPercent(res), res, null);
+            progressBar.stop(res);
         }
     });
 }
