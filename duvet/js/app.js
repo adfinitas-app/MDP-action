@@ -133,8 +133,8 @@ function getNbrDuvetBought(progressBar) {
             console.log(res);
             res = Math.trunc(res / 3000);
             console.log(res);
-            progressBar.render(getPercent(res), res, null);
             progressBar.stop(0);
+            progressBar.render(getPercent(res), res, null);
         }
     });
 }
