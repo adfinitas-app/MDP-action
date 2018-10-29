@@ -122,12 +122,10 @@ function getNbrDuvetBought() {
         dataType: "text",
         success: function(response) {
             obj = JSON.parse(response);
-            for (let i = 0; i < obj.products.length; i++) {
-                console.log("products[" + i + "] = " + obj.products[i]);
-                console.log("res = " + res);
+            for (let i = 0; i < obj.products.length; i++)
                 res += parseInt(obj.products[i]);
-            }
             res = Math.trunc(res / 3000);
+            console.log(res);
             progressBar.stop(0);
         }
     });
