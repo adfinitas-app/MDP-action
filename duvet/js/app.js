@@ -112,7 +112,13 @@ function zipDuvet() {
     img.style.backgroundPosition = `0px 0px`;
 }
 
-function getNbrDuvetBought() {
+function getPercent(number) {
+    let res = 100 * number / OBJECTIVE;
+    
+    return (res);
+}
+
+function getNbrDuvetBought(progressBar) {
     let res = 0;
     let obj;
 
@@ -127,6 +133,7 @@ function getNbrDuvetBought() {
             console.log(res);
             res = Math.trunc(res / 3000);
             console.log(res);
+            progressBar.render(getPercent(res), res, null);
             progressBar.stop(0);
         }
     });
@@ -135,5 +142,5 @@ function getNbrDuvetBought() {
 function handleCounter() {
     progressBar = new ProgressBar();
     progressBar.startAnimation();
-    getNbrDuvetBought();
+    getNbrDuvetBought(progressBar);
 }
