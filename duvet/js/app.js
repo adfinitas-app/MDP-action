@@ -39,7 +39,6 @@ function ProgressBar() {
     this.stop = function(value) {
         this.state.stop = true;
         this.state.number = value;
-        this.state.size = getPercent(value);
     };
 
     this.render = function(size, number, angle) {
