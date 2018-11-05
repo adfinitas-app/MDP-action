@@ -138,7 +138,7 @@ function getNbrDuvetBought(progressBar) {
             console.log("res2 = " + res);
             res = Math.trunc(res / 3000);
             console.log("res3 = " + res);
-            progressBar.stop(res);
+            progressBar.stop(400);
         }
     });
 }
