@@ -132,13 +132,9 @@ function getNbrDuvetBought(progressBar) {
                 let tmp = parseInt(obj.products[i]);
                 if (tmp)
                     res += tmp;
-                console.log("products[" + i + "] = " + obj.products[i]);
-                console.log("res1 = " + res);
             }
-            console.log("res2 = " + res);
             res = Math.trunc(res / 3000);
-            console.log("res3 = " + res);
-            progressBar.stop(400);
+            progressBar.stop(res);
         }
     });
 }
