@@ -129,7 +129,7 @@ function getNbrDuvetBought(progressBar) {
         success: function(response) {
             obj = JSON.parse(response);
             for (let i = 0; i < obj.products.length; i++) {
-                console.lmog("products[" + i + "] = " + obj.products[i]);
+                console.log("products[" + i + "] = " + obj.products[i]);
                 console.log("res1 = " + res);
                 res += parseInt(obj.products[i]);
             }
