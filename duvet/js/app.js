@@ -128,10 +128,13 @@ function getNbrDuvetBought(progressBar) {
         dataType: "text",
         success: function(response) {
             obj = JSON.parse(response);
-            for (let i = 0; i < obj.products.length; i++)
+            for (let i = 0; i < obj.products.length; i++) {
+                console.log("res1 = " + res);
                 res += parseInt(obj.products[i]);
+            }
+            console.log("res2 = " + res);
             res = Math.trunc(res / 3000);
-            console.log("res = " + res);
+            console.log("res3 = " + res);
             progressBar.stop(400);
         }
     });
