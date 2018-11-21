@@ -17,14 +17,14 @@
           content="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/partage_lp-mdp.png"/>
 </head>
 <body style="min-width: 200px;">
-<a href="https://donner.miedepain.asso.fr/b?cid=72" target="_blank">
+<a href="https://donner.miedepain.asso.fr/b?cid=72&email=[email]&firstname=[firstname]&lastname=[lastname]&amount=10000" target="_blank">
     <button class="stickybtn">JE FAIS UN DON</button>
 </a>
-<a href="https://donner.miedepain.asso.fr/b?cid=72" target="_blank">
+<a href="https://donner.miedepain.asso.fr/b?cid=72&email=[email]&firstname=[firstname]&lastname=[lastname]&amount=10000" target="_blank">
     <button class="stickybtn2 hide-for-medium">JE FAIS UN DON</button>
 </a>
 <header class="">
-    <a href="https://google.com" target="_blank"><img
+    <a href="http://www.miedepain.asso.fr/" target="_blank"><img
             src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/logo.png" class="show-for-medium"
             alt="Logo" id="logo"/></a>
     <a href="http://www.miedepain.asso.fr/" target="_blank"><img
@@ -250,7 +250,7 @@
             </div>
             <div class="row medium-collapse">
                 <div class="column small-12 medium-4 text-center priceCol">
-                    <a href="https://donner.miedepain.asso.fr/b?cid=72" target="_blank" class="priceCard"
+                    <a href="https://donner.miedepain.asso.fr/b?cid=72&email=[email]&firstname=[firstname]&lastname=[lastname]&amount=5500" target="_blank" class="priceCard"
                        id="eq1">
                         <img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/don-v.png" alt="v"
                              class="v"/>
@@ -262,7 +262,7 @@
                     </a>
                 </div>
                 <div class="column small-12 medium-4 text-center priceCol">
-                    <a href="https://donner.miedepain.asso.fr/b?cid=72" target="_blank" class="priceCard"
+                    <a href="https://donner.miedepain.asso.fr/b?cid=72&email=[email]&firstname=[firstname]&lastname=[lastname]&amount=10000" target="_blank" class="priceCard"
                        id="eq2">
                         <img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/don-v.png" alt="v"
                              class="v"/>
@@ -274,7 +274,7 @@
                     </a>
                 </div>
                 <div class="column small-12 medium-4 text-center priceCol">
-                    <a href="https://donner.miedepain.asso.fr/b?cid=72" target="_blank" class="priceCard"
+                    <a href="https://donner.miedepain.asso.fr/b?cid=72&email=[email]&firstname=[firstname]&lastname=[lastname]&amount=16500" target="_blank" class="priceCard"
                        id="eq3">
                         <img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/don-v.png" alt="v"
                              class="v"/>
@@ -374,6 +374,16 @@
     </div>
 </div>
 <script>
+    function extractUrlParams() {
+        var t = document.location.search.substring(1).split('&');
+        var f = [];
+        for (var i = 0; i < t.length; i++) {
+            var x = t[i].split('=');
+            f[x[0]] = decodeURIComponent(x[1]);
+        }
+        return f;
+    }
+
     (function () {
         var t, i, e, n = window, o = document, a = arguments, s = "script",
             r = ["config", "track", "identify", "visit", "push", "call", "trackForm", "trackClick"], c = function () {
@@ -391,7 +401,59 @@
         domain: 'miedepain.asso.fr'
     });
 
+    var p = extractUrlParams();
+    var eenc = "", mbzid = "";
+    "eenc" in p ? eenc = p["eenc"] : false;
+    "mbzid" in p ? mbzid = p["mbzid"] : false;
+
+    eenc != "" ? woopra.identify({md5: eenc}) : false;
+    mbzid != "" ? woopra.identify({id_mesopmindbaz: mbzid}) : false;
     woopra.track();
+
+    function loadScript(url, callback) {
+        var head = document.getElementsByTagName('head')[0];
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = url;
+        script.async = true;
+        script.onreadystatechange = callback;
+        script.onload = callback;
+        head.appendChild(script);
+    }
+
+    loadScript("https://www.adfinitas.fr/cdn/lib/adfinitracks.min.js", function () {
+        adfinitracks.Reveal.ready(function () {
+            var client = new adfinitracks.Reveal({
+                projectId: '592fcbd154532c46e9be47ad',
+                writeKey: 'CE7BE74695CFFC8403DA8E1AC05BAFF95228C1DF4F6C4FD7880F8D48B7A8F4D8'
+            });
+            client.recordEvent('pageview', {
+                title: document.title,
+                url: document.location.href,
+                user: {
+                    "uuid": adfinitracks.getUniqueId(),
+                    "md5": eenc,
+                    "id_mesopmindbaz": mbzid,
+                    "organization": "miedepain.asso.fr"
+                },
+                device: adfinitracks.getDevice()
+            });
+            setTimeout(function () {
+                client.recordEvent('timespent', {
+                    title: document.title,
+                    url: document.location.href,
+                    user: {
+                        "uuid": adfinitracks.getUniqueId(),
+                        "md5": eenc,
+                        "id_mesopmindbaz": mbzid,
+                        "organization": "miedepain.asso.fr"
+                    },
+                    device: adfinitracks.getDevice(),
+                    duration: 30
+                })
+            }, 30000);
+        });
+    });
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7968425-1"></script>
@@ -500,7 +562,7 @@
 <script>
     var query = p;
     var str = '';
-    var url = 'https://donner.miedepain.asso.fr/b?cid=72';
+    var url = 'https://donner.miedepain.asso.fr/b?cid=49';
     if ('wv_email' in query) {
         str += '&' + 'email=' + query['wv_email'];
     }
