@@ -71,7 +71,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#logo').parent.click(function () {
+    $('#logo').click(function () {
         woopra.track('interaction', {
             category: "LOGO_FA18",
             action: "clic",
