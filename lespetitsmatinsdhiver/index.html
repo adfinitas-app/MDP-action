@@ -374,16 +374,6 @@
     </div>
 </div>
 <script>
-    function extractUrlParams() {
-        var t = document.location.search.substring(1).split('&');
-        var f = [];
-        for (var i = 0; i < t.length; i++) {
-            var x = t[i].split('=');
-            f[x[0]] = decodeURIComponent(x[1]);
-        }
-        return f;
-    }
-
     (function () {
         var t, i, e, n = window, o = document, a = arguments, s = "script",
             r = ["config", "track", "identify", "visit", "push", "call", "trackForm", "trackClick"], c = function () {
@@ -401,59 +391,7 @@
         domain: 'miedepain.asso.fr'
     });
 
-    var p = extractUrlParams();
-    var eenc = "", mbzid = "";
-    "eenc" in p ? eenc = p["eenc"] : false;
-    "mbzid" in p ? mbzid = p["mbzid"] : false;
-
-    eenc != "" ? woopra.identify({md5: eenc}) : false;
-    mbzid != "" ? woopra.identify({id_mesopmindbaz: mbzid}) : false;
     woopra.track();
-
-    function loadScript(url, callback) {
-        var head = document.getElementsByTagName('head')[0];
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = url;
-        script.async = true;
-        script.onreadystatechange = callback;
-        script.onload = callback;
-        head.appendChild(script);
-    }
-
-    loadScript("https://www.adfinitas.fr/cdn/lib/adfinitracks.min.js", function () {
-        adfinitracks.Reveal.ready(function () {
-            var client = new adfinitracks.Reveal({
-                projectId: '592fcbd154532c46e9be47ad',
-                writeKey: 'CE7BE74695CFFC8403DA8E1AC05BAFF95228C1DF4F6C4FD7880F8D48B7A8F4D8'
-            });
-            client.recordEvent('pageview', {
-                title: document.title,
-                url: document.location.href,
-                user: {
-                    "uuid": adfinitracks.getUniqueId(),
-                    "md5": eenc,
-                    "id_mesopmindbaz": mbzid,
-                    "organization": "miedepain.asso.fr"
-                },
-                device: adfinitracks.getDevice()
-            });
-            setTimeout(function () {
-                client.recordEvent('timespent', {
-                    title: document.title,
-                    url: document.location.href,
-                    user: {
-                        "uuid": adfinitracks.getUniqueId(),
-                        "md5": eenc,
-                        "id_mesopmindbaz": mbzid,
-                        "organization": "miedepain.asso.fr"
-                    },
-                    device: adfinitracks.getDevice(),
-                    duration: 30
-                })
-            }, 30000);
-        });
-    });
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7968425-1"></script>
