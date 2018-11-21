@@ -1,16 +1,110 @@
-.red
-{
-	border: 1px solid red;
+.red {
+    border: 1px solid red;
+}
+
+.yellow {
+    color: #F4D337;
+}
+
+.white {
+    color: #ffffff;
+}
+
+.marginBtm-35 {
+    margin-bottom: 35px;
+}
+
+/* foundation */
+
+.grid-container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+.grid-x {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.grid-x.grid-margin-x {
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.grid-x.grid-margin-x > .cell {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.cell {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.cell.auto {
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0px;
+}
+
+.cell.shrink {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.grid-x > .auto, .grid-x .shrink {
+    width: auto;
+}
+
+@media print, screen and (max-width: 40rem) {
+    .cell.small-12 {
+        width: 100%;
+    }
+
+    .grid-x.grid-margin-x .cell.small-6 {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media print, screen and (min-width: 40em) {
+    .grid-x.grid-margin-x .cell.medium-3 {
+        width: calc(25% - 2rem);
+    }
+}
+
+.cell.large-shrink {
+    flex: 0 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.align-center {
+    justify-content: center;
+}
+
+.align-middle {
+    align-items: center;
+}
+
+/* foundation end */
+
+.redSeparator {
+    background: url("../img/sep.png") no-repeat center center;
 }
 
 @font-face {
     font-family: 'museo700';
     src: url('../font/Museo/Museo700-Regular-webfont.eot');
     src: url('../font/Museo/Museo700-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/Museo/Museo700-Regular-webfont.woff2') format('woff2'),
-         url('../font/Museo/Museo700-Regular-webfont.woff') format('woff'),
-         url('../font/Museo/Museo700-Regular-webfont.ttf') format('truetype'),
-         url('../font/Museo/Museo700-Regular-webfont.svg#museo700') format('svg');
+    url('../font/Museo/Museo700-Regular-webfont.woff2') format('woff2'),
+    url('../font/Museo/Museo700-Regular-webfont.woff') format('woff'),
+    url('../font/Museo/Museo700-Regular-webfont.ttf') format('truetype'),
+    url('../font/Museo/Museo700-Regular-webfont.svg#museo700') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -19,10 +113,10 @@
     font-family: 'museo500';
     src: url('../font/Museo/Museo500-Regular-webfont.eot');
     src: url('../font/Museo/Museo500-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/Museo/Museo500-Regular-webfont.woff2') format('woff2'),
-         url('../font/Museo/Museo500-Regular-webfont.woff') format('woff'),
-         url('../font/Museo/Museo500-Regular-webfont.ttf') format('truetype'),
-         url('../font/Museo/Museo500-Regular-webfont.svg#museo500') format('svg');
+    url('../font/Museo/Museo500-Regular-webfont.woff2') format('woff2'),
+    url('../font/Museo/Museo500-Regular-webfont.woff') format('woff'),
+    url('../font/Museo/Museo500-Regular-webfont.ttf') format('truetype'),
+    url('../font/Museo/Museo500-Regular-webfont.svg#museo500') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -31,10 +125,10 @@
     font-family: 'museo300';
     src: url('../font/Museo/Museo300-Regular-webfont.eot');
     src: url('../font/Museo/Museo300-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/Museo/Museo300-Regular-webfont.woff2') format('woff2'),
-         url('../font/Museo/Museo300-Regular-webfont.woff') format('woff'),
-         url('../font/Museo/Museo300-Regular-webfont.ttf') format('truetype'),
-         url('../font/Museo/Museo300-Regular-webfont.svg#museo300') format('svg');
+    url('../font/Museo/Museo300-Regular-webfont.woff2') format('woff2'),
+    url('../font/Museo/Museo300-Regular-webfont.woff') format('woff'),
+    url('../font/Museo/Museo300-Regular-webfont.ttf') format('truetype'),
+    url('../font/Museo/Museo300-Regular-webfont.svg#museo300') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -46,819 +140,669 @@
     font-style: normal;
 }
 
-#logo-small
-{
-	z-index: 11;
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	width: 60px;
+#logo-small {
+    z-index: 11;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 60px;
 }
 
-#logo
-{
-	z-index: 11;
-	position: absolute;
-	width: 82px;
-	top: 30px;
-	left: 30px;
+#logo {
+    z-index: 11;
+    position: absolute;
+    width: 82px;
+    top: 30px;
+    left: 30px;
 }
 
 /* Table settings */
-.table
-{
-	display: table;
-	width: 100%;
+.table {
+    display: table;
+    width: 100%;
 }
 
-.table-row
-{
-	display: table-row;
+.table-row {
+    display: table-row;
 }
 
-.table-cell
-{
-	display: table-cell;
+.table-cell {
+    display: table-cell;
 }
 
-.table-cell.top
-{
-	vertical-align: top;
+.table-cell.top {
+    vertical-align: top;
 }
 
-.table-cell.bottom
-{
-	vertical-align: bottom;
+.table-cell.bottom {
+    vertical-align: bottom;
 }
 
-.table-cell.middle
-{
-	vertical-align: middle;
+.table-cell.middle {
+    vertical-align: middle;
 }
+
 /* End of Table settings */
 
 /* sticky button */
-.stickybtn
-{
-	position: fixed;
-	top: 5px;
-	right: 5px;
-	z-index: 12;
-	color: white;
-	font-family: 'Open Sans Condensed';
-	background: #7f101f;
-	border-radius: 5px;
-	padding: 16px 40px;
-	cursor: pointer;
+.stickybtn {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    z-index: 12;
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background: #7f101f;
+    border-radius: 5px;
+    padding: 16px 40px;
+    cursor: pointer;
 }
 
-.stickybtn2
-{
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	z-index: 12;
-	color: white;
-	width: 100%;
-	font-family: 'Open Sans Condensed';
-	background: #7f101f;
-	border-radius: 0px;
-	padding: 16px 0;
-	display: none;
-	cursor: pointer;
+.stickybtn2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    color: white;
+    width: 100%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background: #7f101f;
+    border-radius: 0;
+    padding: 16px 0;
+    display: none;
+    cursor: pointer;
 }
 
-header
-{
-	min-height: 100vh;
-	background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header-small.png') no-repeat;
-	background-size: cover;
+header {
+    min-height: 100vh;
+    background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header-small.png') no-repeat;
+    background-size: cover;
 }
 
-@media screen and (min-width: 40em)
-{
-	header
-	{
-		/*background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.jpg') no-repeat;
-		background-size: cover;*/
-		background: none;
-	}
+@media screen and (min-width: 40em) {
+    header {
+        /*background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.jpg') no-repeat;
+        background-size: cover;*/
+        background: none;
+    }
 
-	.stickybtn
-	{
-		top: 30px;
-		right: 30px;
-	}
+    .stickybtn {
+        top: 30px;
+        right: 30px;
+    }
 }
 
 /* Texte: Partagez la chaleur des petits matins ! */
-header p
-{
-	color: white;
-	font-family: 'museo700';
-	font-size: 37px;
-	text-align: center;
-	margin-top: 150px;
-	line-height: 1.2;
-	text-shadow: 0px 0px 30px rgba(50, 50, 50, 0.5);
-	padding: 0 10px;
+header h1 {
+    color: white;
+    font-family: 'museo700', serif;
+    font-size: 37px;
+    text-align: center;
+    margin-top: 150px;
+    line-height: 1.2;
+    text-shadow: 0 0 30px rgba(50, 50, 50, 0.5);
+    padding: 0 10px;
 }
 
-@media screen and (min-width: 40em)
-{
-	header p
-	{
-		font-size: 40px;
-		margin-top: 200px;
-	}
+@media screen and (min-width: 40em) {
+    header h1 {
+        font-size: 40px;
+        margin-top: 200px;
+    }
 }
 
-header .bgvideo
-{
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	z-index: -1;
-	transform: translateX(-50%) translateY(-50%);
-	background-size: cover;
-	transition: 1s opacity;
+header .bgvideo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    transition: 1s opacity;
 }
 
-#txt
-{
-	font-family: 'museo700';
-	text-align: center;
-	padding: 55px 0;
-	background-color: white;
-	position: relative;
-	z-index: 4;
+#txt {
+    font-family: 'museo700', serif;
+    text-align: center;
+    padding-top: 55px;
+    padding-bottom: 10px;
+    background-color: #3a4143;
+    position: relative;
+    z-index: 4;
 }
 
-#txt p.bigger-red
-{
-	color: #7F101F;
-	text-transform: uppercase;
-	font-size: 26px;
-	line-height: 1.2;
-	margin-bottom: 30px;
+#txt h2 {
+    font-family: 'museo700', serif;
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 30px;
 }
 
-#txt p.normal
-{
-	font-size: 23px;
-	line-height: 1.2;
-	margin-bottom: 5px;
+#txt p {
+    font-family: 'museo700', serif;
+    font-size: 21px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    font-weight: 700;
+    max-width: 644px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#chiffres
-{
-	background: #555555;
-	padding: 60px 0;
+#chiffres {
+    background: #3a4143;
+    padding-bottom: 60px;
+    padding-top: 10px;
 }
 
-#chiffres p:first-child
-{
-	font-size: 89px;
-	margin: 0;
-	line-height: 0.75;
+#chiffres p:first-child {
+    font-size: 89px;
+    margin: 0;
+    line-height: 0.75;
 }
 
-#chiffres p:last-child
-{
-	line-height: 1.2;
+#chiffres p:last-child {
+    line-height: 1.2;
 }
 
 @media screen and (min-width: 64em) {
-	#marge-left-large
-	{
-		margin-left: 35px;
-	}
+    #marge-left-large {
+        margin-left: 35px;
+    }
 
-	#cercle
-	{
-		margin-left: 50px;
-	}
+    #cercle {
+        margin-left: 50px;
+    }
 
-	header p
-	{
-		font-size: 64px;
-	}
+    header h1 {
+        font-size: 64px;
+    }
 }
 
-#temoignage
-{
-	background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-temoignage.jpg') no-repeat top left;
-	background-size: cover;
-	background-position: right;
-	padding: 50px 0;
-	min-height: 100vh;
+#temoignage {
+    background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-temoignage.jpg') no-repeat top left;
+    background-size: cover;
+    background-position: right;
+    padding: 50px 0;
+    min-height: 100vh;
 }
 
-#temoignage .column
-{
-	min-height: 1100px;
+#temoignage .column {
+    min-height: 1100px;
 }
 
-@media screen and (min-width: 40em)
-{
-	#temoignage .column
-	{
-		min-height: 720px;
-	}
+@media screen and (min-width: 40em) {
+    #temoignage .column {
+        min-height: 720px;
+    }
 }
 
-#temoignage > p
-{
-	color: white;
-	font-family: 'museo700';
-	line-height: 1.2;
-	text-align: center;
-	font-size: 35px;
-	margin-bottom: 30px;
-	margin-top: 40px;
+#temoignage > p {
+    color: white;
+    font-family: 'museo700', serif;
+    line-height: 1.2;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+    margin-top: 40px;
 }
 
-#temoignage #text-plus
-{
-	color: white;
-	line-height: 1.2;
-	text-align: center;
-	display: none;
-	font-size: 19px;
-	max-width: 583px;
+#temoignage #text-plus {
+    color: white;
+    line-height: 1.2;
+    text-align: center;
+    display: none;
+    font-size: 19px;
+    max-width: 583px;
 }
 
-#temoignage .text
-{
-	color: #fedb38;
-	font-style: italic;
-	text-align: center;
-	line-height: 1.2;
-	font-size: 22px;
-	color: #fedb38;
-	margin-bottom: 30px;
+#temoignage .text {
+    font-weight: 700;
+    color: #fedb38;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 22px;
+    margin-bottom: 30px;
 }
 
-#temoignage .container
-{
-	font-family: 'museo500';
-	position: relative;
-	max-width: 600px;
-	display: inline-block;
+#temoignage .container {
+    font-family: 'museo500', serif;
+    position: relative;
+    max-width: 600px;
+    display: inline-block;
 }
 
-#temoignage #nono
-{
-	color: white;
-	text-align: center;
-	line-height: 1.2;
-	font-family: 'museo700';
-	display: none;
-	font-size: 18px;
+#temoignage #nono {
+    color: white;
+    text-align: center;
+    line-height: 1.2;
+    font-family: 'museo700', serif;
+    display: none;
+    font-size: 18px;
 }
 
-#temoignage #confidentialite
-{
-	color: white;
-	text-align: center;
-	line-height: 1.2;
-	font-size: 12px;
-	display: none;
+#temoignage #confidentialite {
+    color: white;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 12px;
+    display: none;
 }
 
-#objectifs
-{
-	min-height: 100vh;
+#objectifs {
+    min-height: 100vh;
 }
 
-#objectifs .even
-{
-	background: #fed631;
+#objectifs .even {
+    background: #fed631;
 }
 
-#objectifs .odd
-{
-	background: #f6ca30;
+#objectifs .odd {
+    background: #f6ca30;
 }
 
-#objectifs .table
-{
-	min-height: 300px;
-	height: 50vh;
+#objectifs .table {
+    min-height: 300px;
+    height: 50vh;
 }
 
-#objectifs .title
-{
-	font-family: 'museo700';
-	color: #7e101f;
-	font-size: 24px;
-	text-transform: uppercase;
-	line-height: 1.2;
-	margin-bottom: 0;
-	margin-top: 20px;
+#objectifs .title {
+    font-family: 'museo700', serif;
+    color: #7e101f;
+    font-size: 24px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 0;
+    margin-top: 20px;
 }
 
-#objectifs .text
-{
-	font-family: 'museo500';
-	color: black;
-	line-height: 1.2;
-	font-size: 16px;
-	margin-bottom: 0;
-	max-width: 300px;
-	display: inline-block;
+#objectifs .text {
+    font-family: 'museo500', serif;
+    color: black;
+    line-height: 1.2;
+    font-size: 18px;
+    margin-bottom: 0;
+    max-width: 300px;
+    display: inline-block;
 }
 
-#objectifs .red-aide
-{
-	background: #7e101f;
+#objectifs .red-aide {
+    background: #7e101f;
 }
 
-#objectifs .red-aide p
-{
-	color: white;
-	font-family: 'museo700';
-	font-size: 32px;
-	line-height: 1.2;
-	text-transform: uppercase;
-	margin-bottom: 0;
+#objectifs .red-aide p {
+    color: white;
+    font-family: 'museo700', serif;
+    font-size: 32px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 0;
 }
 
-#objectifs .red-aide p span
-{
-	font-family: 'museo300';
-	position: relative;
+#objectifs .red-aide p span {
+    font-family: 'museo300', serif;
+    position: relative;
 }
 
-#objectifs .red-aide .top1
-{
-	top: -115px;
-	left: 30px;
+#objectifs .red-aide .top1 {
+    top: -115px;
+    left: 30px;
 }
 
-#objectifs .red-aide .top2
-{
-	top: -130px;
-	left: 77px;
+#objectifs .red-aide .top2 {
+    top: -130px;
+    left: 77px;
 }
 
-#objectifs .red-aide .top3
-{
-	top: -115px;
-	left: 110px;
+#objectifs .red-aide .top3 {
+    top: -115px;
+    left: 110px;
 }
 
-#objectifs .red-aide .bot1
-{
-	top: 85px;
-	left: 30px;
+#objectifs .red-aide .bot1 {
+    top: 85px;
+    left: 30px;
 }
 
-#objectifs .red-aide .bot2
-{
-	top: 90px;
-	left: 77px;
+#objectifs .red-aide .bot2 {
+    top: 90px;
+    left: 77px;
 }
 
-#objectifs .red-aide .bot3
-{
-	top: 85px;
-	left: 110px;
+#objectifs .red-aide .bot3 {
+    top: 85px;
+    left: 110px;
 }
-@media screen and (min-width: 40em) and (max-width: 63.9375em)
-{
-	#objectifs .red-aide p
-	{
-		font-size: 26px;
-	}
 
-	#objectifs .red-aide .top1
-	{
-		top: -115px;
-		left: 15px;
-	}
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    #objectifs .red-aide p {
+        font-size: 26px;
+    }
 
-	#objectifs .red-aide .top2
-	{
-		top: -130px;
-		left: 62px;
-	}
+    #objectifs .red-aide .top1 {
+        top: -115px;
+        left: 15px;
+    }
 
-	#objectifs .red-aide .top3
-	{
-		top: -115px;
-		left: 95px;
-	}
+    #objectifs .red-aide .top2 {
+        top: -130px;
+        left: 62px;
+    }
 
-	#objectifs .red-aide .bot1
-	{
-		top: 85px;
-		left: 15px;
-	}
+    #objectifs .red-aide .top3 {
+        top: -115px;
+        left: 95px;
+    }
 
-	#objectifs .red-aide .bot2
-	{
-		top: 90px;
-		left: 62px;
-	}
+    #objectifs .red-aide .bot1 {
+        top: 85px;
+        left: 15px;
+    }
 
-	#objectifs .red-aide .bot3
-	{
-		top: 85px;
-		left: 95px;
-	}
+    #objectifs .red-aide .bot2 {
+        top: 90px;
+        left: 62px;
+    }
+
+    #objectifs .red-aide .bot3 {
+        top: 85px;
+        left: 95px;
+    }
 
 }
+
 /* Large and up */
-@media screen and (min-width: 40em)
-{
-	#objectifs .even:not(.firstchild)
-	{
-		background: #f6ca30;
-	}
+@media screen and (min-width: 40em) {
+    #objectifs .even:not(.firstchild) {
+        background: #f6ca30;
+    }
 
-	#objectifs .odd
-	{
-		background: #fed631;
-	}
+    #objectifs .odd {
+        background: #fed631;
+    }
 }
 
-#don
-{
-	margin-top: -1px;
-	min-height: 100vh;
-	background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-don.jpg') no-repeat center;
-	background-size: cover;
-	color: white;
+#don {
+    margin-top: -1px;
+    min-height: 100vh;
+    background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-don.jpg') no-repeat center;
+    background-size: cover;
+    color: white;
 }
 
-#don .left p
-{
-	font-family: 'museo700';
-	font-size: 32px;
-	line-height: 1.2;
-	text-transform: uppercase;
-	margin-bottom: 0;
+#don .left p {
+    font-family: 'museo700', serif;
+    font-size: 32px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 0;
 }
 
-#don .right .container
-{
-	max-width: 300px;
-	display: inline-block;
+#don .right .container {
+    max-width: 300px;
+    display: inline-block;
 }
 
-#don .right .container p
-{
-	font-family: 'museo300';
-	font-size: 16px;
-	line-height: 1.2;
-	margin-top: 20px;
+#don .right .container p {
+    font-family: 'museo300', serif;
+    font-size: 16px;
+    line-height: 1.2;
+    margin-top: 20px;
 }
 
-#don #transparancy
-{
-	background-color: rgba(0, 0, 0, 0.5);
-	padding: 30px;
+#don #transparancy {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
 }
 
-#don .v
-{
-	margin: 30px 0 20px 0;
+#don .v {
+    margin: 30px 0 20px 0;
 }
 
-#don .price
-{
-	font-size: 50px;
-	color: #961225;
-	font-family: 'museo700';
-	margin-bottom: 0px;
-	line-height: 1.1;
+#don .price {
+    font-size: 50px;
+    color: #961225;
+    font-family: 'museo700', serif;
+    margin-bottom: 0;
+    line-height: 1.1;
 }
 
-#don .deduction
-{
-	font-size: 16px;
-	color: #961225;
-	font-family: 'museo300';
-	line-height: 1.2;
-	max-width: 180px;
-	display: inline-block;
+#don .deduction {
+    font-size: 16px;
+    color: #961225;
+    font-family: 'museo300', serif;
+    line-height: 1.2;
+    max-width: 180px;
+    display: inline-block;
 }
 
-#don .text
-{
-	font-size: 16px;
-	color: black;
-	font-family: 'museo300';
-	line-height: 1.2;
-	padding: 0 20px;
-	height: 140px;
+#don .text {
+    font-size: 16px;
+    color: black;
+    font-family: 'museo300', serif;
+    line-height: 1.2;
+    padding: 0 20px;
+    height: 140px;
 }
 
-#don .priceCard
-{
-	display: block;
-	width: 100%;
-	height: 100%;
-	margin-top: 0.9375rem;
-	transition: 0.2s all;
+#don .priceCard {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 0.9375rem;
+    transition: 0.2s all;
 }
 
-#don .priceCard:hover
-{
-	transform: scale(1.05);
+#don .priceCard:hover {
+    transform: scale(1.05);
 }
 
-#don .priceCard button
-{
-	width: 100%;
-	color: white;
-	font-family: 'Open Sans Condensed', sans-serif;
-	padding: 20px;
-	border-radius: 0;
+#don .priceCard button {
+    width: 100%;
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 20px;
+    border-radius: 0;
 }
 
-#don #autre
-{
-	text-align: center;
-	color: white;
-	font-family: 'Open Sans Condensed', sans-serif;
-	display: block;
-	width: 100%;
-	margin-bottom: 30px;
-	text-decoration: underline;
-	text-transform: uppercase;
+#don #autre {
+    text-align: center;
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    text-transform: uppercase;
 }
 
-#don .btn-don
-{
-	cursor: pointer;
+#don .btn-don {
+    cursor: pointer;
 }
 
-@media screen and (min-width: 40em)
-{
-	#don #autre
-	{
-		margin-bottom: 0;
-		margin-top: 35px;
-		margin-bottom: 30px;
-	}
+@media screen and (min-width: 40em) {
+    #don #autre {
+        margin-top: 35px;
+        margin-bottom: 30px;
+    }
 }
 
-.priceCol:nth-child(1) .btn-don
-{
-	background: #760c1a;
+.priceCol:nth-child(1) .btn-don {
+    background: #760c1a;
 }
 
-.priceCol:nth-child(2) .btn-don
-{
-	background: #850e1f;
+.priceCol:nth-child(2) .btn-don {
+    background: #850e1f;
 }
 
-.priceCol:nth-child(3) .btn-don
-{
-	background: #961225;
+.priceCol:nth-child(3) .btn-don {
+    background: #961225;
 }
 
-.priceCol:nth-child(1) .priceCard
-{
-	background: #e8e8e8;
+.priceCol:nth-child(1) .priceCard {
+    background: #e8e8e8;
 }
-.priceCol:nth-child(2) .priceCard
-{
-	background: #f2f2f2;
+
+.priceCol:nth-child(2) .priceCard {
+    background: #f2f2f2;
 }
-.priceCol:nth-child(3) .priceCard
-{
-	background: #ffffff;
-	margin-bottom: 30px;
+
+.priceCol:nth-child(3) .priceCard {
+    background: #ffffff;
+    margin-bottom: 30px;
 }
 
 /* medium and up */
-@media screen and (min-width: 40em)
-{
-	#don
-	{
-		padding-top: 1px;
-	}
+@media screen and (min-width: 40em) {
+    #don {
+        padding-top: 1px;
+    }
 
-	#don #transparancy
-	{
-		margin-top: 20px;
-	}
+    #don #transparancy {
+        margin-top: 20px;
+    }
 
-	#don .priceCard
-	{
-		margin: 0;
-	}
+    #don .priceCard {
+        margin: 0;
+    }
 }
 
-footer
-{
-	background: #2b2b2b;
-	color: #ababab;
-	text-align: center;
-	padding: 1px 30px;
+@media screen and (min-width: 40em) {
+    #border-small {
+        border-bottom: none !important;
+    }
 }
 
-footer .rejoignez
-{
-	margin-bottom: 0;
-	height: 30px;
+#guillemet-left {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 10px;
 }
 
-footer .logo-fb
-{
-	background: #b52c3a;
-	border-radius: 30px;
-	display: inline-block;
-	width: 40px;
-	height: 40px;
-	margin-left: 10px;
-	position: relative;
-	top: -5px;
-	text-align: center;
+#guillemet-right {
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    width: 10px;
 }
 
-footer .logo-fb img
-{
-	position: relative;
-	top: 5px;
+@media screen and (min-width: 64em) {
+    #guillemet-left {
+        position: absolute;
+        top: 0;
+        left: -50px;
+        width: 17px;
+    }
+
+    #guillemet-right {
+        position: absolute;
+        bottom: 0;
+        right: -20px;
+        width: 17px;
+    }
+
 }
 
-footer .title a
-{
-	color: #797979;
+
+#ourEngagements {
+    background-color: #efefef;
+    color: #47576E;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-family: "museo500", serif;
 }
 
-footer .title
-{
-	font-family: 'leagueGothic';
-	margin-bottom: 5px;
-	line-height: 1.2;
-	font-size: 26px;
-	text-align: left;
+#ourEngagements img {
+    margin-bottom: 10px;
 }
 
-footer .text
-{
-	font-family: arial;
-	font-size: 16px;
-	color: #7a7a7a;
-	text-align: left;
-	line-height: 1.2;
-	margin-bottom: 10px;
+#ourEngagements h3 {
+    color: #800C1B;
+    font-size: 2rem;
+    font-family: "museo500", serif;
 }
 
-footer .link
-{
-	text-align: left;
+#ourEngagements p {
+    font-size: 1rem;
+    line-height: 1.1;
 }
 
-footer .link img
-{
-	margin-right: 5px;
-	position: relative;
-	top: -1px;
+@media print, screen and (max-width: 40em) {
+    #ourEngagements {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }
 
-footer .link a
-{
-	color: white;
-	font-size: 14px;
+/* Footer */
+
+#footer {
+    background-color: #555555;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: #ECF3FD;
 }
 
-footer #isf
-{
-	color: #7a7a7a;
-	font-size: 12px;
-	text-align: left;
-	line-height: 1.2;
-	padding-top: 15px;
-	border-bottom: 1px solid #252525;
-	border-top: 1px solid #252525;
-	padding-bottom: 15px;
-	margin-bottom: 16px;
+#footer a, #footer a:hover, #footer a:focus, #footer a:visited {
+    color: #ECF3FD;
 }
 
-footer .footer-link
-{
-	max-width: 150px;
-	text-align: left;
+#footer p {
+    line-height: 1.5;
 }
 
-footer .footer-link a
-{
-	color: #acacac;
+#footer a {
+    hyphens: auto;
 }
 
-footer #border-small
-{
-	border-bottom: 1px solid #252525;
-}
-
-footer .hideBorder
-{
-	padding-top: 18px;
-}
-
-@media screen and (min-width: 40em)
-{
-	footer .hideBorder
-	{
-		border-left: 1px solid #252525;
-		padding-left: 20px;
-		min-height: 440px;
-	}
-
-	#rowfooter
-	{
-		margin-top: 18px;
-	}
-
-	#border-small
-	{
-		border-bottom: none !important;
-	}
-}
-
-#guillemet-left
-{
-	position: absolute;
-	top: 0px;
-	left: -10px;
-	width: 10px;
-}
-
-#guillemet-right
-{
-	position: absolute;
-	bottom: 0px;
-	right: -10px;
-	width: 10px;
-}
-
-@media screen and (min-width: 64em)
-{
-	#guillemet-left
-	{
-		position: absolute;
-		top: 0px;
-		left: -50px;
-		width: 17px;
-	}
-
-	#guillemet-right
-	{
-		position: absolute;
-		bottom: 0px;
-		right: -20px;
-		width: 17px;
-	}
-
+@media print, screen and (max-width: 40em) {
+    #footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }
 
 /* IPHONE5 FIX */
 
-@media screen and (max-width: 380px)
-{
-	#chiffres p:first-child
-	{
-		font-size: 60px;
-	}
+@media screen and (max-width: 380px) {
+    #chiffres p:first-child {
+        font-size: 60px;
+    }
 }
 
 #container-video {
-	overflow: hidden;
-	height: 100vh;
-	background-color: #edeae8;
-	position: relative;
-	z-index: -1;
-	background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header-small.jpg') no-repeat center center;
-	background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #edeae8;
+    position: relative;
+    z-index: -1;
+    background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header-small.jpg') no-repeat center center;
+    background-size: cover;
 }
 
-@media screen and (min-width: 40em)
-{
-	#container-video {
-		background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.jpg') no-repeat center center;
-		background-size: cover;
-	}
+@media screen and (min-width: 40em) {
+    #container-video {
+        background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-header.jpg') no-repeat center center;
+        background-size: cover;
+    }
 }
 
-video
-{
-	position: absolute;
-	z-index: 1;
-	/* Vertical and Horizontal center*/
-	left: 50%; top: 50%;
-	transform: translate(-50%, -50%);
+video {
+    position: absolute;
+    z-index: 1;
+    /* Vertical and Horizontal center*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 video::-webkit-media-controls {
-  display: none;
+    display: none;
 }
