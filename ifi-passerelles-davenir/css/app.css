@@ -52,9 +52,6 @@ body {
         background-position: 90% 0;
         min-height: 750px;
     }
-    #headerLarge #topBar .btn img.l {
-        max-height: 87px;
-    }
     #headerLarge #topBar img.logo {
         padding: 5px 10px;
     }
