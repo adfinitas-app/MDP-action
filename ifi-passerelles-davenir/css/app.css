@@ -1,0 +1,582 @@
+@media print, screen and (max-width: 64em) {
+    body {
+        zoom: 70% !important;
+    }
+    #headerLarge h1 {
+        line-height: 1.5rem;
+    }
+}
+body {
+    zoom: 80%;
+}
+
+#topBar {
+    z-index: 999;
+}
+
+#headerLarge {
+    height: 100vh;
+    min-height: 900px;
+    width: 100%;
+    background-image: url("../assets/header.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#headerLarge #topBar img.logo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    max-width: none!important;
+}
+
+
+#headerLarge #topBar .btn.don {
+    padding: 0 10px 0 5px;
+}
+@media print, screen and (min-width: 64em) {
+    #headerLarge #topBar .btn.don {
+        padding: 0 100px 0 5px !important;
+    }
+}
+
+#headerLarge .marginTop15 {
+    margin-top: 5%;
+}
+@media print, screen and (max-width: 64em) {
+    #headerLarge .marginTop15 {
+        margin-top: 15%;
+    }
+    #headerLarge {
+        background-position: 90% 0;
+        min-height: 750px;
+    }
+    #headerLarge #topBar .btn img {
+        max-height: 100px;
+    }
+    #headerLarge #topBar img.logo {
+        padding: 5px 10px;
+    }
+    #headerLarge #topBar .logo {
+        max-height: 100px;
+    }
+    #headerLarge .title h1 {
+        font-size: 3rem;
+    }
+    #headerLarge .pass {
+        max-height: 200px;
+    }
+    #headerLarge .arrow img {
+        max-height: 110px;
+    }
+}
+@media print, screen and (max-width: 64em) {
+    #headerLarge #topBar .btn img {
+        max-height: 50px;
+        height: 50px;
+    }
+    #headerLarge {
+        background-position: 90% 0;
+        min-height: 750px;
+    }
+    #headerLarge #topBar img.logo {
+        padding: 5px 10px;
+    }
+    #headerLarge #topBar .logo {
+        max-height: 50px;
+    }
+    #headerLarge .title h1 {
+        font-size: 2rem;
+        line-height: 1.75rem;
+    }
+    #headerLarge .pass {
+        max-height: 110px;
+    }
+    #headerLarge .arrow img {
+        max-height: 110px;
+    }
+}
+
+#headerLarge #topBar .btn:hover {
+    transform: none;
+}
+
+#headerLarge .arrow img {
+    padding-bottom: 20px;
+}
+
+#headerLarge .title {
+    padding-top: 3%;
+}
+
+#headerLarge .arrow {
+    bottom: 0;
+}
+
+#headerLarge #topBar {
+    background-color: #405765A0;
+    margin-right: 0;
+}
+
+#chantier {
+    background-color: #EDF4FD;
+}
+
+#chantier .title{
+    padding-top: 70px;
+}
+
+#chantier div.cell.insertion {
+    margin: 0;
+}
+
+#chantier .insertion p.text{
+    line-height: 1.125rem;
+    padding-top: 2rem;
+    margin: 10px;
+}
+
+#chantier .box {
+    margin: 5px;
+}
+
+#chantier .insertion p.title {
+    padding-top: 30px;
+    line-height: 1.5rem;
+}
+
+#chantier .minus {
+    padding-top: 1rem;
+}
+@media print, screen and (max-width: 40em) {
+    #chantier .minus, #chantier .plus {
+        padding-bottom: 1rem;
+    }
+}
+
+@media print, screen and (max-width: 64em) {
+    #pres .text p {
+        font-size: 1.5rem;
+    }
+    #pres .cliquable p{
+        font-size: 1rem;
+    }
+}
+
+#perso .pres .gerard .nom {
+    background-image: url("../assets/gerard.png");
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 300px;
+}
+
+#perso .pres .gerard .nom p {
+    padding-right: 15%;
+}
+
+#perso .pres .gerard .text {
+    background-color: #59788B;
+}
+
+#perso .pres .lydia .nom {
+    background-image: url("../assets/lydia.png");
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 300px;
+}
+
+#perso .pres .lydia .nom p {
+    padding-left: 15%;
+}
+
+#perso .pres .lydia .text {
+    background-color: #520812;
+}
+
+#perso .pres .mohammad .nom {
+    background-image: url("../assets/mohammad.png");
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 300px;
+}
+
+#perso .pres .mohammad .nom p {
+    padding-right: 15%;
+}
+
+#perso .pres .mohammad .text {
+    background-color: #ECF3FD;
+}
+
+#perso .text p {
+    line-height: 2rem;
+}
+
+#perso #slider .gerard .picture {
+    background-image: url("../assets/gerardFull.png");
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#perso #slider .gerard .text {
+    background-color: #59788B;
+}
+
+#perso #slider .lydia .picture {
+    background-image: url("../assets/lydiaFull.png");
+    background-position: 50% 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#perso #slider .lydia .text {
+    background-color: #810314;
+}
+
+#perso #slider .mohammad .picture {
+    background-image: url("../assets/mohammadFull.png");
+    background-position: 50% 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#perso #slider .mohammad .text {
+    background-color: #ECF3FD;
+}
+
+#perso #slider .text p {
+    line-height: 1.25rem;
+    margin-bottom: 10px;
+}
+
+#perso .picture p {
+    margin-right: 6rem;
+}
+
+#perso .quotes {
+    margin: 40px;
+}
+
+#chantier .btn {
+    margin-top: 20px;
+}
+
+#chantier .end {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+#calc .arrowIR {
+    transform: rotate(15deg);
+}
+
+#calc .arrowIFI {
+    transform: rotate(-15deg);
+    padding-right: 1.5rem;
+}
+
+#calc {
+    background-color: #59788B;
+}
+
+#slider {
+    background-color: #59788B;
+    cursor: auto;
+}
+
+#calc .title {
+    padding-top: 40px;
+}
+
+#calc .whiteCircle .btn img {
+    max-width: 250px;
+}
+@media print, screen and (max-width: 64em) {
+    #calc .whiteCircle{
+        min-height: 450px !important;
+        min-width: 450px !important;
+        max-width: 460px !important;
+        margin: 0 !important;
+    }
+    #calc .arrowIFI, #calc .arrowIR {
+        max-width: 30px;
+        padding: 20px;
+    }
+    #calc .whiteCircle .btn img {
+        max-width: 150px;
+    }
+    #calc .whiteCircle p {
+        font-size: 12px !important;
+    }
+    #calc .whiteCircle h3 {
+        font-size: 18px !important;
+    }
+    #calc .whiteCircle #titrerelou {
+        padding-bottom: 10px;
+    }
+    #calc #calendrier p {
+        font-size: 12px;
+    }
+    #calc .title p {
+        font-size: 32px;
+    }}
+
+#calc .whiteCircle{
+    min-height: 500px;
+    min-width: 500px;
+    max-width: 520px;
+}
+
+#calc .whiteCircle p {
+    line-height: 1rem;
+}
+
+
+#calc .whiteCircle {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#calc .arrow, #calc .infos {
+    margin: 20px;
+}
+
+#calc .calendar {
+    padding-bottom: 30px;
+}
+
+#calc .calendrier {
+    background-color: #81A5BA;
+}
+
+#calc .calendrier p {
+    padding: 10px;
+}
+
+#calc .calendrier .BG  {
+    background-color: #6E91A7;
+    margin: 5px;
+}
+
+#calc .calendrier img.cal {
+    padding: 10px 0 50px 0;
+}
+
+#calc .calendrier .first {
+    visibility: hidden;
+}
+
+#calc .calendrier .content {
+    padding: 30px 0;
+}
+
+#calc .calendrier .grid-y .small-6 {
+    min-height: 15rem;
+}
+
+#calculatriceIFI.reveal, #calculatriceIR.reveal {
+    width: 70% !important;
+    top: 10px !important;
+    max-width: 80% !important;
+    padding: 0 !important;
+    min-height: 900px !important;
+}
+@media print, screen and (max-width: 64em) {
+    #calculatriceIFI.reveal, #calculatriceIR.reveal {
+        width: 100% !important;
+        top: 10px !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        min-height: 900px !important;
+    }
+}
+
+#calculatriceIFI {
+    background-color: #520812;
+}
+
+#calculatriceIFI  .btn {
+    margin: 50px 0;
+}
+
+#calculatriceIFI .inputMontants {
+    padding: 20px 0;
+}
+
+#calculatriceIFI .menu {
+    padding: 0 0 20px 0;
+}
+
+#calculatriceIFI .don {
+    padding: 20px 0 20px 0;
+}
+
+#calculatriceIFI .menu i {
+    padding: 0 10px;
+    color: #FFF;
+}
+
+#calculatriceIFI .title {
+    padding-top: 4rem;
+}
+
+#calculatriceIFI .title p {
+    padding: 30px;
+}
+
+
+#calc .calendrier .col  {
+    margin: 5px;
+}
+
+@media print, screen and (max-width: 1055px) {
+    #calc .arrow {
+        display: none;
+    }
+}
+
+@media print, screen and (min-width: 1055px) {
+    #calc .arrow {
+        display: block;
+    }
+}
+
+
+#equi {
+    background-image: url("../assets/bgEqui.png");
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media print, screen and (max-width: 800px) {
+    #equi .content {
+        padding: 25% 5%;
+    }
+}
+
+@media print, screen and (min-width: 800px) {
+    #equi .content {
+        padding: 20% 30%;
+    }
+}
+
+#don .btn {
+    margin: 5px;
+}
+
+#don .btns {
+    margin-top: 70px;
+}
+
+#don .btn.padding {
+    padding: 20px !important;
+}
+
+#don .btn.padding30 {
+    padding: 30px !important;
+}
+
+#don img {
+    padding: 0 30px 20px 30px;
+}
+
+#don .text {
+    padding: 50px 0;
+}
+
+#don .box {
+    margin: 10px 0;
+}
+
+#footer .little {
+    padding: 10px 5%;
+}
+
+#footer {
+    padding-bottom: 60px;
+}
+
+#footer .littleArrows {
+    padding-top: 30px;
+}
+
+#mention .content{
+    padding: 80px 0;
+}
+
+#footer .title {
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+#footer .sep {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media print, screen and (max-width: 800px) {
+    #perso .nom p{
+        font-size: 2rem;
+    }
+    #perso #slider .nom {
+        padding: 6rem 0;
+        text-align: center;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+@media print, screen and (max-width: 1024px) {
+    #perso #slider .nom {
+        padding: 10rem 0;
+        text-align: center;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    #perso .text p {
+        line-height: 1.25rem;
+    }
+    #perso .picture {
+        background-position: top !important;
+    }
+}
+
+#slider {
+    height: unset;
+}
+
+#footer h4 {
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+
+.textPadding {
+    padding: 0 5px;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.btn {
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+#mention p a:hover {
+    color: #520812 !important;
+}
