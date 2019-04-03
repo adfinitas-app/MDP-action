@@ -205,40 +205,42 @@
     function calcCalcIFI() {
         var toAdd = document.getElementsByClassName("toAdd");
         var res = document.getElementsByClassName("resIFI");
-        var princ = (parseInt(toAdd[0].value) * 0.7);
-        var autres = isNaN(parseInt(toAdd[1].value)) ? 0 : parseInt(toAdd[1].value);
-        var dettes = isNaN(parseInt(toAdd[2].value)) ? 0 : parseInt(toAdd[2].value);
-        var result = princ + autres - dettes;
+        var princ = parseInt(toAdd[0].value.replace(/\s/g, '')) * 0.7;
+        var autres = isNaN(parseInt(toAdd[1].value.replace(/\s/g, ''))) ? 0 : parseInt(toAdd[1].value.replace(/\s/g, ''));
+        var dettes = isNaN(parseInt(toAdd[2].value.replace(/\s/g, ''))) ? 0 : parseInt(toAdd[2].value.replace(/\s/g, ''));
+        var patrTotal = princ + autres - dettes;
         var coef = [0.005, 0.007, 0.01, 0.0125, 0.01];
         var arr = [800001, 1300001, 2570001, 5000001, 10000001];
         var IFI = 0;
-        var tmp = result;
-        console.log(result);
-        if (result < arr[0]) {
-            res[0].value = result;
+        var tmp = patrTotal;
+        for (var i = 0; i < toAdd.length; i++)
+            toAdd[i].value = formatMoney(parseInt(toAdd[i].value.replace(/\s/g, '')));
+        //console.log(patrTotal);
+        if (patrTotal < arr[0]) {
+            res[0].value = formatMoney(setPrecision(patrTotal));
             res[1].value = 0;
-            console.log("return;");
+           // console.log("return;");
             return;
         }
         for (let i = 4; i > -1; i--)
-            if (result > arr[i]) {
-                //console.log("arr[i] - tmp = "+ ((arr[i] - 1) - tmp));
+            if (patrTotal > arr[i]) {
+          //      console.log("tmp - arr[i]= "+ tmp - ((arr[i] - 1)));
                 IFI += (tmp - (arr[i] - 1)) * coef[i];
-                tmp -= result - (arr[i] - 1);
+                tmp -= patrTotal - (arr[i] - 1);
                 //console.log("tmp = "+ tmp);
                 //console.log("coef[i] = "+ coef[i]);
                 //console.log("arr[i] = "+ (arr[i] - 1));
                 //console.log("IFI = "+ IFI);
             }
-        IFI = IFI - (17500 - (result * 0.0125));
-        res[0].value = result;
-        res[1].value = IFI;
+        IFI = IFI - (17500 - (patrTotal * 0.0125));
+        res[0].value = formatMoney(patrTotal);
+        res[1].value = formatMoney(IFI < 0 ? 0 : IFI);
         calcDonIFI();
     }
     function setPrecision(num) {
         var test = parseInt(num);
         if (num === test)
-            return num
+            return num;
         else {
             return num.toFixed(2);
         }
@@ -248,41 +250,82 @@
         var reduc = document.getElementById("reducIR");
         var don = document.getElementById("montantDonReducIR");
         var btn = document.getElementById("btnDonIR");
-        if (parseInt(montant.value) > 546) {
-            reduc.value = setPrecision(parseInt(montant.value) * 0.66);
-            don.value = setPrecision(parseInt(montant.value) - parseInt(montant.value) * 0.66);
+        var value = parseFloat(montant.value.replace(/\s/g, ''));
+        console.log(value);
+        montant.value = formatMoney(parseFloat(value));
+        if (value > 546) {
+            reduc.value = formatMoney(setPrecision(value * 0.66));
+            don.value = formatMoney(setPrecision(value - (value * 0.66)));
         } else {
-            reduc.value = setPrecision(parseInt(montant.value) * 0.75);
-            don.value = setPrecision(parseInt(montant.value) - parseInt(montant.value) * 0.75);
+            reduc.value = formatMoney(setPrecision(value * 0.75));
+            don.value = formatMoney(setPrecision(value - (value * 0.75)));
         }
-        btn.innerText = montant.value;
+        btn.innerText = formatMoney(value);
         setLink("btnDonIRLink", "btnDonIR");
     }
+    function formatMoney(n, c, d, t) {
+        c = isNaN(c = Math.abs(c)) ? 0 : c;
+        d = d === undefined ? "," : d;
+        t = t === undefined ? "\u00A0" : t;
+        var s = n < 0 ? "-" : "",
+            i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))),
+            j = (j = i.length) > 3 ? j % 3 : 0;
+
+        return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+    }
     function calcDonIFI() {
-        var opti = document.getElementById("opti");
+        var optiInput = document.getElementById("opti");
         var don = document.getElementById("donIFI");
         var newIFI = document.getElementById("IFIafter");
         var IFInet = document.getElementById("IFInet");
         var btn = document.getElementById("btnDonIFI");
+        var valueDon = parseFloat(don.value.replace(/\s/g, ''));
+        var valueIFInet = setPrecision(parseFloat(IFInet.value.replace(/\s/g, '')));
+        var opti = 0;
 
-        if (!isNaN(parseFloat(don.value))) btn.innerText = parseFloat(don.value).toString();
-        setLink('btnDonIFILink', 'btnDonIFI');
-        if (isNaN(parseFloat(IFInet.value))) return;
-        opti.value = setPrecision(parseFloat(IFInet.value) * 1.33332);
-        btn.innerText = setPrecision(parseFloat(opti.value)).toString();
-        newIFI.value = setPrecision(parseFloat(IFInet.value) - parseFloat(opti.value) * 0.75);
-        setLink('btnDonIFILink', 'btnDonIFI');
-        if (isNaN(parseFloat(don.value))) return;
-        btn.innerText = setPrecision(parseFloat(don.value)).toString();
-        newIFI.value = setPrecision((parseFloat(IFInet.value) - parseFloat(don.value) * 0.75) <= 0 ? 0 : (parseFloat(IFInet.value) - parseFloat(don.value) * 0.75));
+        if (!isNaN(valueDon)) {
+            btn.innerText = formatMoney(valueDon).toString();
+            don.value = formatMoney(valueDon);
+        }
+        if (!isNaN(valueIFInet)) {
+            opti = setPrecision(parseFloat(valueIFInet) * 1.33332);
+            optiInput.value = formatMoney(opti).toString();
+            btn.innerText = formatMoney(opti).toString();
+            newIFI.value = formatMoney(valueIFInet - (opti * 0.75));
+        }
+        if (!isNaN(valueDon) && valueDon !== 0) {
+            btn.innerText = formatMoney(valueDon);
+            newIFI.value = formatMoney(valueIFInet - (valueDon * 0.75) <= 0 ? 0 : valueIFInet - (valueDon * 0.75));
+        }
         setLink('btnDonIFILink', 'btnDonIFI');
     }
   function setLink(name, nb) {
     var link = document.getElementById(name);
     var txt =  document.getElementById(nb);
-    var amount = parseFloat(txt.innerText);
-    link.href += "&amount=" + (amount * 100).toString();
-    console.log("&amount=" + (amount * 100).toString());
+    var amount = parseFloat(txt.innerText.replace(/\s/g, ''));
+    var str = link.href.split("?");
+    var nLink = str[0] + "?";
+    var arr = str[1].split("&");
+    var tmp;
+    var find = false;
+    //  console.log(nLink);
+      //console.log(str);
+    //console.log(arr);
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] == "")
+            continue;
+        tmp = arr[i].split("=");
+        if (tmp[0] == "amount") {
+            nLink += "&amount=" + (amount * 100).toString();
+            find = true;
+        } else
+            nLink += "&" + tmp[0] + "=" + tmp[1];
+    }
+    if (find === false)
+        nLink += "&amount=" + (amount * 100).toString();
+      //console.log(nLink);
+//    console.log("&amount=" + (amount * 100).toString());
+    link.href = nLink;
   }
 </script>
 
@@ -549,7 +592,7 @@
                 <div class="cell">
                     <div class="grid-x gerard cliquable"  onclick="showSlider('gerard');woopra.track('interaction', {category:'TEM-GERARD_IFI19',action:'clic',url:document.location.href,title: document.title});">
                         <div class="cell small-6 nom">
-                            <div class="grid-y height-100 align-center"  onclick="showSlider('gerard');woopra.track('interaction', {category:'TEM-GERARD_IFI19',action:'clic',url:document.location.href,title: document.title});">
+                            <div class="grid-y height-100 align-center">
                                 <div class="cell align-center">
                                     <p class="whiteText text-right ptSans fs54 title">
                                         GÉRARD
@@ -612,7 +655,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid-x mohammad cliquable" onclick="showSlider('lydia');woopra.track('interaction', {category:'TEM-LYDIA_IFI19',action:'clic',url:document.location.href,title: document.title});">
+                    <div class="grid-x mohammad cliquable" onclick="showSlider('mohammad');woopra.track('interaction', {category:'TEM-LYDIA_IFI19',action:'clic',url:document.location.href,title: document.title});">
                         <div class="cell small-6 nom">
                             <div class="grid-y height-100 align-center">
                                 <div class="cell align-center">
@@ -683,14 +726,14 @@
                                                 la qualité de la<br class="show-for-large"> formation.
                                             </p>
                                             <p class="whiteText fs20 italic sourceSans">
-                                                Mise en situation de chaque tache, respect des <br class="show-for-large">exigences liées au métier… Les encadrants m’ont <br class="show-for-large">expliqué les bons gestes et la technique à adopter. J’ai<br class="show-for-large"> acquis le savoir-faire
+                                                Mise en situation de chaque tâche, respect des <br class="show-for-large">exigences liées au métier… Les encadrants m’ont <br class="show-for-large">expliqué les bons gestes et la technique à adopter. J’ai<br class="show-for-large"> acquis le savoir-faire
                                                 professionnel qui me manquait.
                                             </p>
                                             <p class="whiteText fs20 italic sourceSans">
                                                 Après l’obtention de mon diplôme, j’ai été pris en stage <br class="show-for-large">dans un restaurant d’entreprise.
                                             </p>
                                             <p class="whiteText fs20 italic sourceSans">
-                                                Aujourd’hui je suis en formation de pâtissier. Je redécouvre <br>le plaisir d’être heureux au travail. Je suis confiant, <br class="show-for-large">je sens que j’ai trouvé ma voix ».
+                                                Aujourd’hui je suis en formation de pâtissier. Je redécouvre <br>le plaisir d’être heureux au travail. Je suis confiant, <br class="show-for-large">je sens que j’ai trouvé ma voie ».
                                             </p>
                                         </div>
                                         <div class="cell shrink quotes">
@@ -1038,7 +1081,7 @@
                                 <div class="grid-container">
                                     <div class="grid-x grid-padding-x">
                                         <div class="small-12 cell">
-                                            <input type="number" placeholder="" class="noVerticalMargin toAdd" onchange="calcCalcIFI()">
+                                          <input type="text" class="noVerticalMargin toAdd" oninput="calcCalcIFI();" />
                                         </div>
                                     </div>
                                 </div>
@@ -1061,7 +1104,7 @@
                                 <div class="grid-container">
                                     <div class="grid-x grid-padding-x">
                                         <div class="small-12 cell">
-                                            <input type="number" placeholder="" class="noVerticalMargin toAdd" onchange="calcCalcIFI()">
+                                            <input type="text" placeholder="" class="noVerticalMargin toAdd" oninput="calcCalcIFI()">
                                         </div>
                                     </div>
                                 </div>
@@ -1084,7 +1127,7 @@
                                 <div class="grid-container">
                                     <div class="grid-x grid-padding-x">
                                         <div class="small-12 cell">
-                                            <input type="number" placeholder="" class="noVerticalMargin toAdd" onchange="calcCalcIFI()">
+                                            <input type="text" placeholder="" class="noVerticalMargin toAdd" oninput="calcCalcIFI()">
                                         </div>
                                     </div>
                                 </div>
@@ -1107,7 +1150,7 @@
                                 <div class="grid-container">
                                     <div class="grid-x grid-padding-x">
                                         <div class="small-12 cell">
-                                            <input type="number" placeholder="" class="noVerticalMargin resIFI" disabled>
+                                            <input type="text" placeholder="" class="noVerticalMargin resIFI" disabled>
                                         </div>
                                     </div>
                                 </div>
@@ -1132,7 +1175,7 @@
                                         <div class="grid-container">
                                             <div class="grid-x grid-padding-x">
                                                 <div class="small-12 cell">
-                                                    <input type="number" placeholder="" class="noVerticalMargin resIFI" disabled id="IFInet" onchange="calcDonIFI();">
+                                                    <input type="text" placeholder="" class="noVerticalMargin resIFI" disabled id="IFInet" oninput="calcDonIFI();">
                                                 </div>
                                             </div>
                                         </div>
@@ -1163,7 +1206,7 @@
                                 <div class="grid-container">
                                     <div class="grid-x grid-padding-x">
                                         <div class="small-12 cell">
-                                            <input type="number" placeholder="" class="noVerticalMargin" id="opti" disabled>
+                                            <input type="text" placeholder="" class="noVerticalMargin" id="opti" disabled>
                                         </div>
                                     </div>
                                 </div>
@@ -1186,7 +1229,7 @@
                                 <div class="grid-container">
                                     <div class="grid-x grid-padding-x">
                                         <div class="small-12 cell">
-                                            <input type="number" placeholder="" class="noVerticalMargin" id="donIFI" onchange="calcDonIFI()">
+                                            <input type="text" placeholder="" class="noVerticalMargin" id="donIFI" oninput="calcDonIFI()">
                                         </div>
                                     </div>
                                 </div>
@@ -1211,7 +1254,7 @@
                                         <div class="grid-container">
                                             <div class="grid-x grid-padding-x">
                                                 <div class="small-12 cell">
-                                                    <input type="number" placeholder="" class="noVerticalMargin" id="IFIafter" disabled>
+                                                    <input type="text" placeholder="" class="noVerticalMargin" id="IFIafter" disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -1260,7 +1303,7 @@
                                 <div class="grid-container">
                                     <div class="grid-x grid-padding-x">
                                         <div class="small-12 cell">
-                                            <input type="number" placeholder="" class="noVerticalMargin" onchange="setIR()" id="montantDonIR">
+                                            <input type="text" placeholder="" class="noVerticalMargin" oninput="setIR()" id="montantDonIR">
                                         </div>
                                     </div>
                                 </div>
@@ -1285,7 +1328,7 @@
                                         <div class="grid-container">
                                             <div class="grid-x grid-padding-x">
                                                 <div class="small-12 cell">
-                                                    <input type="number" placeholder="" class="noVerticalMargin" id="reducIR" readonly>
+                                                    <input type="text" placeholder="" class="noVerticalMargin" id="reducIR" readonly>
                                                 </div>
                                             </div>
                                         </div>
@@ -1310,7 +1353,7 @@
                                 <div class="grid-container">
                                     <div class="grid-x grid-padding-x">
                                         <div class="small-12 cell">
-                                            <input type="number" placeholder="" class="noVerticalMargin" id="montantDonReducIR" readonly>
+                                            <input type="text" placeholder="" class="noVerticalMargin" id="montantDonReducIR" readonly>
                                         </div>
                                     </div>
                                 </div>
