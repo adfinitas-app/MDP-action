@@ -143,7 +143,7 @@
             return;
         act.classList.add("active");
         alr.classList.remove("active");
-        var all = document.getElemenhretsByClassName("toHide");
+        var all = document.getElementsByClassName("toHide");
         for (var i = 0; i < all.length; i++) {
             all[i].classList.remove("notDisplay");
             all[i].classList.add("flex");
@@ -318,7 +318,7 @@
                         <div class="cell large-offset-2 logo shrink show-for-medium ">
                             <div class="grid-x align-middle">
                                 <div class="cell small-2 large-offset-1  medium-2 text-center" id="logoContainer">
-                                    <a target="_blank"  href="http://miedepain.asso.fr/" target="blank" onclick="woopra.track('interaction', {category:'CTA-LOGO_IFI19',action:'clic',url:document.location.href,title: document.title});">
+                                    <a href="http://miedepain.asso.fr/" target="blank" onclick="woopra.track('interaction', {category:'CTA-LOGO_IFI19',action:'clic',url:document.location.href,title: document.title});">
                                         <img src="assets/logo.png" alt="Logo Mie de Pain" class="logo">
                                     </a>
                                 </div>
@@ -364,7 +364,7 @@
                                     </div>
                                 </div>
                                 <div class="cell small-5">
-                                    <a target="blank" href="https://donner.miedepain.asso.fr/89/?reserved_code_media=WI19-1-P1&amount=20000" class="noVerticalMargin noVerticalPadding"
+                                    <a  target="_blank" href="https://donner.miedepain.asso.fr/89/?reserved_code_media=WI19-1-P1&amount=20000" class="noVerticalMargin noVerticalPadding"
                                                              onclick="woopra.track('interaction', {category:'CTA-STICKY-DON_IFI19',action:'clic',url:document.location.href,title: document.title});">
                                     <div class="grid-x align-middle height-100">
                                         <div class="cell">
@@ -408,8 +408,9 @@
         <div class="cell small-12 medium-10 large-10 title">
             <p class="fs44 redText bold ptSans text-center lh2-5 textPadding bigBold">
                 PASSERELLES D’AVENIR 2019, <br class="show-for-large"> deux chantiers éligibles aux déductions fiscales
+              <br class="show-for-small-only">
             </p>
-            <p class="fs24 darkRedText lh1 sourceSans text-center" style="padding-bottom: 20px; line-height: 1.25rem">
+            <p class="fs24 darkRedText lh1 sourceSans text-center text" style="padding-bottom: 20px; line-height: 1.25rem">
                 La Mie de Pain recrute et suit d’un point de vue social et <br class="show-for-large">professionnel plus d’une cinquantaine de salariés en insertion par an.
             </p>
         </div>
@@ -905,7 +906,7 @@
                                 <div class="cell small-3 align-self-top show-for-medium">
                                     <img src="assets/redArrowIFI.png" alt="" class="float-right arrowIFI">
                                 </div>
-                                <div class="cell small-6 small-offset-3 medium-offset-0">
+                                <div class="cell small-8 small-offset-2 medium-offset-0">
                                     <div class="cliquable button whiteText width-100 noVerticalMargin noVerticalPadding noSidePadding" data-open="calculatriceIFI" onclick="showCalcIFI();woopra.track('interaction', {category:'CTA-CALIFI_IFI19',action:'clic',url:document.location.href,title: document.title});">
                                         <div class="grid-x align-center-middle btn">
                                             <div class="cell">
@@ -1200,7 +1201,6 @@
                     <div class="grid-x align-center">
                         <div class="cell small-9">
                             <div class="grid-x align-middle inputMontants redBG">
-
                                 <div class="cell small-6 redBG">
                                     <p class="fs18 sourceSans whiteText noVerticalMargin text-right">
                                         MONTANT DE MON IFI APRÈS DÉDUCTION
@@ -1228,7 +1228,7 @@
                     <div class="grid-x height-100 align-center-middle">
                         <div class="cell small-9 medium-6 large-3">
                             <div class="grid-x align-center-middle btn padding whiteBG width-100 cliquable">
-                                <a id="btnDonIFILink" target="_blank" href="https://donner.miedepain.asso.fr/89/?reserved_code_media=WI19-1-P1" class="height-100" onclick="woopra.track('interaction', {category:'CTA-DON-BUDGET_IFI19',action:'clic',url:document.location.href,title: document.title});">
+                                <a id="btnDonIFILink" target="_blank" href="https://donner.miedepain.asso.fr/88/?reserved_code_media=WI19-1-P1" class="height-100" onclick="woopra.track('interaction', {category:'CTA-DON-BUDGET_IFI19',action:'clic',url:document.location.href,title: document.title});">
                                     <div class="cell">
                                         <p class="redText fs18 bold ptSans text-center noVerticalMargin">
                                             JE FAIS UN DON DE <span id="btnDonIFI">0</span>&nbsp;€
