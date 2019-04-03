@@ -147,6 +147,9 @@ body {
     #chantier .plus {
         padding-bottom: 1rem;
     }
+    #chantier .title p.text {
+        font-size: 18px;
+    }
 }
 
 @media print, screen and (max-width: 64em) {
