@@ -18,6 +18,7 @@
     })(window,document,'script','dataLayer','GTM-KVZR5ZR');</script>
     <!-- End Google Tag Manager -->
     <meta charset="utf-8">
+    <meta name="description" content="Soutenez nos chantiers d'insertion et offrez une seconde chance aux personnes durablement éloignées de l'emploi. 75% du montant de votre don est déductible de votre impôt." />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Passerelles d'avenir</title>
@@ -222,16 +223,22 @@
            // console.log("return;");
             return;
         }
-        for (let i = 4; i > -1 && tmp > arr[0]; i--)
+        var tmp2;
+        for (let i = 4; i > -1 && tmp > arr[0]; i--) {
             if (patrTotal > arr[i]) {
-          //      console.log("tmp - arr[i]= "+ tmp - ((arr[i] - 1)));
+                console.log(patrTotal - arr[i]);
+                //      console.log("tmp - arr[i]= "+ tmp - ((arr[i] - 1)));
                 IFI += (tmp - (arr[i] - 1)) * coef[i];
                 tmp -= patrTotal - (arr[i] - 1);
-                //console.log("tmp = "+ tmp);
-                //console.log("coef[i] = "+ coef[i]);
-                //console.log("arr[i] = "+ (arr[i] - 1));
-                //console.log("IFI = "+ IFI);
+                tmp2 = patrTotal - (arr[i] - 1);
+                console.log("tmp = " + tmp);
+                console.log("patr - arr = " + patrTotal - (arr[i] - 1));
+                console.log("tmp2 = " + tmp2);
+                //   console.log("coef[i] = "+ coef[i]);
+                // console.log("arr[i] = "+ (arr[i] - 1));
+                console.log("IFI = " + IFI);
             }
+        }
         IFI = IFI - (17500 - (patrTotal * 0.0125));
         res[0].value = formatMoney(patrTotal);
         res[1].value = formatMoney(IFI < 0 ? 0 : IFI);
@@ -288,7 +295,7 @@
             don.value = formatMoney(valueDon);
         }
         if (!isNaN(valueIFInet)) {
-            IFInet.value = formatMoney(valueIFInet);
+//            IFInet.value = formatMoney(valueIFInet);
             opti = setPrecision(parseFloat(valueIFInet) * 1.33332);
             optiInput.value = formatMoney(opti > 50000 ? 50000 : opti).toString();
             btn.innerText = formatMoney(opti > 50000 ? 50000 : opti).toString();
@@ -716,7 +723,7 @@
                                         </div>
                                         <div class="cell shrink">
                                             <p class="whiteText fs20 italic sourceSans">
-                                                « Je suis arrivé en France en 2014 et j’ai fait plusieurs <br class="show-for-large">petits boulots car je n’avais aucune
+                                                Je suis arrivé en France en 2014 et j’ai fait plusieurs <br class="show-for-large">petits boulots car je n’avais aucune
                                                 qualification et je<br class="show-for-large"> ne savais pas exactement ce que je voulais faire<br class="show-for-large"> comme métier.
                                             </p>
                                             <p class="whiteText fs20 italic sourceSans">
@@ -734,7 +741,7 @@
                                                 Après l’obtention de mon diplôme, j’ai été pris en stage <br class="show-for-large">dans un restaurant d’entreprise.
                                             </p>
                                             <p class="whiteText fs20 italic sourceSans">
-                                                Aujourd’hui je suis en formation de pâtissier. Je redécouvre <br>le plaisir d’être heureux au travail. Je suis confiant, <br class="show-for-large">je sens que j’ai trouvé ma voie ».
+                                                Aujourd’hui je suis en formation de pâtissier. Je redécouvre <br>le plaisir d’être heureux au travail. Je suis confiant, <br class="show-for-large">je sens que j’ai trouvé ma voie.
                                             </p>
                                         </div>
                                         <div class="cell shrink quotes">
@@ -1410,6 +1417,11 @@
                 <div class="cell">
                     <img src="assets/smallCalendar.png" alt="Calendrier" class="float-center cal">
                 </div>
+                <div class="cell">
+                    <p class="fs20 whiteText ptSans text-center">
+                        *Ces dates sont susceptibles d’être modifiées
+                    </p>
+                </div>
             </div>
             <div class="grid-x align-center content height-100 notDisplay">
                 <div class="cell small-3 large-3 col">
@@ -1504,7 +1516,7 @@
                             <div class="grid-x height-100 align-middle">
                                 <div class="cell textBox">
                                     <p class="fs16 ptSans whiteText bold noVerticalMargin">
-                                        29 septembre 2019
+                                        21 septembre 2019
                                     </p>
                                 </div>
                             </div>
@@ -1809,7 +1821,7 @@
             <div class="cell small-12">
                 <p class="darkRedText fs14 sourceSans textPadding">
                     L’Association Les Œuvres de la Mie de Pain, créée en 1887 et constituée, en 1920, en association régie par la loi du 1er juillet 1901, est reconnue d’utilité publique depuis 1984 et est agréée par le Don en Confiance. Elle a été enregistrée en préfecture de Paris le 18 août 1920 (JO du 19 septembre 1920), sous le numéro W751022467. Son siège social est&nbsp;: 18, rue Charles Fourier – 75013&nbsp;PARIS • Numéro SIRET&nbsp;: 775 682 198 00053 • APE : 8790 B • Contact du service de collecte :
-                    <a href="mailto:karim.souane@miedepain.asso.fr" class="underline redText">karim.souane@miedepain.asso.fr</a>
+                    <a href="mailto:karim.souane@miedepain.asso.fr" class="underline darkRedText">karim.souane@miedepain.asso.fr</a>
                 </p>
             </div>
         </div>
