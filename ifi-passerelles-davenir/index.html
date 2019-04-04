@@ -288,6 +288,7 @@
             don.value = formatMoney(valueDon);
         }
         if (!isNaN(valueIFInet)) {
+//            IFInet.value = formatMoney(valueIFInet);
             opti = setPrecision(parseFloat(valueIFInet) * 1.33332);
             optiInput.value = formatMoney(opti).toString();
             btn.innerText = formatMoney(opti).toString();
