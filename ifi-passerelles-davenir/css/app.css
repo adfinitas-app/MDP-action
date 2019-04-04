@@ -378,7 +378,11 @@ body {
 }
 
 #calc .calendrier img.cal {
-    padding: 10px 0 50px 0;
+    padding: 10px 0;
+}
+
+#calc .calendrier p {
+    padding: 30px;
 }
 
 #calc .calendrier .first {
@@ -463,7 +467,7 @@ body {
 
 #equi {
     background-image: url("../assets/bgEqui.png");
-    background-position: center;
+    background-position: top center;
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
@@ -471,13 +475,13 @@ body {
 
 @media print, screen and (max-width: 800px) {
     #equi .content {
-        padding: 15% 5%;
+        padding: 10% 5%;
     }
 }
 
 @media print, screen and (min-width: 800px) {
     #equi .content {
-        padding: 15% 15%;
+        padding: 10% 10%;
     }
 }
 
