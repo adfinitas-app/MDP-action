@@ -222,7 +222,7 @@
            // console.log("return;");
             return;
         }
-        for (let i = 4; i > -1; i--)
+        for (let i = 4; i > -1 && tmp > arr[0]; i--)
             if (patrTotal > arr[i]) {
           //      console.log("tmp - arr[i]= "+ tmp - ((arr[i] - 1)));
                 IFI += (tmp - (arr[i] - 1)) * coef[i];
