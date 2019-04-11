@@ -44,11 +44,6 @@
     $(function() {
         $("form").submit(function() { return false; });
     });
-    $(document).ready( function() {
-        var sliderlydia = document.getElementById("slider");
-        sliderlydia.classList.add("notDisplay");
-        //console.log("bonsoir j'ai chargé");
-    });
     function setStickyButton() {
         let button = document.getElementById("smallStickyButton");
 
@@ -125,12 +120,12 @@
         pres.classList.add("display");
     }
     function showCalendar() {
-        var cal = document.getElementById("calendrier");
+        var cal = document.getElementById("calendrierCODE");
         cal.classList.remove("notDisplay");
         cal.classList.add("display");
     }
     function hideCalendar() {
-        var cal = document.getElementById("calendrier");
+        var cal = document.getElementById("calendrierCODE");
         cal.classList.remove("display");
         cal.classList.add("notDisplay");
     }
@@ -348,7 +343,7 @@
                 <div id="smallStickyButton" style="display: none; z-index: 6;top: 0; left: 0; right: 0;" class="cell shrink sticky is-anchored show-for-small-only">
                     <div class="grid-x align-spaced align-middle redBG">
                         <div class="cell small-6 text-center greyBG">
-                            <div  data-open="calculatriceIFI" class="cliquable noVerticalMargin noVerticalPadding noSidePadding" onclick="woopra.track('interaction', {category:'CTA-STICKY-CAL_IFI19',action:'clic',url:document.location.href,title: document.title});">
+                            <div data-open="calculatriceIFI" class="cliquable noVerticalMargin noVerticalPadding noSidePadding" onclick="woopra.track('interaction', {category:'CTA-STICKY-CAL_IFI19',action:'clic',url:document.location.href,title: document.title});">
                                 <div class="grid-x align-middle height-100 width-100">
                                     <div class="cell">
                                         <p class="whiteText fs18 text-center bold ptSans noVerticalMargin" style="padding: 10px">CALCULATRICE FISCALE</p>
@@ -459,6 +454,7 @@
 </header>
 
 <section id="chantier">
+    <div id="dispositifs"></div>
     <div class="grid-x align-center" id="1" data-magellan-target>
         <div class="cell small-12 medium-10 large-10 title">
             <p class="fs44 redText bold ptSans text-center lh2-5 textPadding bigBold">
@@ -590,6 +586,9 @@
             </div>
         </div>
         <div class="cell small-12">
+            <div id="lydia"></div>
+            <div id="mohammad"></div>
+            <div id="gerard"></div>
             <p class="fs28 ptSans bold greyText text-center italic end">
                 Budget restant à financer&nbsp;: 260&nbsp;000&nbsp;€
             </p>
@@ -602,7 +601,8 @@
         <div class="cell">
             <div class="grid-x pres" id="pres">
                 <div class="cell">
-                    <div class="grid-x gerard cliquable"  onclick="showSlider('gerard');woopra.track('interaction', {category:'TEM-GERARD_IFI19',action:'clic',url:document.location.href,title: document.title});">
+                    <div class="grid-x gerard cliquable"
+                          onclick="showSlider('gerard');woopra.track('interaction', {category:'TEM-GERARD_IFI19',action:'clic',url:document.location.href,title: document.title});">
                         <div class="cell small-6 nom">
                             <div class="grid-y height-100 align-center">
                                 <div class="cell align-center">
@@ -634,7 +634,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid-x lydia cliquable" onclick="showSlider('lydia');woopra.track('interaction', {category:'TEM-LYDIA_IFI19',action:'clic',url:document.location.href,title: document.title});">
+                    <div class="grid-x lydia cliquable"
+                          onclick="showSlider('lydia');woopra.track('interaction', {category:'TEM-LYDIA_IFI19',action:'clic',url:document.location.href,title: document.title});">
                         <div class="cell small-6 text">
                             <div class="grid-x height-100">
                                 <div class="cell small-12 medium-offset-4 large-offset-3 medium-8 large-7">
@@ -667,7 +668,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid-x mohammad cliquable" onclick="showSlider('mohammad');woopra.track('interaction', {category:'TEM-LYDIA_IFI19',action:'clic',url:document.location.href,title: document.title});">
+                    <div class="grid-x mohammad cliquable"
+                          onclick="showSlider('mohammad');woopra.track('interaction', {category:'TEM-LYDIA_IFI19',action:'clic',url:document.location.href,title: document.title});">
                         <div class="cell small-6 nom">
                             <div class="grid-y height-100 align-center">
                                 <div class="cell align-center">
@@ -1025,7 +1027,7 @@
                     </div>
                 </div>
             </div>
-            <div class="grid-x align-center">
+            <div class="grid-x align-center" id="calendrier">
                 <div class="cell small-10 infos">
                     <p class="fs14 lightGreyText ptSans text-center">
                         Au-delà de ce plafond, votre réduction est de 66 % de votre don dans la limite de 20 % de votre revenu imposable. Si votre don dépasse 20 % de votre revenu imposable, vous pouvez reporter l’excédent sur les 5 années suivantes.                    </p>
@@ -1409,7 +1411,8 @@
         </div>
         </div>
     </div>
-    <div class="grid-x align-center-middle calendrier notDisplay" id="calendrier">
+    <div class="grid-x align-center-middle calendrier notDisplay"
+         id="calendrierCODE">
         <div class="large-12 small-12 height-100">
             <div class="grid-x align-center">
                 <div class="cell">
