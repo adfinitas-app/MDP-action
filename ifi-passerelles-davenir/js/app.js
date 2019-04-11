@@ -10,7 +10,7 @@ $(document).ready( function() {
         var elem = new Foundation.Reveal($('#calculatriceIFI'));
         elem.open();
         showCalcIFI();
-        alert("je suis la");
+        //alert("je suis la");
         // window.location = '#';
         // window.scrollTo(0, 0);
     }
