@@ -15,6 +15,7 @@ $(document).ready( function() {
         // window.scrollTo(0, 0);
     }
 });
+var bool = false
 var minus = [];
 var plus = [];
 var text = [];
