@@ -10,12 +10,13 @@ $(document).ready( function() {
         var elem = new Foundation.Reveal($('#calculatriceIFI'));
         elem.open();
         showCalcIFI();
+        bool = true;
         //alert("je suis la");
         // window.location = '#';
         // window.scrollTo(0, 0);
     }
 });
-var bool = false
+var bool = false;
 var minus = [];
 var plus = [];
 var text = [];
