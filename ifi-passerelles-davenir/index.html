@@ -334,6 +334,11 @@
 //    console.log("&amount=" + (amount * 100).toString());
     link.href = nLink;
   }
+  function checkBool() {
+        if (bool === true)
+            window.scrollTo(0, 0);
+        bool = false;
+    }
 </script>
 
 <header>
@@ -1395,7 +1400,8 @@
                 </div>
             </div>
         </div>
-        <button class="close-button" data-close aria-label="Close modal" type="button">
+        <button class="close-button" data-close aria-label="Close modal"
+                type="button" onclick="checkBool()">
             <img src="assets/whiteCrossSlider.png" aria-hidden="true"/>
         </button>
     </div>
