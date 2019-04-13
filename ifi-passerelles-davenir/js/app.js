@@ -11,9 +11,6 @@ $(document).ready( function() {
         elem.open();
         showCalcIFI();
         bool = true;
-        //alert("je suis la");
-        // window.location = '#';
-        // window.scrollTo(0, 0);
     }
 });
 var bool = false;
