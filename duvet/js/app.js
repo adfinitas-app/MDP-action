@@ -1,4 +1,4 @@
-var OBJECTIVE = 400;
+var OBJECTIVE = 600;
 
 var progressBar = undefined;
 function ProgressBar() {
@@ -114,7 +114,7 @@ function zipDuvet() {
 
 function getPercent(number) {
     let res = 100 * number / OBJECTIVE;
-    
+
     return (res);
 }
 
