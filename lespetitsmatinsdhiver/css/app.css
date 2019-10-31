@@ -409,53 +409,42 @@ header .bgvideo {
 
 #temoignage .text {
     color: #fedb38;
-    text-align: center;
     line-height: 1.2;
     font-size: 18px;
     margin-bottom: 30px;
 }
 
-#temoignage #text-plus {
+#temoignage #text-plus, #temoignage #text-plus2 {
     display: none;
 }
 
 #temoignage .container {
     font-family: 'museo500', serif;
-    position: relative;
     max-width: 600px;
     display: inline-block;
 }
 
-#guillemet-left {
-    position: absolute;
-    top: 0;
-    left: 10px;
-    width: 10px;
+#temoignage .container img {
+    display: inline;
 }
 
-#guillemet-right {
-    position: absolute;
-    bottom: 34px;
-    right: -10px;
-    width: 10px;
+.guillemet-left {
+    width: 17px;
 }
 
-@media screen and (min-width: 64em) {
-    #guillemet-left {
-        float: left;
+.guillemet-right {
+    width: 17px;
+}
+
+@media screen and (max-width: 40em) {
+    .guillemet-left {
+        width: 10px;
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 17px;
     }
 
-    #guillemet-right {
-        position: absolute;
-        bottom: 34px;
-        right: 0;
-        width: 17px;
+    .guillemet-right {
+        width: 10px;
     }
-
 }
 
 #temoignage #nono {
