@@ -345,11 +345,16 @@ header .bgvideo {
 }
 
 #temoignage {
-    background-image: url('../img/bg-temoignage.png');
-    background-size: cover;
-    background-position: right;
     padding: 50px 0;
     min-height: 100vh;
+}
+
+@media print, screen and (min-width: 40em) {
+    #temoignage {
+        background-image: url('../img/bg-temoignage.png');
+        background-size: cover;
+        background-position: right;
+    }
 }
 
 #temoignage h2 {
@@ -369,6 +374,7 @@ header .bgvideo {
         justify-items: flex-end;
         align-items: flex-end;
         min-height: 1100px;
+        background-image: linear-gradient(to bottom, #050e10, #081c22);
     }
 
     #temoignage .flex-container {
