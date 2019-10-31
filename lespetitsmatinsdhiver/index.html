@@ -17,13 +17,13 @@
           content="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/partage_lp-mdp.png"/>
 </head>
 <body style="min-width: 200px;">
-<a href="https://donner.miedepain.asso.fr/b?cid=72" target="_blank">
+<a id="cta" href="https://donner.miedepain.asso.fr/b?cid=124&email=[email]&firstname=[firstname]&lastname=[lastname]&amount=10000" target="_blank">
     <button class="stickybtn">JE FAIS UN DON</button>
 </a>
-<a href="https://donner.miedepain.asso.fr/b?cid=72" target="_blank">
+<a id="cta-small" href="https://donner.miedepain.asso.fr/b?cid=124&email=[email]&firstname=[firstname]&lastname=[lastname]&amount=10000" target="_blank">
     <button class="stickybtn2 hide-for-medium">JE FAIS UN DON</button>
 </a>
-<header class="">
+    <header class="">
     <a href="http://www.miedepain.asso.fr/" target="_blank"><img
             src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/logo.png" class="show-for-medium"
             alt="Logo" id="logo"/></a>
@@ -31,8 +31,8 @@
             src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/logo-red.png"
             class="hide-for-medium" alt="Logo" id="logo-small"/></a>
     <div id="container-video" class="show-for-medium">
-        <video autoplay muted controls="true" loop>
-            <source src="video/Fume.mp4" type="video/mp4"></source>
+        <video autoplay muted loop>
+            <source src="video/Fume.mp4" type="video/mp4">
         </video>
     </div>
     <!-- <video autoplay loop muted class="bgvideo show-for-medium"><source src="video/Fume1920x1080.mp4" type="video/mp4"/></video> -->
@@ -56,60 +56,52 @@
     </div>
 </header>
 <section id="txt">
+  <div class="row" style="margin-bottom: 2rem;">
     <div class="column small-12 large-10 small-centered white">
-        <h2 class="yellow">Se réveiller dans un lit après une nuit de <br class="show-for-medium">sommeil et prendre un petit-déjeuner chaud...</h2>
-        <p class="text-center" style="margin-bottom: 15px;">S’il s’agit pour nous de plaisirs simples du quotidien,<br>
-        n’oublions pas combien ce sont <span class="yellow">des besoins essentiels<br>
-        pour les 150&nbsp;000 personnes sans-abri qui, l’hiver, vivent dans la rue.</span>
+      <h2 class="yellow">Se réveiller dans un lit après une nuit de <br class="show-for-medium">sommeil et prendre un petit-déjeuner chaud...</h2>
+      <p class="text-center" style="margin-bottom: 15px;">S’il s’agit pour nous de plaisirs simples du quotidien,<br>
+        n’oublions pas combien ce sont <span class="yellow">des besoins essentiels<br>pour les 150&nbsp;000 personnes sans-abri qui, l’hiver, vivent dans la rue.</span>
         <br>N’oublions pas non plus que le nombre de ces personnes ne cesse d’augmenter.
-</p>
+      </p>
     </div>
-</section>
-<section id="chiffres">
-    <div class="column small-12 large-10 small-centered">
-        <div class="row">
-            <div class="column small-12 large-6 text-center large-text-right"
-                 style="color: white;font-family: 'museo700', serif;" id="marge-left-large">
-                <div class="table" style="min-height: 220px;">
-                    <div class="table-row">
-                        <div class="table-cell middle yellow">
-                            <p style="margin-bottom: 15px;">150&nbsp;000</p>
-                            <p style="margin-right: 6px;margin-bottom: 0;font-size: 19px">PERSONNES SANS-ABRI EN
-                                FRANCE</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column small-12 large-4 end text-center large-text-left">
-                <img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/chiffre.png"
-                     alt="Soit 50% de plus qu'il y a 10 ans" id="cercle" style="min-height: 220px;min-width: 220px;"/>
-            </div>
-        </div>
+  </div>
+  <div class="row" style="padding-top: 1rem; padding-bottom: 1rem;" id="nombre_sans_abris">
+    <div class="column small-12 large-shrink align-center text-center" style="color: white;font-family: 'museo700', serif; padding: 0;">
+        <p class="yellow" style="font-size: 172px; font-family: 'museo500', 'Arial', sans-serif; margin-top: 64px;" id="number">000000</p>
+        <p class="yellow" style="font-size: 37px; font-family: 'museo500', 'Arial', sans-serif;text-transform: uppercase;">Personnes sans abri en France</p>
     </div>
+  </div>
 </section>
+
 <section id="temoignage">
     <p>TROUVER UN REFUGE<br/>APRÈS 4&nbsp;ANS DANS LA RUE...</p>
     <div class="column small-12 large-8 small-centered text-center">
         <div class="container">
             <img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/guillemet-left.png" alt='"'
                  id="guillemet-left">
-            <p class="text">J’étais hébergé par un ami mais il a dû quitter son appartement. C’est comme ça que je me
-                suis retrouvé à la rue. J’y suis resté 4 ans. J’allais dans des centres d’hébergement dont je devais
-                repartir le matin. Puis j’ai eu une chambre au Refuge de La Mie de Pain. Être au chaud, ne plus dormir
-                dehors dans le froid et sous la pluie, pouvoir prendre un petit-déjeuner, une douche, des repas… et
-                savoir que je pouvais rester jusqu’à ce que je retrouve un logement : cela a changé ma vie.</p>
-            <p id="text-plus">L’équipe a tout de suite été très chaleureuse. Je devais passer des examens médicaux à
-                cause d’un problème de santé et un travailleur social m’a proposé de m’accompagner, c’était rassurant.
-                Avec l’équipe et tous les autres résidents nous avons aussi fêté Noël l’an dernier c’était superbe ! Les
-                décorations, le repas… nous avons passé un très beau moment tous ensemble.<br/><br/>Aujourd’hui, je
-                continue à m’occuper de ma santé et à faire des démarches administratives avant de pouvoir chercher un
-                emploi dans la restauration. J’ai aussi un projet pour le prochain Noël : aller rendre visite à ma
-                famille. Cela fait tellement longtemps que je n’ai pas passé les fêtes auprès de mes proches !</p>
+            <p class="text">
+                Je n’avais plus de contact avec ma famille et je pensais m’en sortir toute seule.
+                Après plusieurs petits boulots précaires de vendeuse sur des marchés, je suis tombée malade et je n’avais plus de quoi payer le loyer de ma chambre de bonne.
+                De squatts en hébergements temporaires, je me suis retrouvée à la rue pendant
+                deux longues années… Puis j’ai rencontré une assistante sociale, qui m’a parlé
+                du Foyer pour femmes de la Mie de Pain. J’y suis allée et j’avoue que ça a été
+                un nouveau départ dans ma vie.
+            </p>
+            <p class="text" id="text-plus">J’ai pu consulter un médecin et me faire soigner gratuitement. J’ai pu me poser,
+                me laver, me nourrir correctement et surtout sortir de la précarité.
+                J’avais une chambre pour moi et une adresse fixe où je pouvais recevoir mon courrier, notamment pour les nombreuses démarches administratives qui me permettent
+                de retrouver mes droits.<br><br>
+                Savoir que je pouvais continuer d’habiter là jusqu’à ce que je retrouve un logement,
+                ça m’a redonné l’envie de croire à nouveau en mes chances.
+                A la Mie de Pain, l’équipe de travailleurs sociaux du Foyer pour femmes est chaleureuse
+                et disponible. On m’a aidé à démêler ma situation et à faire valoir mes droits.
+                Aujourd’hui, j’ai reçu une réponse positive à ma recherche d’emploi :
+                ça faisait longtemps que je n’avais pas reçu un tel cadeau pour Noël !</p>
             <img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/guillemet-right.png" alt='"'
                  id="guillemet-right">
         </div>
-        <p id="nono">Nono, accueilli au Refuge</p>
-        <p id="confidentialite">Par souci de confidentialité,<br/>nous avons modifié le prénom</p>
+        <p id="nono"><span class="yellow">Lisa</span>, accueillie au Foyer pour femmes de la Mie de Pain.</p>
+        <p id="confidentialite">Par respect de la confidentialité, le prénom a été modifié.</p>
         <div style="margin-top: 30px;">
             <a href="#"><img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/%2B.png" alt="+"
                              id="plus"/></a>
@@ -149,7 +141,7 @@
                              alt="Lit"/>
                     </div>
                     <p class="title">Héberger</p>
-                    <p class="text">Avec ses 360 places d'hébergement, La Mie de Pain porte assistance aux personnes exposées aux dangers de la rue en les hébérgeant.</p>
+                    <p class="text">Avec 378 hommes abrités au Refuge en 2018, la Mie de Pain porte assistance aux personnes sans-abri.</p>
                 </div>
             </div>
         </div>
@@ -184,8 +176,7 @@
                              alt="Personnes accueillantes"/>
                     </div>
                     <p class="title">Accueillir 24H/24</p>
-                    <p class="text">Les personnes hébergées ne sont pas contraintes de repartir dans la rue au petit
-                        matin.</p>
+                    <p class="text">Les personnes hébergées ne sont pas contraintes de retourner à la rue.</p>
                 </div>
             </div>
         </div>
@@ -199,7 +190,7 @@
                              alt="Bol"/>
                     </div>
                     <p class="title">Nourrir</p>
-                    <p class="text">Plus de 1&nbsp;000 repas chauds sont servis chaque jour dont des petits déjeuners.</p>
+                    <p class="text">Plus de 246&nbsp;400 repas chauds servis en 2018 au sein du refuge incluant les petits déjeuners.</p>
                 </div>
             </div>
         </div>
@@ -211,7 +202,7 @@
                              alt="Sapin de Noël"/>
                     </div>
                     <p class="title">Partager la<br/>lumière de noël</p>
-                    <p class="text">4 réveillons et repas conviviaux seront organisés sur la période de Noël et de nombreux cadeaux seront distribués.</p>
+                    <p class="text">4 réveillons et repas conviviaux seront organisés durant la période de Noël et plus de 1 000 cadeaux seront distribués.</p>
                 </div>
             </div>
         </div>
@@ -223,7 +214,7 @@
                              alt="Puzzle qui s'insère"/>
                     </div>
                     <p class="title">Accompagner vers<br class="hide-for-medium-only"/> la réinsertion</p>
-                    <p class="text">751 accompagnements sont assurés vers un emploi, un logement, des droits sociaux.</p>
+                    <p class="text">63 personnes salariées sont réparties sur trois dispositifs de retour à l’emploi dont deux chantiers d’insertion.</p>
                 </div>
             </div>
         </div>
@@ -237,7 +228,7 @@
                 <div class="column medium-6 text-left left">
                     <div class="table" style="min-height: 160px;">
                         <div class="table-cell middle">
-                            <p>Je fais un don pour apporter de la chaleur dans le froid de l'hiver</p>
+                            <p>JE FAIS UN DON POUR procurer un peu de chaleur DANS LE FROID DE L’HIVER</p>
                         </div>
                     </div>
                 </div>
@@ -245,52 +236,49 @@
                     <div class="container">
                         <img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/camembert.png"
                              alt="Camembert"/>
-                        <p>75% du montant de votre don est déductible de votre impôt sur le revenu. jusqu'à 537&nbsp;€
-                            (plafond 2018), puis 66% au-delà de cette somme, dans la limite de 20% de votre revenu imposable.</p>
+                        <p>75% du montant de votre don est déductible de vos impôts sur le revenu, jusqu’à 546&nbsp;€ (plafond 2019), puis 66% au-delà.</p>
                     </div>
                 </div>
             </div>
             <div class="row medium-collapse">
                 <div class="column small-12 medium-4 text-center priceCol">
-                    <a href="https://donner.miedepain.asso.fr/b?cid=72" target="_blank" class="priceCard"
+                    <a href="https://donner.miedepain.asso.fr/b?cid=124&email=[email]&firstname=[firstname]&lastname=[lastname]&amount=5500" target="_blank" class="priceCard"
                        id="eq1">
                         <img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/don-v.png" alt="v"
                              class="v"/>
                         <p class="price">55€</p>
                         <p class="deduction">(soit 13,75€ après réduction fiscale)</p>
-                        <p class="text">1 journée pour 1 personne au Nouveau Refuge (3&nbsp;repas, 1&nbsp;hébergement en
-                            chambre, premiers soins)</p>
+                        <p class="text">24 h de prise en charge d’une personne au Refuge ou au Foyer pour femmes.<br><br>(un hébergement en chambre, des repas chauds, des premiers soins et une prise en charge sociale.)</p>
                         <button class="btn-don">JE DONNE</button>
                     </a>
                 </div>
                 <div class="column small-12 medium-4 text-center priceCol">
-                    <a href="https://donner.miedepain.asso.fr/b?cid=72" target="_blank" class="priceCard"
+                    <a href="https://donner.miedepain.asso.fr/b?cid=124&email=[email]&firstname=[firstname]&lastname=[lastname]&amount=10000" target="_blank" class="priceCard"
                        id="eq2">
                         <img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/don-v.png" alt="v"
                              class="v"/>
                         <p class="price">100€</p>
-                        <p class="deduction">(soit 25€ après réduction fiscale)</p>
+                        <p class="deduction">(soit 25,50€ après réduction fiscale)</p>
                         <p class="text">5 consultations médicales incluant les premiers soins et les traitements
                             appropriés</p>
                         <button class="btn-don">JE DONNE</button>
                     </a>
                 </div>
                 <div class="column small-12 medium-4 text-center priceCol">
-                    <a href="https://donner.miedepain.asso.fr/b?cid=72" target="_blank" class="priceCard"
+                    <a href="https://donner.miedepain.asso.fr/b?cid=124&email=[email]&firstname=[firstname]&lastname=[lastname]&amount=16500" target="_blank" class="priceCard"
                        id="eq3">
                         <img src="https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/don-v.png" alt="v"
                              class="v"/>
                         <p class="price">165€</p>
                         <p class="deduction">(soit 41,25€ après réduction fiscale)</p>
-                        <p class="text">1 mois d'accompagnement social et professionnel (suivi par un conseiller en
-                            insertion et un psychologue)</p>
+                        <p class="text">1 mois d’accompagnement social et professionnel.<br><br>(par un conseiller en insertion et un psychologue)</p>
                         <button class="btn-don">JE DONNE</button>
                     </a>
                 </div>
             </div>
             <div class="row">
                 <div class="column small-12 medium-offset-4 medium-4 end">
-                    <p><a href="https://donner.miedepain.asso.fr/b?cid=72&email=[email]&firstname=[firstname]&lastname=[lastname]" target="_blank" id="autre">Je
+                    <p><a href="https://donner.miedepain.asso.fr/b?cid=124&email=[email]&firstname=[firstname]&lastname=[lastname]" target="_blank" id="autre">Je
                         donne un autre montant</a></p>
                 </div>
             </div>
@@ -316,7 +304,7 @@
         <div class="grid-x align-center margin-btm-35">
             <div class="cell medium-10 large-8">
                 <p class="font-size-20 text-center marginBtm-35">Agréée par le Don en confiance depuis 2011, La Mie de Pain s'engage
-                    à respecter <br class="show-for-medium">un code de déontologie s'appuyant sur 4 grands principes&nbsp;:</p>
+                    à respecter&nbsp;:</p>
             </div>
         </div>
         <div class="grid-x grid-margin-x align-center" id="infoAsso">
