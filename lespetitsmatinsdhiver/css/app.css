@@ -269,15 +269,15 @@ header .bgvideo {
     font-family: 'museo700', serif;
     text-align: center;
     padding-top: 55px;
-    padding-bottom: 10px;
-    background-color: #3a4143;
+    padding-bottom: 3rem;
+    background-image: linear-gradient(to bottom, #667283, #0E1218, #121321);
     position: relative;
     z-index: 4;
 }
 
 #txt h2 {
     font-family: 'museo700', serif;
-    font-size: 33px;
+    font-size: 39px;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 30px;
@@ -291,27 +291,14 @@ header .bgvideo {
     font-weight: 700;
 }
 
-#chiffres {
-    background: #3a4143;
-    padding-bottom: 60px;
-    padding-top: 10px;
-}
-
-#chiffres p:first-child {
-    font-size: 89px;
-    margin: 0;
-    line-height: 0.75;
-}
-
-#chiffres p:last-child {
-    line-height: 1.2;
+#nombre_sans_abris {
+    background: url("../img/nombre_sans_abris.png") no-repeat center;
+    background-size: contain;
+    height: 400px;
+    width: 100%;
 }
 
 @media screen and (min-width: 64em) {
-    #marge-left-large {
-        margin-left: 35px;
-    }
-
     #cercle {
         margin-left: 50px;
     }
@@ -322,7 +309,7 @@ header .bgvideo {
 }
 
 #temoignage {
-    background: url('https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/bg-temoignage.jpg') no-repeat top left;
+    background-image: url('../img/bg-temoignage.png');
     background-size: cover;
     background-position: right;
     padding: 50px 0;
@@ -349,23 +336,20 @@ header .bgvideo {
     margin-top: 40px;
 }
 
-#temoignage #text-plus {
-    color: white;
-    line-height: 1.2;
-    text-align: center;
-    display: none;
-    font-size: 19px;
-    max-width: 583px;
+#temoignage p {
+    text-shadow: 1px 1px black;
 }
 
 #temoignage .text {
-    font-weight: 700;
     color: #fedb38;
-    font-style: italic;
     text-align: center;
     line-height: 1.2;
-    font-size: 22px;
+    font-size: 18px;
     margin-bottom: 30px;
+}
+
+#temoignage #text-plus {
+    display: none;
 }
 
 #temoignage .container {
@@ -741,7 +725,7 @@ header .bgvideo {
 /* Footer */
 
 #footer {
-    background-color: #555555;
+    background-color: #111220;
     padding-top: 100px;
     padding-bottom: 100px;
     color: #ECF3FD;
@@ -767,12 +751,6 @@ header .bgvideo {
 }
 
 /* IPHONE5 FIX */
-
-@media screen and (max-width: 380px) {
-    #chiffres p:first-child {
-        font-size: 60px;
-    }
-}
 
 #container-video {
     overflow: hidden;
