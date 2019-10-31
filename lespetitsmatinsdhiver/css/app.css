@@ -420,13 +420,45 @@ header .bgvideo {
     display: inline-block;
 }
 
-#temoignage #lisa {
+#guillemet-left {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 10px;
+}
+
+#guillemet-right {
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    width: 10px;
+}
+
+@media screen and (min-width: 64em) {
+    #guillemet-left {
+        float: left;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 17px;
+    }
+
+    #guillemet-right {
+        position: absolute;
+        bottom: 34px;
+        right: 0;
+        width: 17px;
+    }
+
+}
+
+#temoignage #nono {
     color: white;
     text-align: center;
     line-height: 1.2;
     font-family: 'museo700', serif;
-    display: none;
     font-size: 18px;
+    display: none;
 }
 
 #temoignage #confidentialite {
@@ -719,37 +751,6 @@ header .bgvideo {
     #border-small {
         border-bottom: none !important;
     }
-}
-
-#guillemet-left {
-    position: absolute;
-    top: 0;
-    left: -10px;
-    width: 10px;
-}
-
-#guillemet-right {
-    position: absolute;
-    bottom: 0;
-    right: -10px;
-    width: 10px;
-}
-
-@media screen and (min-width: 64em) {
-    #guillemet-left {
-        position: absolute;
-        top: 0;
-        left: -50px;
-        width: 17px;
-    }
-
-    #guillemet-right {
-        position: absolute;
-        bottom: 0;
-        right: -20px;
-        width: 17px;
-    }
-
 }
 
 
