@@ -13,13 +13,16 @@ $(document).ready(function () {
         var display = $('#text-plus').css('display');
         if (display === 'none') {
             $(this).attr('src', 'https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/x.png');
+            $('#guillemet-toggle').css('display', 'none');
         }
         $('#text-plus').slideToggle();
+        $('#text-plus2').slideToggle();
         $('#nono').slideToggle();
         $('#confidentialite').slideToggle();
 
         if (display !== 'none') {
             $(this).attr('src', 'https://s3.amazonaws.com/heroku-adfinitas-campaign/MDP-LP-No%C3%ABl/%2B.png');
+            $('#guillemet-toggle').css('display', 'inline');
         }
     });
 
