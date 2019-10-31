@@ -53,5 +53,6 @@ function increase_number() {
 }
 
 $(function () {
+    document.getElementById("number").innerHTML = "000 000";
     interval = setInterval("increase_number()", 1);
 });
