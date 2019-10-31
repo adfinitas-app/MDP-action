@@ -291,11 +291,47 @@ header .bgvideo {
     font-weight: 700;
 }
 
+@media print, screen and (max-width: 40em) {
+    #txt h2 {
+        font-size: 30px;
+    }
+
+    #txt p {
+        font-size: 16px;
+    }
+}
+
 #nombre_sans_abris {
     background: url("../img/nombre_sans_abris.png") no-repeat center;
     background-size: contain;
     height: 400px;
     width: 100%;
+}
+
+#nombre_sans_abris p {
+    font-size: 37px;
+    font-family: 'museo500', 'Arial', sans-serif;
+    text-transform: uppercase;
+}
+
+#number {
+    font-size: 172px !important;
+    margin-top: 64px;
+}
+
+@media print, screen and (max-width: 40em) {
+    #nombre_sans_abris {
+        height: 300px;
+    }
+
+    #nombre_sans_abris p {
+        font-size: 20px;
+    }
+
+    #number {
+        margin-top: 80px;
+        font-size: 80px !important;
+    }
 }
 
 @media screen and (min-width: 64em) {
@@ -316,8 +352,33 @@ header .bgvideo {
     min-height: 100vh;
 }
 
-#temoignage .column {
-    min-height: 1100px;
+#temoignage h2 {
+    color: #fefefe;
+    font-size: 53px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'museo700', "Arial", sans-serif;
+}
+
+@media print, screen and (max-width: 40em) {
+    #temoignage {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-content: flex-end;
+        justify-items: flex-end;
+        align-items: flex-end;
+        height: 1100px;
+    }
+
+    #temoignage .flex-container {
+        flex-shrink: 1;
+    }
+
+    #temoignage h2 {
+        font-size: 30px;
+        margin-top: auto;
+    }
 }
 
 @media screen and (min-width: 40em) {
@@ -359,7 +420,7 @@ header .bgvideo {
     display: inline-block;
 }
 
-#temoignage #nono {
+#temoignage #lisa {
     color: white;
     text-align: center;
     line-height: 1.2;
