@@ -6,12 +6,6 @@
         line-height: 1.5rem;
     }
 }
-
-
-*:focus {
-    outline: 0;
-}
-
 body {
     zoom: 80%;
 }
@@ -50,13 +44,24 @@ body {
 #headerLarge .marginTop15 {
     margin-top: 5%;
 }
+
+#headerLarge .marginTop30 {
+    margin-top: 10%;
+}
 @media print, screen and (max-width: 64em) {
     #headerLarge .marginTop15 {
         margin-top: 15%;
     }
+
+    #headerLarge .marginTop30 {
+        margin-top: 20%;
+    }
     #headerLarge {
         background-position: 90% 0;
         min-height: 750px;
+    }
+    #headerLarge #topBar .btn img {
+        max-height: 100px;
     }
     #headerLarge #topBar img.logo {
         padding: 5px 10px;
@@ -90,7 +95,7 @@ body {
         max-height: 50px;
     }
     #headerLarge .title h1 {
-        font-size: 1.75rem;
+        font-size: 2rem;
         line-height: 1.75rem;
     }
     #headerLarge .pass {
@@ -103,6 +108,10 @@ body {
 
 #headerLarge #topBar .btn:hover {
     transform: none;
+}
+
+#headerLarge .arrow img {
+    padding-bottom: 20px;
 }
 
 #headerLarge .title {
@@ -146,16 +155,11 @@ body {
 }
 
 #chantier .minus {
-    padding-top: 1.25rem;
+    padding-top: 1rem;
 }
 @media print, screen and (max-width: 40em) {
-    #chantier .minus,
-    #chantier .plus {
+    #chantier .minus, #chantier .plus {
         padding-bottom: 1rem;
-    }
-    #chantier .title p.text {
-        font-size: 18px;
-        padding-top: 10px;
     }
 }
 
@@ -184,16 +188,6 @@ body {
 #perso .pres .gerard .text {
     background-color: #59788B;
 }
-@media print, screen and (min-width: 64em) {
-    #perso .pres .grid-x:hover p {
-        transform: scale(1.1);
-        transition-duration: 0.5s;
-    }
-    #perso .pres .grid-x p {
-        transform: scale(1);
-        transition-duration: 0.5s;
-    }
-}
 
 #perso .pres .lydia .nom {
     background-image: url("../assets/lydia.png");
@@ -212,8 +206,8 @@ body {
     background-color: #520812;
 }
 
-#perso .pres .mohammad .nom {
-    background-image: url("../assets/mohammad.png");
+#perso .pres .rebecca .nom {
+    background-image: url("../assets/rebecca.png");
     background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
@@ -221,11 +215,11 @@ body {
     min-height: 300px;
 }
 
-#perso .pres .mohammad .nom p {
+#perso .pres .rebecca .nom p {
     padding-right: 15%;
 }
 
-#perso .pres .mohammad .text {
+#perso .pres .rebecca .text {
     background-color: #ECF3FD;
 }
 
@@ -257,15 +251,15 @@ body {
     background-color: #810314;
 }
 
-#perso #slider .mohammad .picture {
-    background-image: url("../assets/mohammadFull.png");
+#perso #slider .rebecca .picture {
+    background-image: url("../assets/rebeccaFull.png");
     background-position: 50% 0;
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-#perso #slider .mohammad .text {
+#perso #slider .rebecca .text {
     background-color: #ECF3FD;
 }
 
@@ -328,7 +322,7 @@ body {
         padding: 20px;
     }
     #calc .whiteCircle .btn img {
-        max-width: 200px;
+        max-width: 150px;
     }
     #calc .whiteCircle p {
         font-size: 12px !important;
@@ -384,11 +378,7 @@ body {
 }
 
 #calc .calendrier img.cal {
-    padding: 10px 0;
-}
-
-#calc .calendrier p {
-    padding: 30px;
+    padding: 10px 0 50px 0;
 }
 
 #calc .calendrier .first {
@@ -473,7 +463,7 @@ body {
 
 #equi {
     background-image: url("../assets/bgEqui.png");
-    background-position: top center;
+    background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
@@ -481,13 +471,13 @@ body {
 
 @media print, screen and (max-width: 800px) {
     #equi .content {
-        padding: 10% 5%;
+        padding: 25% 5%;
     }
 }
 
 @media print, screen and (min-width: 800px) {
     #equi .content {
-        padding: 10% 10%;
+        padding: 20% 30%;
     }
 }
 
@@ -597,8 +587,4 @@ body {
 
 #mention p a:hover {
     color: #520812 !important;
-}
-
-.reveal {
-    border: none;
 }
