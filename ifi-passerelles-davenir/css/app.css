@@ -378,7 +378,10 @@ body {
 }
 
 #calc .calendrier img.cal {
-    padding: 10px 0 50px 0;
+    padding: 10px 0 30px 0;
+}
+#calc .calendrier p {
+    padding-bottom: 60px;
 }
 
 #calc .calendrier .first {

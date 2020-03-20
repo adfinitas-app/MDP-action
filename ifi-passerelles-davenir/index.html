@@ -251,7 +251,7 @@
         var reduc = document.getElementById("reducIR");
         var don = document.getElementById("montantDonReducIR");
         var btn = document.getElementById("btnDonIR");
-        if (parseInt(montant.value) > 546) {
+        if (parseInt(montant.value) > 552) {
             reduc.value = setPrecision(parseInt(montant.value) * 0.66);
             don.value = setPrecision(parseInt(montant.value) - parseInt(montant.value) * 0.66);
         } else {
@@ -306,11 +306,16 @@
                 </div>
                 <div data-sticky-container>
                     <div id="topBar" class="grid-x align-stretch noSideMargin align-spaced sticky" data-sticky data-margin-top="0">
-                        <div class="cell large-offset-2 logo shrink show-for-medium ">
+                        <div class="cell large-offset-2 small-2 logo show-for-medium ">
                             <div class="grid-x align-middle">
                                 <div class="cell small-2 large-offset-1  medium-2 text-center" id="logoContainer">
                                     <a href="http://miedepain.asso.fr/" target="blank" onclick="woopra.track('interaction', {category:'CTA-LOGO_IFI19',action:'clic',url:document.location.href,title: document.title});">
                                         <img src="assets/logo.png" alt="Logo Mie de Pain" class="logo">
+                                    </a>
+                                </div>
+                                <div class="cell auto text-center">
+                                    <a href="">
+                                    <p class="ptSans fs20 whiteText padding30 noVerticalMargin">Retourner <br>vers le site</p>
                                     </a>
                                 </div>
                             </div>
@@ -883,6 +888,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <p class="fs16 sourceSans blueText">Pour des raisons de confidentialité, la photographie a été modifiée</p>
                                     </div>
                                 </div>
                                 <div class="cell small-2">
@@ -912,7 +918,8 @@
     <div class="grid-x align-center title">
         <div class="cell small-12 medium-8">
             <p class="whiteText ptSans fs38 bold text-center lh2" style="padding: 10px">
-                Soutenez notre programme PASSERELLES D’AVENIR <br class="show-for-large">et réduisez votre impôt&nbsp;!
+                Soutenez notre programme RÉDUCTION FISCALES <br class="show-for-large">
+                ET IMPACT SOCIAL, et réduisez votre impôt&nbsp;!
             </p>
         </div>
         <div class="cell small-5 arrow">
@@ -994,7 +1001,7 @@
                             <div class="grid-x align-center height-100">
                                 <div class="cell small-8 large-12 align-self-middle">
                                     <p class="darkGreyText ptSans fs20 text-center" style="line-height: 1.1rem">
-                                        Vous pouvez déduire 75% de votre <br class="show-for-large">don à la Mie de Pain lorsque le  <br class="show-for-large">montant de votre don est inférieur ou  <br class="show-for-large">égal à 546&nbsp;€ (plafond annuel 2019, tous <br class="show-for-large"> organismes éligibles confondus).
+                                        Vous pouvez déduire 75% de votre <br class="show-for-large">don à la Mie de Pain lorsque le  <br class="show-for-large">montant de votre don est inférieur ou  <br class="show-for-large">égal à 552&nbsp;€ (plafond annuel 2020, tous <br class="show-for-large"> organismes éligibles confondus).
                                     </p>
                                 </div>
                             </div>
@@ -1058,7 +1065,7 @@
                         </div>
                         <div class="cell small-5">
                             <p class="fs20 sourceSans whiteText noVerticalMargin">
-                                Je souhaite calculer le montant de mon IFI 2019
+                                Je souhaite calculer le montant de mon IFI 2020
                             </p>
                         </div>
                     </div>
@@ -1068,7 +1075,7 @@
                         </div>
                         <div class="cell small-5">
                             <p class="fs20 sourceSans whiteText noVerticalMargin">
-                                Je connais le montant de mon IFI 2019
+                                Je connais le montant de mon IFI 2020
                             </p>
                         </div>
                     </div>
@@ -1172,7 +1179,7 @@
                             <div class="grid-x align-middle inputMontants redBG">
                                 <div class="cell small-6 redBG">
                                     <p class="fs18 sourceSans whiteText noVerticalMargin text-right">
-                                        MONTANT NET ESTIMÉ DE MON IFI 2019
+                                        MONTANT NET ESTIMÉ DE MON IFI 2020
                                     </p>
                                 </div>
                                 <div class="cell small-4 redBG">
@@ -1280,7 +1287,7 @@
                                 <a href="https://donner.miedepain.asso.fr/89/?reserved_code_media=WI19-1-P1&amount=20000" class="height-100" onclick="woopra.track('interaction', {category:'CTA-DON-BUDGET_IFI19',action:'clic',url:document.location.href,title: document.title});">
                                     <div class="cell">
                                         <p class="redText fs18 bold ptSans text-center noVerticalMargin">
-                                            JE FAIS UN DON DE <span id="btnDonIFI">XXX</span>&nbsp;€
+                                            JE FAIS UN DON DE <span id="btnDonIFI">XX</span>&nbsp;€
                                         </p>
                                     </div>
                                 </a>
@@ -1294,7 +1301,7 @@
                     <div class="grid-x align-center">
                         <div class="cell small-8">
                             <p class="fs20 whiteText ptSans">
-                                Je fais un don à La Mie de Pain et je bénéficie d’une réduction d’impôt de 75&nbsp;% sur le montant de mon don dans la limite de 546&nbsp;€ (plafond 2019). Au delà, la réduction est de 66&nbsp;%.
+                                Je fais un don à La Mie de Pain et je bénéficie d’une réduction d’impôt de 75&nbsp;% sur le montant de mon don dans la limite de 552&nbsp;€ (plafond 2020). Au delà, la réduction est de 66&nbsp;%.
                             </p>
                         </div>
                     </div>
@@ -1377,7 +1384,7 @@
                                 <a href="https://donner.miedepain.asso.fr/89/?reserved_code_media=WI19-1-P1&amount=20000" class="height-100" onclick="woopra.track('interaction', {category:'CTA-DON-BUDGET_IFI19',action:'clic',url:document.location.href,title: document.title});">
                                     <div class="cell">
                                         <p class="redText fs18 bold ptSans text-center noVerticalMargin">
-                                            JE FAIS UN DON DE <span id="btnDonIR">XXX</span>&nbsp;€
+                                            JE FAIS UN DON DE <span id="btnDonIR">XX</span>&nbsp;€
                                         </p>
                                     </div>
                                 </a>
@@ -1414,6 +1421,9 @@
             <div class="grid-x">
                 <div class="cell">
                     <img src="assets/smallCalendar.png" alt="Calendrier" class="float-center cal">
+                </div>
+                <div class="cell">
+                    <p class="fs20 ptSans whiteText italic text-center">Ces dates sont susceptibles d’être modifiées. Elles sont régulièrement mises à jour sur ce site.</p>
                 </div>
             </div>
             <div class="grid-x align-center content height-100 notDisplay">
@@ -1463,7 +1473,7 @@
                             <div class="grid-x height-100 align-middle">
                                 <div class="cell textBox">
                                     <p class="fs16 ptSans whiteText bold noVerticalMargin">
-                                        16 mai 2019
+                                        16 mai 2020
                                     </p>
                                 </div>
                             </div>
@@ -1473,12 +1483,12 @@
                                 <div class="cell textBox">
                                     <p class="fs14 ptSans whiteText bold noVerticalMargin">
                                         départements 01 à 19 :<br>
-                                        21 mai 2019
+                                        21 mai 2020
                                         <br><br class="show-for-large">
-                                        départements 20 à 49 : <br>28 mai 2019
+                                        départements 20 à 49 : <br>28 mai 2020
                                         <br><br class="show-for-large">
                                         départements 50 à 95 et 971 à 976&nbsp;:<br>
-                                        4 juin 2019
+                                        4 juin 2020
                                     </p>
                                 </div>
                             </div>
@@ -1500,7 +1510,7 @@
                             <div class="grid-x height-100 align-middle">
                                 <div class="cell textBox">
                                     <p class="fs16 ptSans whiteText bold noVerticalMargin">
-                                        16 septembre 2019
+                                        16 septembre 2020
                                     </p>
                                 </div>
                             </div>
@@ -1509,7 +1519,7 @@
                             <div class="grid-x height-100 align-middle">
                                 <div class="cell textBox">
                                     <p class="fs16 ptSans whiteText bold noVerticalMargin">
-                                        29 septembre 2019
+                                        29 septembre 2020
                                     </p>
                                 </div>
                             </div>
@@ -1802,7 +1812,7 @@
                     </a>
                 </p>
             </div>
-            <div class="cell small-4 medium-2 medium-offset-6">
+            <div class="cell small-4 medium-2">
                 <a href="https://fr-fr.facebook.com/lamiedepain/" target="_blank">
                     <img src="assets/fb.png" alt="" class="float-right">
                 </a>

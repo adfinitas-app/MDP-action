@@ -15,8 +15,16 @@
     width: 50%;
 }
 
+.width-150 {
+    width: 150px;
+}
+
 .lh0-5 {
     line-height: 0.75rem;
+}
+
+.padding40 {
+    padding: 40px;
 }
 
 .cliquable {
