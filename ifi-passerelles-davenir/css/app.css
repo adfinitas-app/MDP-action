@@ -99,8 +99,13 @@ body {
         line-height: 1.75rem;
     }
     #headerLarge .pass {
-        max-height: 110px;
+        max-height: 90px !important;
     }
+
+    #headerLarge .marginTop30 {
+        margin-top: 50% !important;
+    }
+
     #headerLarge .arrow img {
         max-height: 110px;
     }
@@ -166,6 +171,7 @@ body {
 @media print, screen and (max-width: 64em) {
     #pres .text p {
         font-size: 1.5rem;
+        padding: 5px;
     }
     #pres .cliquable p{
         font-size: 1rem;
