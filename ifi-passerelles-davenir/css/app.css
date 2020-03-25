@@ -332,6 +332,11 @@ body {
         line-height: 20px !important;
     }
 
+    #calc .whiteCircle h3 .title {
+        font-size: 29px !important;
+        line-height: 20px !important;
+    }
+
     #equi p.fs38 {
         font-size: 30px !important;
     }
