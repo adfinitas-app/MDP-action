@@ -39,6 +39,10 @@ body {
     #headerLarge #topBar .btn.don {
         padding: 0 100px 0 5px !important;
     }
+
+    .cell.redBlurBG {
+        margin-top: 5%;
+    }
 }
 
 #headerLarge .marginTop15 {
@@ -109,6 +113,7 @@ body {
     #headerLarge .arrow img {
         max-height: 110px;
     }
+
 }
 
 #headerLarge #topBar .btn:hover {
@@ -610,4 +615,15 @@ body {
 
 #mention p a:hover {
     color: #520812 !important;
+}
+
+.cell.redBlurBG {
+    backdrop-filter: blur(10px);
+    background-color: #A70016BF;
+    padding: 10px 30px;
+    margin-bottom: 30%;
+}
+
+.cell.redBlurBG img {
+    padding-bottom: 10px;
 }
