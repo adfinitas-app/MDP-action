@@ -38,6 +38,7 @@
     function setStickyButton() {
         let button = document.getElementById("smallStickyButton");
         let btn = document.getElementById("bandeauSticky");
+        let sbtn = document.getElementById("smallBandeauSticky");
 
         if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
             button.style.display = "block";
@@ -50,8 +51,10 @@
         }
         if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
             btn.style.display = "block";
+            sbtn.style.display = "block";
         } else {
             btn.style.display = "none";
+            sbtn.style.display = "none";
         }
     }
     function editHeight() {
@@ -281,6 +284,18 @@
             <div class="cell small-1">
                 <div id="smallStickyButton" style="display: none; z-index: 6;top: 0; left: 0; right: 0;" class="cell shrink sticky is-anchored show-for-small-only">
                     <div class="grid-x align-spaced align-middle redBG">
+                        <div class="cell small-12 darkRedBG" id="smallBandeauSticky" style="display: none;">
+                            <div class="grid-x align-middle height-100">
+                                <div class="cell shrink" style="padding: 10px">
+                                    <img src="assets/virus.png" alt="virus" class="float-center" style="max-width: 45px">
+                                </div>
+                                <div class="cell auto" style="padding: 5px">
+                                    <p class="whiteText fs18 ptSans bold noVerticalMargin">
+                                        Votre don est urgent pour soutenir nos actions de prévention et de protection des personnes sans abri.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="cell small-6 text-center greyBG">
                             <div  data-open="calculatriceIFI" class="cliquable noVerticalMargin noVerticalPadding noSidePadding" onclick="woopra.track('interaction', {category:'CTA-STICKY-CAL_IFI20',action:'clic',url:document.location.href,title: document.title});">
                                 <div class="grid-x align-middle height-100 width-100">
@@ -304,17 +319,18 @@
                 </div>
                 <div data-sticky-container>
                     <div id="topBar" class="grid-x align-stretch noSideMargin align-spaced sticky" data-sticky data-margin-top="0" style="backdrop-filter: blur(10px)">
-                        <div class="cell small-12 darkRedBG" id="bandeauSticky" style="display: none;">
+                        <div class="cell small-12 darkRedBG show-for-medium" id="bandeauSticky" style="display: none;">
                             <div class="grid-x align-middle height-100">
-                                <div class="cell small-1 large-offset-2" style="padding: 10px">
-                                    <img src="assets/virus.png" alt="virus" class="float-center" style="max-width: 45px">
+                                <div class="cell small-1 medium-offset-1 large-offset-3" style="padding: 10px">
+                                    <img src="assets/virus.png" alt="virus" class="float-right" style="max-width: 45px">
                                 </div>
-                                <div class="cell large-9 small-11" style="padding: 5px">
-                                    <p class="whiteText fs18 ptSans noVerticalMargin">
+                                <div class="cell large-7 small-11 medium-9 " style="padding: 5px">
+                                    <p class="whiteText fs18 ptSans bold noVerticalMargin">
                                         Votre don est urgent pour soutenir nos actions de prévention et de protection des personnes sans abri.
                                     </p>
                                 </div>
-                            </div>                        </div>
+                            </div>
+                        </div>
                         <div  class="cell large-offset-2 small-2 logo show-for-medium ">
                             <div class="grid-x align-middle">
                                 <div class="cell small-2 large-4 large-offset-1  medium-3 text-center" id="logoContainer">
@@ -367,6 +383,16 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="cell shrink">
+                                    <a target="_blank" href="https://donner.miedepain.asso.fr/ifi/?utm_campaign=WI&utm_source=WI20-1-LP&utm_content=DONPCP&utm_term=&amount=20000&reserved_code_media=WI20-1-LP" class="noVerticalMargin noVerticalPadding"
+                                       onclick="woopra.track('interaction', {category:'CTA-STICKY-DON_IFI20',action:'clic',url:document.location.href,title: document.title});">
+                                        <div class="grid-x align-middle height-100">
+                                            <div class="cell">
+                                                <img src="assets/redBtnTopBar.png" alt="Je fais un don" style="max-height: 60px">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
