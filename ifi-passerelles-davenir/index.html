@@ -37,6 +37,7 @@
     });
     function setStickyButton() {
         let button = document.getElementById("smallStickyButton");
+        let btn = document.getElementById("bandeauSticky");
 
         if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
             button.style.display = "block";
@@ -46,6 +47,11 @@
             button.style.display = "none";
             button.classList.remove("is-stuck");
             button.classList.add("is-anchored");
+        }
+        if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
         }
     }
     function editHeight() {
@@ -265,8 +271,9 @@
                         <img src="assets/virus.png" alt="virus" class="inline" style="max-width: 45px">
                     </div>
                     <div class="cell auto" style="padding: 5px">
-                        <p class="whiteText fs12 ptSans noVerticalMargin popup">En raison de la propagation du coronavirus COVID-19, certaines activités de collecte de la Mie de Pain sont fortement perturbées.
-                                                              Votre don est urgent pour soutenir nos actions de prévention et de protection des personnes sans abri.
+                        <p class="whiteText fs12 ptSans noVerticalMargin popup">
+                            En raison de la propagation du coronavirus COVID-19, certaines activités de collecte de la Mie de Pain sont fortement perturbées.
+                            Votre don est urgent pour soutenir nos actions de prévention et de protection des personnes sans abri.
                         </p>
                     </div>
                 </div>
@@ -297,6 +304,17 @@
                 </div>
                 <div data-sticky-container>
                     <div id="topBar" class="grid-x align-stretch noSideMargin align-spaced sticky" data-sticky data-margin-top="0" style="backdrop-filter: blur(10px)">
+                        <div class="cell small-12 darkRedBG" id="bandeauSticky" style="display: none;">
+                            <div class="grid-x align-middle height-100">
+                                <div class="cell small-1 large-offset-2" style="padding: 10px">
+                                    <img src="assets/virus.png" alt="virus" class="float-center" style="max-width: 45px">
+                                </div>
+                                <div class="cell large-9 small-11" style="padding: 5px">
+                                    <p class="whiteText fs18 ptSans noVerticalMargin">
+                                        Votre don est urgent pour soutenir nos actions de prévention et de protection des personnes sans abri.
+                                    </p>
+                                </div>
+                            </div>                        </div>
                         <div  class="cell large-offset-2 small-2 logo show-for-medium ">
                             <div class="grid-x align-middle">
                                 <div class="cell small-2 large-4 large-offset-1  medium-3 text-center" id="logoContainer">
@@ -349,16 +367,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="cell shrink">
-                                    <a target="_blank" href="https://donner.miedepain.asso.fr/ifi/?utm_campaign=WI&utm_source=WI20-1-LP&utm_content=DONPCP&utm_term=&amount=20000&reserved_code_media=WI20-1-LP" class="noVerticalMargin noVerticalPadding"
-                                                             onclick="woopra.track('interaction', {category:'CTA-STICKY-DON_IFI20',action:'clic',url:document.location.href,title: document.title});">
-                                    <div class="grid-x align-middle height-100">
-                                        <div class="cell">
-                                            <img src="assets/redBtnTopBar.png" alt="Je fais un don" style="max-height: 60px">
-                                        </div>
-                                    </div>
-                                    </a>
                                 </div>
                             </div>
                         </div>
