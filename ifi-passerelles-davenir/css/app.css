@@ -341,6 +341,7 @@ body {
     #calc .whiteCircle h3 {
         font-size: 18px !important;
         line-height: 26px !important;
+        padding-bottom: 5px;
     }
 
     #calc .whiteCircle h3 .title {
