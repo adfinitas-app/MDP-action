@@ -1,0 +1,327 @@
+.bigBold {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+}
+
+.isActive {
+    display: block;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.width-150 {
+    width: 150px;
+}
+
+.lh0-5 {
+    line-height: 0.75rem;
+}
+
+.padding40 {
+    padding: 40px;
+}
+
+.cliquable {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 28.13rem) {
+    .width-450.responsive {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+.lh3 {
+    line-height: 3rem;
+}
+
+.lh2-5 {
+    line-height: 2.5rem;
+}
+
+.lh2 {
+    line-height: 2rem;
+}
+
+.lh1-5 {
+    line-height: 1.5rem;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.btn.padding {
+    padding: 30px;
+}
+
+.width-80 {
+    width: 80%;
+}
+
+.nonCliquable {
+    cursor: auto;
+}
+
+.reverse {
+    transform: rotate(180deg);
+}
+
+.notDisplay {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.display {
+    display: block;
+}
+
+.height-100 {
+    height: 100% !important;
+}
+
+.width-100 {
+    width: 100% !important;
+}
+
+.noSideMargin {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.noVerticalMargin {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.noSidePadding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.noVerticalPadding {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.redBG {
+    background-color: #810314;
+}
+
+.whiteText {
+    color: #FCFCFC;
+}
+
+.blueText {
+    color: #59788B;
+}
+
+.blueBG {
+    background-color: #59788B;
+}
+
+.darkBlueBG {
+    background-color: #49616F;
+}
+
+.lightBlueText {
+    color: #ECF3FD;
+}
+
+.lightBlueBG {
+    background-color: #81A5BA;
+}
+
+.whiteBG {
+background-color: #ECF3FD
+}
+
+.greyText {
+    color: #809BAC;
+}
+
+.lightGreyText {
+    color: #A2C0C6;
+}
+
+.darkGreyText {
+    color: #59788B;
+}
+
+.redText {
+    color: #810314;
+}
+
+.darkRedText {
+    color: #520812;
+}
+
+.darkRedBG {
+    background-color: #520812;
+}
+
+.darkDarkRedBG {
+    background-color: #31080D;
+}
+
+.darkblueText {
+    color: #47576E;
+}
+
+.greyBG {
+    background-color: #5F8095;
+}
+
+.darkGreyBG {
+    background-color: #405765;
+}
+
+
+/* FONTS AND TEXTS */
+
+.ptSans {
+    font-family: 'PT Sans', Arial, sans-serif;
+}
+
+.sourceSans {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+.bBold {
+    font-weight: 700;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.fs10 {
+    font-size: 0.625rem;
+}
+
+.fs12 {
+    font-size: 0.75rem;
+}
+
+.fs13 {
+    font-size: 0.85rem;
+}
+
+.fs14 {
+    font-size: 0.875rem;
+}
+
+.fs16 {
+    font-size: 1rem;
+}
+
+.fs18 {
+    font-size: 1.125rem;
+}
+
+.fs20 {
+    font-size: 1.25rem;
+}
+
+.fs22 {
+    font-size: 1.375rem;
+}
+
+.fs24 {
+    font-size: 1.5rem;
+}
+
+.fs26 {
+    font-size: 1.625rem;
+}
+
+.fs28 {
+    font-size: 1.75rem;
+}
+
+.fs30 {
+    font-size: 1.875rem;
+}
+
+.fs32 {
+    font-size: 2rem;
+}
+
+.fs34 {
+    font-size: 2.125rem;
+}
+
+.fs36 {
+    font-size: 2.25rem;
+}
+
+.fs38 {
+    font-size: 2.375rem;
+}
+
+.fs40 {
+    font-size: 2.5rem;
+}
+
+.fs42 {
+    font-size: 2.625rem;
+}
+
+.fs44 {
+    font-size: 2.75rem;
+}
+
+.fs54 {
+    font-size: 3.75rem;
+}
+
+
+.slide-in-fwd-center {
+    -webkit-animation: slide-in-fwd-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-fwd-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-fwd-center {
+    0% {
+        -webkit-transform: translateZ(-1400px);
+        transform: translateZ(-1400px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-fwd-center {
+    0% {
+        -webkit-transform: translateZ(-1400px);
+        transform: translateZ(-1400px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
