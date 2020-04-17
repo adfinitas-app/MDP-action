@@ -29,9 +29,42 @@
         $("form").submit(function() { return false; });
     });
     $(document).ready( function() {
+        var hash = window.location.hash;
+        var cal = $("#calendrier");
+        var el = document.getElementById("topBar");
+        var top = el.offsetHeight;
+        if (hash === "#calculatrice") {
+            console.log("jesadsasd")
+            $('#calculatriceIFI').foundation('open');
+
+        }
+        if (hash === "#calendrier") {
+            showCalendar();
+            var interval = setInterval(function() {
+                var y = window.scrollY;
+                var target = cal.offset().top - top - 10;
+                var offset = 7;
+
+                if (y > target + offset) {
+                    window.scroll(0, y - offset);
+                } else if (y < target - offset) {
+                    window.scroll(0, y + offset);
+                } else {
+                    clearInterval(interval);
+                }
+            }, 1);
+        }
         var sliderlydia = document.getElementById("slider");
         sliderlydia.classList.add("notDisplay");
     });
+    function getOffset(el) {
+        const rect = el.getBoundingClientRect();
+        console.log(rect);
+        return {
+            left: rect.left + window.scrollX,
+            top: rect.top + window.scrollY
+        };
+    }
     function setStickyButton() {
         let button = document.getElementById("smallStickyButton");
         let btn = document.getElementById("bandeauSticky");
@@ -170,6 +203,7 @@
         netIFI.removeAttribute("disabled");
     }
     function showCalcIFI() {
+        console.log("sqdqsd");
         var ifi = document.getElementById("IFI");
         ifi.classList.add("display");
         ifi.classList.remove("notDisplay");
@@ -1459,7 +1493,7 @@
             <img src="assets/whiteCrossCalc.png" aria-hidden="true" alt="X"/>
         </button>
     </div>
-    <div class="grid-x align-center calendar">
+    <div class="grid-x align-center calendar" id="scrollCal">
         <div class="cliquable" onclick="showCalendar();">
         <div class="cell">
             <img src="assets/calendar.png" alt="" class="float-center">
