@@ -267,15 +267,14 @@
         else {
             return num.toFixed(2);
         }
-    }
-    function setIR() {
+    }unction setIR() {
         var montant = document.getElementById("montantDonIR");
         var reduc = document.getElementById("reducIR");
         var don = document.getElementById("montantDonReducIR");
         var btn = document.getElementById("btnDonIR");
         if (parseInt(montant.value) > 1000) {
-            reduc.value = setPrecision(parseInt(montant.value) * 0.66);
-            don.value = setPrecision(parseInt(montant.value) - parseInt(montant.value) * 0.66);
+            reduc.value = setPrecision((parseInt(montant.value) - 1000) * 0.66) + 1000 * 0.75;
+            don.value = setPrecision(parseInt(montant.value) - reduc.value);
         } else {
             reduc.value = setPrecision(parseInt(montant.value) * 0.75);
             don.value = setPrecision(parseInt(montant.value) - parseInt(montant.value) * 0.75);
