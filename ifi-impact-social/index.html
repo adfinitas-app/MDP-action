@@ -274,7 +274,7 @@
         var don = document.getElementById("montantDonReducIR");
         var btn = document.getElementById("btnDonIR");
         if (parseInt(montant.value) > 1000) {
-            reduc.value = setPrecision((parseInt(montant.value) - 1000) * 0.66) + 1000 * 0.75;
+          reduc.value = setPrecision(((parseInt(montant.value) - 1000) * 0.66) + (1000 * 0.75));
             don.value = setPrecision(parseInt(montant.value) - reduc.value);
         } else {
             reduc.value = setPrecision(parseInt(montant.value) * 0.75);
