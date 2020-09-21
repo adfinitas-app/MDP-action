@@ -92,6 +92,44 @@ var img = document.getElementById("photoDuvet");
 img.addEventListener('onmouseover', unzipDuvet, {passive: false});
 img.addEventListener('onmouseout', zipDuvet, {passive: false});
 
+function updateSideBarButtonValue(value = undefined) {
+    var element = $('.sideBarEquiv[selected] .sideBarEquivAmount')[0];
+    var amount = $('#sideBarButtonAmount');
+    var link = $('#sideBarAmountLink');
+    const baseURL = 'https://donner.miedepain.asso.fr/181/?reserved_code_media=WD20-1-LP&amount=';
+
+    if (value === undefined && element)
+        value = parseInt(element.innerHTML);
+
+    amount.text(value);
+    link.attr('href', baseURL + (value * 100));
+}
+
+function handleSideBarEquivClick(e) {
+    $('.sideBarEquiv').removeAttr("selected");
+    var element = e.target;
+
+    while (!element.classList.contains("sideBarEquiv") && element.parentElement)
+        element = element.parentElement;
+    element.setAttribute("selected", "true");
+    updateSideBarButtonValue();
+}
+
+function handleSideBarEquivOtherAmountReducClick() {
+    var value = $('#sideBarEquivInput').val();
+    $('#sideBarAutreMontant').text(Math.round(100 * value / 4) / 100);
+    updateSideBarButtonValue(value);
+}
+
+function setSideBar() {
+    $('.sideBarEquiv').click(function(event) {
+        handleSideBarEquivClick(event);
+    });
+    $('#sideBarEquivInput').on('input', function() {
+        handleSideBarEquivOtherAmountReducClick()
+    });
+}
+
 function setTopBar() {
     if (window.innerWidth > 640) {
         document.getElementById("logoContainer").style.width = getComputedStyle(document.getElementById("donateButton"), null).getPropertyValue("width");
@@ -102,6 +140,7 @@ function setTopBar() {
 
 function setPage() {
     handleCounter();
+    setSideBar();
     setTopBar();
 }
 
@@ -128,6 +167,10 @@ function getNbrDuvetBought(progressBar) {
         dataType: "text",
         success: function(response) {
             obj = JSON.parse(response);
+            if (!obj || !obj.products) {
+                console.log("Unable to retrieve actual amount");
+                return;
+            }
             for (let i = 0; i < obj.products.length; i++) {
                 let tmp = parseInt(obj.products[i]);
                 if (tmp)
