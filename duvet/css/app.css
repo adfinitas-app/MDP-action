@@ -115,6 +115,143 @@ p {
 
 /* Body */
 
+/* SideBar */
+
+@media print, screen and (min-width: 40em) {
+    #sideBar {
+        width: 300px;
+    }
+
+    #sideBarContainer {
+        width: 300px;
+    }
+}
+
+#sideBarContainer {
+    background-color: #47576E;
+    height: 100vh !important;
+    padding: 27px;
+}
+
+.sideBarTitle {
+    font-size: 1.625rem;
+    font-family: "League Gothic", Arial, sans-serif;
+    color: #fefefe;
+    line-height: 1.75rem;
+}
+
+.sideBarEquiv {
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 1rem 0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+    width: 245px;
+    transition: all 0.25s;
+    color: #fefefe;
+}
+
+.sideBarEquiv[selected="true"], .sideBarEquiv:hover {
+    background-color: #fefefe;
+    transition: all 0.25s;
+    color: #0a0a0a;
+}
+
+.sideBarEquivAmount {
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 1.5625rem;
+    color: #fefefe;
+    font-weight: bold;
+    transition: all 0.25s;
+}
+
+.sideBarEquiv[selected="true"] .sideBarEquivAmount,  .sideBarEquiv:hover .sideBarEquivAmount {
+    color: #0a0a0a;
+    transition: all 0.25s;
+}
+
+.sideBarEquivDuvetNbr {
+    font-family: "Lucida Grande", Arial, sans-serif;
+    font-size: 0.875rem;
+    color: #fefefe;
+    font-weight: bold;
+    transition: all 0.25s;
+}
+
+.sideBarEquiv[selected="true"] .sideBarEquivDuvetNbr, .sideBarEquiv:hover .sideBarEquivDuvetNbr {
+    color: #A70016;
+    transition: all 0.25s;
+}
+
+.sideBarEquivReduc {
+    font-family: "Lucida Grande", Arial, sans-serif;
+    font-size: 0.71875rem;
+    color: #fefefe;
+    transition: all 0.25s;
+}
+
+.sideBarEquiv[selected="true"] .sideBarEquivReduc, .sideBarEquiv:hover .sideBarEquivReduc {
+    color: #0a0a0a;
+    transition: all 0.25s;
+}
+
+.sideBarInput, .sideBarInput:focus {
+    display: inline-block;
+    width: 48px;
+    padding: 0;
+    border: unset;
+    box-shadow: unset;
+    margin: 0;
+    font-weight: bold;
+    text-align: right;
+    background: unset;
+    color: #fefefe;
+    transition: all 0.25s;
+}
+
+.sideBarEquiv[selected="true"] .sideBarInput, .sideBarEquiv[selected="true"] .sideBarInput:focus,
+.sideBarEquiv:hover .sideBarInput, .sideBarEquiv:hover .sideBarInput:focus {
+    color: #0a0a0a;
+    transition: all 0.25s;
+}
+
+#sideBarAmountLink, #sideBarAmountLink:hover, #sideBarAmountLink:visited, #sideBarAmountLink:focus {
+    color: unset;
+}
+
+.sideBarButton {
+    background-image: linear-gradient(to bottom, #FDE100, #E4AD00);
+    width: 245px;
+    height: 50px;
+    border-radius: 10px;
+    font-family: "League Gothic", Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.375rem;
+    line-height: 1.6875rem;
+    padding-top: 12px;
+    cursor: pointer;
+}
+
+.sideBarInfo {
+    font-family: "Lucida Grande", Arial, sans-serif;
+    font-size: 0.625rem;
+    color: #fefefe;
+    opacity: 50%;
+    text-align: center;
+}
+
+.sideBarNav a, .sideBarNav a:visited, .sideBarNav a:focus, .sideBarNav a:hover {
+    font-family: Montserrat, Arial, sans-serif;
+    color: #fefefe;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.sideBarNav a:hover {
+    text-decoration: underline;
+}
+
 /* Header */
 
 #topBar {
