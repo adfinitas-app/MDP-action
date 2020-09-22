@@ -124,10 +124,11 @@ function handleSideBarEquivOtherAmountReducClick() {
 function setSideBar() {
     $('.sideBarEquiv').click(function(event) {
         handleSideBarEquivClick(event);
-    });
+    })
     $('#sideBarEquivInput').on('input', function() {
         handleSideBarEquivOtherAmountReducClick()
-    });
+    })
+
 }
 
 function setTopBar() {
@@ -167,9 +168,8 @@ function getNbrDuvetBought(progressBar) {
         dataType: "text",
         success: function(response) {
             obj = JSON.parse(response);
-            if (!obj || !obj.products) {
-                console.log("Unable to retrieve actual amount");
-                return;
+            if (obj.error === true) {
+                console.log("Error: ", obj.message);
             }
             for (let i = 0; i < obj.products.length; i++) {
                 let tmp = parseInt(obj.products[i]);
