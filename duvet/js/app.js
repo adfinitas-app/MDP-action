@@ -166,6 +166,7 @@ function getNbrDuvetBought(progressBar) {
         url: "//duvet-mdp-iraiser-proxy.herokuapp.com/",
         type: "GET",
         dataType: "text",
+        headers: {"Origin": "action.miedepain.asso.fr"},
         success: function(response) {
             obj = JSON.parse(response);
             if (obj.error === true) {
