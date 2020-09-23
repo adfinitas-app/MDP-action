@@ -72,6 +72,18 @@ p {
     font-weight: 600;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 /* Colors */
 
 .whiteColor {
@@ -127,9 +139,14 @@ p {
     }
 }
 
+#sideBarStickyContainer {
+    margin: 0 !important;
+}
+
 #sideBarContainer {
     background-color: #47576E;
     height: 100vh !important;
+    min-height: 720px;
     padding: 27px;
 }
 
@@ -196,7 +213,7 @@ p {
 
 .sideBarInput, .sideBarInput:focus {
     display: inline-block;
-    width: 48px;
+    width: 60px;
     padding: 0;
     border: unset;
     box-shadow: unset;
@@ -224,7 +241,7 @@ p {
     height: 50px;
     border-radius: 10px;
     font-family: "League Gothic", Arial, sans-serif;
-    font-weight: bold;
+    font-weight: 600;
     text-transform: uppercase;
     font-size: 1.375rem;
     line-height: 1.6875rem;
@@ -234,7 +251,7 @@ p {
 
 .sideBarInfo {
     font-family: "Lucida Grande", Arial, sans-serif;
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     color: #fefefe;
     opacity: 50%;
     text-align: center;
@@ -293,7 +310,7 @@ p {
 
 #progressBar img {
     height: 20px !important;
-    widows: 20px !important;
+    width: 20px !important;
 }
 
 #counter {
@@ -360,6 +377,7 @@ p {
     margin-top: 50px;
     margin-bottom: 50px;
     font-size: 2.75rem;
+    line-height: 3rem;
 }
 
 #introduction p {
