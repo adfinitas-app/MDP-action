@@ -74,8 +74,6 @@ window.onresize = setTopBar;
 window.onscroll = setStickyButton;
 window.onscroll = handleSideBarScroll;
 
-console.log(window.innerHeight);
-
 function handleSideBarScroll() {
     let sideBar = $("#sideBarStickyContainer");
 
