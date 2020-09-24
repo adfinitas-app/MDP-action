@@ -78,12 +78,8 @@ console.log(window.innerHeight);
 
 function handleSideBarScroll() {
     let sideBar = $("#sideBarStickyContainer");
-    console.log(sideBar.css("height"));
-    console.log($(window).scrollTop());
-    console.log(window.innerHeight);
 
     let limit = parseInt(sideBar.css("height")) - window.innerHeight;
-    console.log(limit)
     if ($(window).scrollTop() > limit && window.innerWidth > 64*16) {
         sideBar.addClass("sticky-isfloating");
         sideBar.removeClass("sticky-isanchored");
