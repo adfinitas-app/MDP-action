@@ -72,6 +72,28 @@ $(document).ready(setPage());
 window.onresize = setTopBar;
 
 window.onscroll = setStickyButton;
+window.onscroll = handleSideBarScroll;
+
+console.log(window.innerHeight);
+
+function handleSideBarScroll() {
+    let sideBar = $("#sideBarStickyContainer");
+    console.log(sideBar.css("height"));
+    console.log($(window).scrollTop());
+    console.log(window.innerHeight);
+
+    let limit = parseInt(sideBar.css("height")) - window.innerHeight;
+    console.log(limit)
+    if ($(window).scrollTop() > limit && window.innerWidth > 64*16) {
+        sideBar.addClass("sticky-isfloating");
+        sideBar.removeClass("sticky-isanchored");
+        sideBar.css("top", -limit + "px");
+    } else {
+        sideBar.removeClass("sticky-isfloating");
+        sideBar.addClass("sticky-isanchored");
+        sideBar.css("top", "0");
+    }
+}
 
 function setStickyButton() {
     let button = document.getElementById("smallStickyButton");
@@ -166,7 +188,6 @@ function getNbrDuvetBought(progressBar) {
         url: "//duvet-mdp-iraiser-proxy.herokuapp.com/",
         type: "GET",
         dataType: "text",
-        headers: {"Origin": "action.miedepain.asso.fr"},
         success: function(response) {
             obj = JSON.parse(response);
             if (obj.error === true) {
