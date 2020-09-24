@@ -141,6 +141,12 @@ input[type=number] {
 
 #sideBarStickyContainer {
     margin: 0 !important;
+    z-index: 5;
+}
+
+#sideBarStickyContainer.sticky-isfloating {
+    position: fixed;
+    top: -100px;
 }
 
 #sideBarContainer {
