@@ -138,7 +138,7 @@ function handleSideBarEquivOtherAmountReducClick() {
     if (value > 1000) {
         result += 250;
         value -= 1000;
-        result += 0.37 * value;
+        result += 0.34 * value;
     } else {
         result = 0.25 * value;
     }
