@@ -1,4 +1,4 @@
-var OBJECTIVE = 600;
+var OBJECTIVE = 1000;
 
 var progressBar = undefined;
 function ProgressBar() {
@@ -133,7 +133,16 @@ function handleSideBarEquivClick(e) {
 
 function handleSideBarEquivOtherAmountReducClick() {
     var value = $('#sideBarEquivInput').val();
-    $('#sideBarAutreMontant').text(Math.round(100 * value / 4) / 100);
+    var result = 0;
+
+    if (value > 1000) {
+        result += 250;
+        value -= 1000;
+        result += 0.37 * value;
+    } else {
+        result = 0.25 * value;
+    }
+    $('#sideBarAutreMontant').text(Math.round(100 * result) / 100);
     updateSideBarButtonValue(value);
 }
 
