@@ -1,660 +1,216 @@
-/* DEV */
+var OBJECTIVE = 1000;
 
-/* Foundation modifications */
+var progressBar = undefined;
+function ProgressBar() {
+    this.state = {
+        angle: 0,
+        size: 0,
+        stop: false,
+        number: 0,
+        i: 0
+    };
 
-.button, p, div.cell {
-    margin-bottom: 0;
+    this.counterStatus = document.getElementById("counterStatus");
+    this.numberElement = document.getElementById("nbrDuvets");
+    this.element = document.getElementById("progressBar");
+    this.interval = undefined;
+
+    this.startProgression = function() {
+        this.interval = setInterval((function() {
+            if (this.state.number === 0) {
+                this.render(0, 0)
+                clearInterval(this.interval);
+                return;
+            }
+            if (this.state.i >= this.state.number)
+                clearInterval(this.interval);
+            else {
+                this.state.i++;
+                this.state.size = this.state.i * 100 / OBJECTIVE;
+                if (this.state.size > 100)
+                    this.state.size = 100;
+                else if (this.state.size < 0)
+                    this.state.size = 0;
+            }
+            this.render(this.state.size, this.state.i);
+        }).bind(this), 10);
+    };
+
+    this.stop = function(value) {
+        this.state.stop = true;
+        this.state.number = value;
+    };
+
+    this.render = function(size, number, angle) {
+        if (size !== null)
+            this.element.style.width = size + "%";
+        if (number !== null)
+            this.numberElement.textContent = number + " duvet" + ((number === 0 || number === 1) ? "" : "s") + " acheté" + ((number === 0 || number === 1) ? "" : "s");
+        if (angle !== null)
+            this.counterStatus.style.transform = "rotate(" + angle + "deg)";
+    };
+
+    this.startAnimation = function () {
+        this.interval = setInterval((function() {
+            if (this.state.stop === true && this.state.angle === 0) {
+                clearInterval(this.interval);
+                this.startProgression();
+            } else {
+                this.state.angle++;
+                if (this.state.angle >= 360)
+                    this.state.angle = 0;
+            }
+            this.render(null, null, this.state.angle);
+        }).bind(this), 5);
+    };
 }
 
-.orbit-image {
-    width: auto;
-    height: auto;
-}
+$(document).foundation();
 
-p {
-    line-height: 1.1;
-}
+$(document).ready(setPage());
 
-.grid-container {
-    max-width: 1000px;
-}
+window.onresize = setTopBar;
 
-/* Globals */
+window.onscroll = setStickyButton;
+window.onscroll = handleSideBarScroll;
 
-.show-for-640-780 {
-    display: none;
-}
+function handleSideBarScroll() {
+    let sideBar = $("#sideBarStickyContainer");
 
-@media screen and (min-width: 40.06em) and (max-width: 48.81em) {
-    .show-for-640-780 {
-        display: block;
-    }
-
-}
-
-.underline {
-    text-decoration: underline;
-}
-
-.margin-btm-50 {
-    margin-bottom: 50px;
-}
-
-.margin-btm-35 {
-    margin-bottom: 35px;
-}
-
-.font-size-50 {
-    font-size: 3.125rem;
-}
-
-.font-size-60 {
-    font-size: 3.75rem;
-}
-
-.font-size-26 {
-    font-size: 1.625rem;
-}
-
-.font-size-23 {
-    font-size: 1.438rem;
-}
-
-.font-size-20 {
-    font-size: 1.438rem;
-}
-
-.font-size-18 {
-    font-size: 1.125rem;
-}
-
-.semiBold {
-    font-weight: 600;
-}
-
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-    -moz-appearance: textfield;
-}
-
-/* Colors */
-
-.whiteColor {
-    color: #fefefe;
-}
-
-.whiteColorHover:hover {
-    color: #fefefe;
-}
-
-.redColor, .redColor:hover {
-    color: #a70016;
-}
-
-.redBg {
-    background-color: #a70016;
-}
-
-.redBgHover:hover {
-    background-color: #a70016;
-}
-
-.redSeparator {
-    background: url("../assets/sep.png") no-repeat center center;
-}
-
-/* Fonts */
-
-@font-face {
-    font-family: "League Gothic";
-    src: url("../fonts/LeagueGothic-Regular.otf");
-}
-
-.leagueGothic {
-    font-family: "League Gothic", Arial, sans-serif;
-}
-
-.sourceSans {
-    font-family: "Source Sans Pro", Arial, sans-serif;
-}
-
-/* Body */
-
-/* SideBar */
-
-@media print, screen and (min-width: 40em) {
-    #sideBar {
-        width: 300px;
-    }
-
-    #sideBarContainer {
-        width: 300px;
+    let limit = parseInt(sideBar.css("height")) - window.innerHeight;
+    if ($(window).scrollTop() > limit && window.innerWidth > 64*16) {
+        sideBar.addClass("sticky-isfloating");
+        sideBar.removeClass("sticky-isanchored");
+        sideBar.css("top", -limit + "px");
+    } else {
+        sideBar.removeClass("sticky-isfloating");
+        sideBar.addClass("sticky-isanchored");
+        sideBar.css("top", "0");
     }
 }
 
-#sideBarStickyContainer {
-    margin: 0 !important;
-    z-index: 5;
-}
+function setStickyButton() {
+    let button = document.getElementById("smallStickyButton");
 
-#sideBarStickyContainer.sticky-isfloating {
-    position: fixed;
-    top: -100px;
-}
-
-#sideBarContainer {
-    background-color: #47576E;
-    height: 100vh !important;
-    min-height: 720px;
-    padding: 27px;
-}
-
-.sideBarTitle {
-    font-size: 1.625rem;
-    font-family: "League Gothic", Arial, sans-serif;
-    color: #fefefe;
-    line-height: 1.75rem;
-}
-
-.sideBarEquiv {
-    background-color: rgba(0, 0, 0, 0.2);
-    margin: 1rem 0;
-    padding: 0.25rem 0.5rem;
-    border-radius: 10px;
-    width: 245px;
-    transition: all 0.25s;
-    color: #fefefe;
-}
-
-.sideBarEquiv[selected="true"], .sideBarEquiv:hover {
-    background-color: #fefefe;
-    transition: all 0.25s;
-    color: #0a0a0a;
-}
-
-.sideBarEquivAmount {
-    font-family: Montserrat, Arial, sans-serif;
-    font-size: 1.5625rem;
-    color: #fefefe;
-    font-weight: bold;
-    transition: all 0.25s;
-}
-
-.sideBarEquiv[selected="true"] .sideBarEquivAmount,  .sideBarEquiv:hover .sideBarEquivAmount {
-    color: #0a0a0a;
-    transition: all 0.25s;
-}
-
-.sideBarEquivDuvetNbr {
-    font-family: "Lucida Grande", Arial, sans-serif;
-    font-size: 0.875rem;
-    color: #fefefe;
-    font-weight: bold;
-    transition: all 0.25s;
-}
-
-.sideBarEquiv[selected="true"] .sideBarEquivDuvetNbr, .sideBarEquiv:hover .sideBarEquivDuvetNbr {
-    color: #A70016;
-    transition: all 0.25s;
-}
-
-.sideBarEquivReduc {
-    font-family: "Lucida Grande", Arial, sans-serif;
-    font-size: 0.71875rem;
-    color: #fefefe;
-    transition: all 0.25s;
-}
-
-.sideBarEquiv[selected="true"] .sideBarEquivReduc, .sideBarEquiv:hover .sideBarEquivReduc {
-    color: #0a0a0a;
-    transition: all 0.25s;
-}
-
-.sideBarInput, .sideBarInput:focus {
-    display: inline-block;
-    width: 60px;
-    padding: 0;
-    border: unset;
-    box-shadow: unset;
-    margin: 0;
-    font-weight: bold;
-    text-align: right;
-    background: unset;
-    color: #fefefe;
-    transition: all 0.25s;
-}
-
-.sideBarEquiv[selected="true"] .sideBarInput, .sideBarEquiv[selected="true"] .sideBarInput:focus,
-.sideBarEquiv:hover .sideBarInput, .sideBarEquiv:hover .sideBarInput:focus {
-    color: #0a0a0a;
-    transition: all 0.25s;
-}
-
-#sideBarAmountLink, #sideBarAmountLink:hover, #sideBarAmountLink:visited, #sideBarAmountLink:focus {
-    color: unset;
-}
-
-.sideBarButton {
-    background-image: linear-gradient(to bottom, #FDE100, #E4AD00);
-    width: 245px;
-    height: 50px;
-    border-radius: 10px;
-    font-family: "League Gothic", Arial, sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 1.375rem;
-    line-height: 1.6875rem;
-    padding-top: 12px;
-    cursor: pointer;
-}
-
-.sideBarInfo {
-    font-family: "Lucida Grande", Arial, sans-serif;
-    font-size: 0.75rem;
-    color: #fefefe;
-    opacity: 50%;
-    text-align: center;
-}
-
-.sideBarNav a, .sideBarNav a:visited, .sideBarNav a:focus, .sideBarNav a:hover {
-    font-family: Montserrat, Arial, sans-serif;
-    color: #fefefe;
-    font-size: 0.75rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.sideBarNav a:hover {
-    text-decoration: underline;
-}
-
-/* Header */
-
-#topBar {
-    background-color: #fefefec0;
-}
-
-#topBar .button {
-    font-size: 2rem;
-    background-color: #a70016;
-}
-
-#topBar .button:hover {
-    background-color: #a70016;
-}
-
-@media print, screen and (max-width: 64em) {
-    #topBar {
-        padding-bottom: 5px;
-    }
-
-    #topBar .button {
-        padding: 10px;
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        button.style.display = "block";
+        button.classList.add("is-stuck");
+        button.classList.remove("is-anchored");
+    } else {
+        button.style.display = "none";
+        button.classList.remove("is-stuck");
+        button.classList.add("is-anchored");
     }
 }
 
-#progressBarContainer {
-    background-color: #3b3b3b;
-    border-radius: 10px;
-    height: 20px;
+var img = document.getElementById("photoDuvet");
+
+img.addEventListener('onmouseover', unzipDuvet, {passive: false});
+img.addEventListener('onmouseout', zipDuvet, {passive: false});
+
+function updateSideBarButtonValue(value = undefined) {
+    var element = $('.sideBarEquiv[selected] .sideBarEquivAmount')[0];
+    var amount = $('#sideBarButtonAmount');
+    var link = $('#sideBarAmountLink');
+    const baseURL = 'https://donner.miedepain.asso.fr/181/?reserved_code_media=WD20-1-LP&amount=';
+
+    if (value === undefined && element)
+        value = parseInt(element.innerHTML);
+
+    amount.text(value);
+    link.attr('href', baseURL + (value * 100));
 }
 
-#progressBar {
-    background-image: linear-gradient(to top, #b11328, #820d1c);
-    width: 4%; /* minimum 4% */
-    min-width: 20px;
-    height: 100%;
-    border-radius: 10px;
+function handleSideBarEquivClick(e) {
+    $('.sideBarEquiv').removeAttr("selected");
+    var element = e.target;
+
+    while (!element.classList.contains("sideBarEquiv") && element.parentElement)
+        element = element.parentElement;
+    element.setAttribute("selected", "true");
+    $('#sideBarEquivInput').val("");
+    $('#sideBarAutreMontant').text("");
+    updateSideBarButtonValue();
 }
 
-#progressBar img {
-    height: 20px !important;
-    width: 20px !important;
+function handleSideBarEquivOtherAmountReducClick() {
+    var value = $('#sideBarEquivInput').val();
+    var result = 0;
+
+    if (value > 1000) {
+        result += 250;
+        value -= 1000;
+        result += 0.34 * value;
+    } else {
+        result = 0.25 * value;
+    }
+    $('#sideBarAutreMontant').text(Math.round(100 * result) / 100);
+    updateSideBarButtonValue(value);
 }
 
-#counter {
-    width: 450px;
-    max-width: 90%;
+function setSideBar() {
+    $('.sideBarEquiv').click(function(event) {
+        handleSideBarEquivClick(event);
+    })
+    $('#sideBarEquivInput').on('input', function() {
+        handleSideBarEquivOtherAmountReducClick()
+    })
+
 }
 
-@media screen and (max-width: 51.75rem) {
-    #counter {
-        -ms-flex-order: 3;
-        order: 3;
-        margin: auto;
+function setTopBar() {
+    if (window.innerWidth > 640) {
+        document.getElementById("logoContainer").style.width = getComputedStyle(document.getElementById("donateButton"), null).getPropertyValue("width");
+    } else {
+        document.getElementById("logoContainer").style.width = null;
     }
 }
 
-#header {
-    height: 100vh !important;
-    background: url("../assets/header.jpg") no-repeat center;
-    background-size: cover;
+function setPage() {
+    handleCounter();
+    setSideBar();
+    setTopBar();
 }
 
-#banner {
-    height: available;
+function unzipDuvet() {
+    img.style.backgroundPosition = `0px 314px`;
+}
+function zipDuvet() {
+    img.style.backgroundPosition = `0px 0px`;
 }
 
-#banner .cell {
-    margin-bottom: 10vh;
+function getPercent(number) {
+    let res = 100 * number / OBJECTIVE;
+
+    return (res);
 }
 
-#banner h1 {
-    font-size: 5.813rem;
+function getNbrDuvetBought(progressBar) {
+    let res = 0;
+    let obj;
+
+    $.ajax({
+        url: "//duvet-mdp-iraiser-proxy.herokuapp.com/",
+        type: "GET",
+        dataType: "text",
+        success: function(response) {
+            obj = JSON.parse(response);
+            if (obj.error === true) {
+                console.log("Error: ", obj.message);
+            }
+            for (let i = 0; i < obj.products.length; i++) {
+                let tmp = parseInt(obj.products[i]);
+                if (tmp)
+                    res += tmp;
+            }
+            res = Math.trunc(res / 3000);
+            progressBar.stop(res);
+        }
+    });
 }
 
-#banner h2 {
-    max-width: 600px;
-    font-size: 1.5rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media print, screen and (max-width: 40em) {
-    #banner h1 {
-        font-size: 3.3rem;
-        line-height: 1;
-    }
-
-    #banner h2 {
-        font-size: 1.4rem;
-        line-height: 1.2;
-    }
-
-    #banner .cell {
-        margin-bottom: 5vh;
-    }
-}
-
-/* Introduction */
-
-#introduction {
-    background-image: linear-gradient(to top right, #000000, #1e2734);
-}
-
-#introduction h3 {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 2.75rem;
-    line-height: 3rem;
-}
-
-#introduction p {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-#introduction p:last-child {
-    margin-bottom: 100px;
-}
-
-@media print, screen and (max-width: 40em) {
-    #introduction h3 {
-        margin-top: 25px;
-        font-size: 1.6rem;
-    }
-
-    #introduction p {
-        font-size: 1rem;
-    }
-
-    #introduction p:last-child {
-        margin-bottom: 75px;
-    }
-}
-
-/* Goal */
-
-#goal {
-    background-color: #c7d4e6;
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-#goal h3 {
-    font-size: 2.75rem;
-}
-
-#infoDuvet, #share {
-    margin-top: 100px;
-}
-
-#goal div.small-10 {
-    font-size: 2.188rem;
-}
-
-#goal a {
-    font-size: 2rem;
-    text-decoration: underline;
-}
-
-#goal a.redColor:hover {
-    color: #a70016;
-}
-
-@media print, screen and (max-width: 40em) {
-    #goal {
-        padding-top: 75px;
-        padding-bottom: 75px;
-    }
-
-    #goal h3 {
-        font-size: 1.6rem;
-    }
-
-    #goal div.small-10 {
-        font-size: 1.5rem;
-    }
-
-    #goal a {
-        font-size: 1.2rem;
-    }
-}
-
-@media print, screen and (max-width: 64em) {
-    #infoDuvet, #share {
-        margin-top: 50px;
-    }
-
-    #goal div.margin-btm-50 {
-        margin-bottom: 15px;
-    }
-}
-
-#photoDuvet {
-    width: 384px;
-    height: 314px;
-    background: url('../assets/duvetSpritesheet.png') 0px 0px;
-    margin: auto;
-}
-
-/* Arche d'Avenirs */
-
-#archeAvenir {
-    background-image: linear-gradient(to top, #fefefe, #eff5fd, #ecf3Fd);
-}
-
-#slider {
-    margin-top: 50px;
-    margin-bottom: 100px;
-
-}
-
-#sliderImg, #sliderTxt {
-    width: 636px !important;
-}
-
-#sliderTxt {
-    padding: 50px 100px;
-}
-
-#archeAvenir h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-#archeAvenir p {
-    font-size: 1.25rem;
-    line-height: 1.1;
-}
-
-#archeAvenir a {
-    text-decoration: underline;
-}
-
-#archeAvenir a.whiteColor:hover {
-    color: #fefefe;
-}
-
-@media print, screen and (max-width: 64em) {
-    #sliderTxt {
-        padding: 20px 15px;
-    }
-}
-
-@media print, screen and (max-width: 40em) {
-    #sliderTxt, #sliderImg {
-        width: 100% !important;
-    }
-}
-
-
-/* Don */
-
-#donate {
-    background-image: linear-gradient(to bottom, #a70016, #840011, #54000b);
-    padding-bottom: 50px;
-}
-
-#donate>div:first-child {
-    margin-bottom: 35px;
-}
-
-#donate h3 {
-    font-size: 2.75rem;
-}
-
-#donate .donation-box {
-    background-color: #fefefe;
-    border-radius: 100px;
-    padding: 55px 22px;
-    width: 300px;
-    max-width: 95vw;
-    margin-left: 15px;
-    margin-right: 15px;
-    transform: scale(1);
-    transition: transform 0.5s;
-}
-
-#donate .donation-box:hover {
-    transform: scale(1.1);
-    transition: transform 0.5s;
-}
-
-#donate .button {
-    font-size: 2rem;
-    padding: 30px 40px;
-    margin-top: 15px;
-}
-
-.imgDuvet {
-    margin-top: 25px;
-}
-
-#autreMontant {
-    font-size: 2rem;
-    text-decoration: underline;
-}
-
-#autreMontant:hover {
-    color: #fefefe;
-}
-
-#infoImpot p {
-    line-height: 1.1;
-    font-size: 1rem;
-    width: 200px;
-}
-
-@media print, screen and (max-width: 40em) {
-    #donate {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    #donate h3 {
-        font-size: 1.8rem;
-    }
-
-    .donation-box {
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-
-    #infoImpot {
-        margin-top: 10px;
-    }
-
-    #infoImpot p {
-        width: auto;
-    }
-}
-
-/* Engagements */
-
-#ourEngagements {
-    background-image: linear-gradient(to bottom, #ffffff, #eff5fd, #ecf3fd);
-    color: #475467;
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-#ourEngagements img {
-    margin-bottom: 10px;
-}
-
-#ourEngagements h3 {
-    font-size: 2.813rem;
-}
-
-#ourEngagements p {
-    font-size: 1.063rem;
-    line-height: 1.1;
-}
-
-@media print, screen and (max-width: 40em) {
-    #ourEngagements {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-}
-
-/* Footer */
-
-#footer {
-    background-image: linear-gradient(to top right, #000000, #0e1218, #1e2734);
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-#footer p {
-    line-height: 1.5;
-}
-
-#footer a {
-    hyphens: auto;
-}
-
-@media print, screen and (max-width: 40em) {
-    #footer {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
+function handleCounter() {
+    progressBar = new ProgressBar();
+    progressBar.startAnimation();
+    getNbrDuvetBought(progressBar);
 }
