@@ -44,6 +44,10 @@ p {
     margin-bottom: 35px;
 }
 
+.no-margin {
+    margin: 0;
+}
+
 .font-size-50 {
     font-size: 3.125rem;
 }
@@ -152,7 +156,7 @@ input[type=number] {
 #sideBarContainer {
     background-color: #47576E;
     height: 100vh !important;
-    min-height: 750px;
+    min-height: 720px;
     padding: 27px;
 }
 
@@ -257,10 +261,11 @@ input[type=number] {
 
 .sideBarInfo {
     font-family: "Lucida Grande", Arial, sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
     color: #fefefe;
     opacity: 50%;
     text-align: center;
+    line-height: 1rem;
 }
 
 .sideBarNav a, .sideBarNav a:visited, .sideBarNav a:focus, .sideBarNav a:hover {
