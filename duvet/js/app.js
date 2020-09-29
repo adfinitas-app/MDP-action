@@ -128,6 +128,8 @@ function handleSideBarEquivClick(e) {
     while (!element.classList.contains("sideBarEquiv") && element.parentElement)
         element = element.parentElement;
     element.setAttribute("selected", "true");
+    $('#sideBarEquivInput').val("");
+    $('#sideBarAutreMontant').text("");
     updateSideBarButtonValue();
 }
 
