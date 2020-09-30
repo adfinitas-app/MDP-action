@@ -156,8 +156,13 @@ input[type=number] {
 #sideBarContainer {
     background-color: #47576E;
     height: 100vh !important;
-    min-height: 720px;
+    min-height: 690px;
     padding: 27px;
+}
+
+#sideBarContainer>.grid-y>.cell {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .sideBarTitle {
@@ -169,7 +174,7 @@ input[type=number] {
 
 .sideBarEquiv {
     background-color: rgba(0, 0, 0, 0.2);
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     padding: 0.25rem 0.5rem;
     border-radius: 10px;
     width: 245px;
