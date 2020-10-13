@@ -128,7 +128,11 @@ function handleSideBarEquivClick(e) {
     while (!element.classList.contains("sideBarEquiv") && element.parentElement)
         element = element.parentElement;
     element.setAttribute("selected", "true");
-    $('#sideBarEquivInput').val("");
+    if (element.classList.contains("otherAmount")) {
+        $("#sideBarEquivInput").focus();
+    } else {
+        $('#sideBarEquivInput').val("");
+    }
     $('#sideBarAutreMontant').text("");
     updateSideBarButtonValue();
 }
