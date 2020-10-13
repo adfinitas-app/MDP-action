@@ -130,9 +130,8 @@ function handleSideBarEquivClick(e) {
     element.setAttribute("selected", "true");
     if (element.classList.contains("otherAmount")) {
         $("#sideBarEquivInput").focus();
-    } else {
-        $('#sideBarEquivInput').val("");
     }
+    $('#sideBarEquivInput').val("");
     $('#sideBarAutreMontant').text("");
     updateSideBarButtonValue();
 }
