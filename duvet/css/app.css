@@ -180,6 +180,8 @@ input[type=number] {
     width: 245px;
     transition: all 0.25s;
     color: #fefefe;
+    cursor: pointer;
+    user-select: none;
 }
 
 .sideBarEquiv[selected="true"], .sideBarEquiv:hover {
