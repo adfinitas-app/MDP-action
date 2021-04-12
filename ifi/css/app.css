@@ -1,13 +1,13 @@
 @media print, screen and (max-width: 64em) {
     body {
-        zoom: 70% !important;
+        /*zoom: 70% !important;*/
     }
     #headerLarge h1 {
         line-height: 1.5rem;
     }
 }
 body {
-    zoom: 80%;
+    /*zoom: 80%;*/
 }
 
 #topBar {
@@ -21,7 +21,6 @@ body {
     background-image: url("../assets/header.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
 }
 
 #headerLarge #topBar img.logo {
@@ -41,7 +40,6 @@ body {
     }
 
     .cell.redBlurBG {
-        margin-top: 5%;
     }
 }
 
@@ -99,8 +97,8 @@ body {
         max-height: 50px;
     }
     #headerLarge .title h1 {
-        font-size: 2rem;
-        line-height: 1.75rem;
+        font-size: 2.375rem;
+        line-height: 2rem;
     }
     #headerLarge .pass {
         max-height: 90px !important;
@@ -193,15 +191,15 @@ body {
 }
 
 #perso .pres .gerard .nom p {
-    padding-right: 15%;
+    padding-left: 15%;
 }
 
 #perso .pres .gerard .text {
-    background-color: #59788B;
+    background-color: #ECF3FD;
 }
 
-#perso .pres .lydia .nom {
-    background-image: url("../assets/lydia.png");
+#perso .pres .sandrine .nom {
+    background-image: url("../assets/sandrine.png");
     background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
@@ -209,12 +207,12 @@ body {
     min-height: 300px;
 }
 
-#perso .pres .lydia .nom p {
+#perso .pres .sandrine .nom p {
     padding-left: 15%;
 }
 
-#perso .pres .lydia .text {
-    background-color: #520812;
+#perso .pres .sandrine .text {
+    background-color: #59788B;
 }
 
 #perso .pres .rebecca .nom {
@@ -231,7 +229,7 @@ body {
 }
 
 #perso .pres .rebecca .text {
-    background-color: #ECF3FD;
+    background-color: #520812;
 }
 
 #perso .text p {
@@ -247,19 +245,19 @@ body {
 }
 
 #perso #slider .gerard .text {
-    background-color: #59788B;
+    background-color: #ECF3FD;
 }
 
-#perso #slider .lydia .picture {
-    background-image: url("../assets/lydiaFull.png");
+#perso #slider .sandrine .picture {
+    background-image: url("../assets/sandrineFull.png");
     background-position: 50% 0;
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-#perso #slider .lydia .text {
-    background-color: #810314;
+#perso #slider .sandrine .text {
+    background-color: #59788B;
 }
 
 #perso #slider .rebecca .picture {
@@ -271,7 +269,7 @@ body {
 }
 
 #perso #slider .rebecca .text {
-    background-color: #ECF3FD;
+    background-color: #810314;
 }
 
 #perso #slider .text p {
@@ -360,7 +358,7 @@ body {
         padding-bottom: 10px;
     }
     #calc #calendrier p {
-        font-size: 12px;
+        font-size: 14px;
     }
     #calc .title p {
         font-size: 32px;
@@ -406,8 +404,9 @@ body {
 #calc .calendrier img.cal {
     padding: 10px 0 30px 0;
 }
-#calc .calendrier p {
-    padding-bottom: 60px;
+#calc .calendrier .textBox {
+    padding-bottom: 30px;
+    padding-Top: 30px;
 }
 
 #calc .calendrier .first {
@@ -618,11 +617,14 @@ body {
     color: #520812 !important;
 }
 
+.cell.headerTitle {
+    padding: 10px 5px 10px 5px;
+}
+
 .cell.redBlurBG {
     backdrop-filter: blur(10px);
     background-color: #A70016BF;
     padding: 10px 30px;
-    margin-bottom: 30%;
 }
 
 .cell.redBlurBG img {
