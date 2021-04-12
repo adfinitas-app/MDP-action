@@ -47,10 +47,10 @@
   $(document).ready(function () {
     var hash = window.location.hash;
     var cal = $("#calendrier");
+    var impactSocial = $("#slider");
     var el = document.getElementById("topBar");
     var top = el.offsetHeight;
     if (hash === "#calculatrice") {
-      console.log("jesadsasd")
       $('#calculatriceIFI').foundation('open');
 
     }
@@ -59,6 +59,22 @@
       var interval = setInterval(function () {
         var y = window.scrollY;
         var target = cal.offset().top - top - 10;
+        var offset = 7;
+
+        if (y > target + offset) {
+          window.scroll(0, y - offset);
+        } else if (y < target - offset) {
+          window.scroll(0, y + offset);
+        } else {
+          clearInterval(interval);
+        }
+      }, 1);
+    }
+    if (hash === "#impactsocial") {
+      showSlider("sandrine");
+      var interval = setInterval(function () {
+        var y = window.scrollY;
+        var target = impactSocial.offset().top - top - 10;
         var offset = 7;
 
         if (y > target + offset) {
@@ -417,7 +433,8 @@
 												<img src="assets/logo.png" alt="Logo Mie de Pain" class="logo">
 											</div>
 											<div class="cell small-9">
-												<p class="whiteText ptSans bold fs24 lh1-5 noVerticalMargin">Retourner <br class="show-for-large">vers le site</p>
+												<p class="whiteText ptSans bold fs24 lh1-5 noVerticalMargin">Retourner <br
+													class="show-for-large">vers le site</p>
 											</div>
 										</div>
 									</a>
@@ -443,7 +460,7 @@
 									   onclick="woopra.track('interaction', {category:'CTA-STICKY-DON_IFI20',action:'clic',url:document.location.href,title: document.title});">
 										<div class="grid-x align-middle height-100">
 											<div class="cell">
-												<img src="assets/redBtnTopBar.png" alt="Je fais un don"  style="max-height: 90px">
+												<img src="assets/redBtnTopBar.png" alt="Je fais un don" style="max-height: 90px">
 											</div>
 										</div>
 									</a>
@@ -455,8 +472,9 @@
 								<div class="cell small-4 " style="margin-left: 5px; margin-right: 0;">
 									<a href="https://www.miedepain.asso.fr/">
 										<img src="assets/logoSmall.png" alt="Logo Mie de Pain" class="logo float-center"
-									     style=";padding-top: 10px;max-height: 65px;">
-									<p class="whiteText ptSans bold fs10 noVerticalMargin text-center">Retourner <br class="show-for-large">vers le site</p>
+										     style=";padding-top: 10px;max-height: 65px;">
+										<p class="whiteText ptSans bold fs10 noVerticalMargin text-center">Retourner <br
+											class="show-for-large">vers le site</p>
 									</a>
 								</div>
 								<div class="cell small-4" style="margin-left: 5px; margin-right: 0;">
@@ -515,16 +533,16 @@
 						</div>
 					</div>
 					<div class="cell large-3 medium-3 show-for-medium">
-					<div class="cell redBlurBG">
-						<img src="assets/virus.png" alt="virus" class="float-center">
-						<p class="whiteText fs20 ptSans text-center bold">
-							En raison de la crise sanitaire, certaines activités de collecte de la Mie de Pain sont
-							fortement perturbées.
-						</p>
-						<p class="whiteText fs20 ptSans text-center bold">
-							Votre don est urgent pour soutenir nos actions de prévention et de protection des personnes sans abri.
-						</p>
-					</div>
+						<div class="cell redBlurBG">
+							<img src="assets/virus.png" alt="virus" class="float-center">
+							<p class="whiteText fs20 ptSans text-center bold">
+								En raison de la crise sanitaire, certaines activités de collecte de la Mie de Pain sont
+								fortement perturbées.
+							</p>
+							<p class="whiteText fs20 ptSans text-center bold">
+								Votre don est urgent pour soutenir nos actions de prévention et de protection des personnes sans abri.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -722,16 +740,17 @@
 									</div>
 								</div>
 							</div>
-						</div><div class="cell small-6 nom">
-						<div class="cliquable grid-y height-100 align-center"
-						     onclick="showSlider('sandrine');woopra.track('interaction', {category:'TEM-LYDIA_IFI20',action:'clic',url:document.location.href,title: document.title});">
-							<div class="cell align-center">
-								<p class="whiteText text-left ptSans fs54">
-									SANDRINE
-								</p>
+						</div>
+						<div class="cell small-6 nom">
+							<div class="cliquable grid-y height-100 align-center"
+							     onclick="showSlider('sandrine');woopra.track('interaction', {category:'TEM-LYDIA_IFI20',action:'clic',url:document.location.href,title: document.title});">
+								<div class="cell align-center">
+									<p class="whiteText text-left ptSans fs54">
+										SANDRINE
+									</p>
+								</div>
 							</div>
 						</div>
-					</div>
 					</div>
 					<div class="grid-x rebecca">
 						<div class="cell small-6 nom">
@@ -938,7 +957,7 @@
 										<div class="cell shrink">
 											<p class="whiteText fs20 italic sourceSans">
 												Le jour où j’ai rencontré la Mie de Pain, ma vie a changé.
-												</p>
+											</p>
 											<p class="whiteText fs20 italic sourceSans">
 												J’ai rejoint le chantier d’insertion nettoyage en 2019, j’y ai<br class="show-for-large">
 												beaucoup appris. J’ai rencontré d’autres personnes et j’ai <br class="show-for-large">
@@ -948,20 +967,20 @@
 											<p class="whiteText fs20 italic sourceSans">
 												Je me suis tout de suite sentie en confiance. On apprend un<br class="show-for-large">
 												métier mais on l’apprend dans la bonne humeur.
-										</p>
+											</p>
 											<p class="whiteText fs20 italic sourceSans">
 												C’est la Mie de Pain qui a parlé de moi à plusieurs<br class="show-for-large">
 												entreprises. Depuis 1 an, je suis salariée d’une société de<br class="show-for-large">
 												nettoyage dont les locaux sont situés à Barbès.
-										</p>
+											</p>
 											<p class="whiteText fs20 italic sourceSans">
 												C’est stabilisant et sécurisant, j’ai un vrai contrat de travail<br class="show-for-large">
 												qui se renouvelle tous les 4 mois.
-										</p>
+											</p>
 											<p class="whiteText fs20 italic sourceSans">
 												Je suis satisfaite car j’aime ce que je fais et je me sens bien<br class="show-for-large">
 												dans mon histoire.
-										</p>
+											</p>
 										</div>
 										<div class="cell shrink quotes">
 											<div class="grid-x">
@@ -1880,7 +1899,8 @@
 							</h3>
 						</div>
 						<div class="cell small-3">
-							<a target="_blank" href="https://donner.miedepain.asso.fr/b?cid=213&reserved_code_media=WI21-1_LP1&amount=10000"
+							<a target="_blank"
+							   href="https://donner.miedepain.asso.fr/b?cid=213&reserved_code_media=WI21-1_LP1&amount=10000"
 							   class="height-100"
 							   onclick="woopra.track('interaction', {category:'DON-CTA-100_IFI20',action:'clic',url:document.location.href,title: document.title});">
 								<div class="grid-x align-center-middle btn padding lightBlueBG width-100 cliquable">
@@ -1897,7 +1917,8 @@
 							</a>
 						</div>
 						<div class="cell small-3">
-							<a target="_blank" href="https://donner.miedepain.asso.fr/b?cid=213&reserved_code_media=WI21-1_LP1&amount=20000"
+							<a target="_blank"
+							   href="https://donner.miedepain.asso.fr/b?cid=213&reserved_code_media=WI21-1_LP1&amount=20000"
 							   class="height-100"
 							   onclick="woopra.track('interaction', {category:'DON-CTA-150_IFI20',action:'clic',url:document.location.href,title: document.title});">
 								<div class="grid-x align-center-middle btn padding blueBG width-100 cliquable">
@@ -1914,7 +1935,8 @@
 							</a>
 						</div>
 						<div class="cell small-3">
-							<a target="_blank" href="https://donner.miedepain.asso.fr/b?cid=213&reserved_code_media=WI21-1_LP1&amount=40000"
+							<a target="_blank"
+							   href="https://donner.miedepain.asso.fr/b?cid=213&reserved_code_media=WI21-1_LP1&amount=40000"
 							   class="height-100"
 							   onclick="woopra.track('interaction', {category:'DON-CTA-AUTRES_IFI20',action:'clic',url:document.location.href,title: document.title});">
 								<div class="grid-x align-center-middle btn padding30 darkBlueBG width-100 cliquable">
@@ -2072,8 +2094,10 @@
 						class="show-for-medium">
 						soutiennent, c’est participer à la construction d’un climat de confiance indispensable à<br
 						class="show-for-large"> notre existence. <br><br>
-						Les comptes de La Mie de Pain sont annuellement soumis au contrôle d’un commissaire<br class="show-for-large">
-						aux comptes. La certification qui en découle donne lieu à la présentation des comptes <br class="show-for-large">
+						Les comptes de La Mie de Pain sont annuellement soumis au contrôle d’un commissaire<br
+						class="show-for-large">
+						aux comptes. La certification qui en découle donne lieu à la présentation des comptes <br
+						class="show-for-large">
 						annuels de La Mie de Pain sous la forme d’un bilan et d’un compte de résultat.
 						<br><br>
 						<a href="https://www.miedepain.asso.fr/nos-comptes/" target="_blank" class="whiteText">
